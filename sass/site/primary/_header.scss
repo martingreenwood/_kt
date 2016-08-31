@@ -1,0 +1,39 @@
+/*================================
+=            HomePage            =
+================================*/
+
+header {
+	padding: 30px 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+	background: white;
+
+	.site-branding, .site-tagline {
+		width: 100%;
+
+		@include media($medium-screen-up) {
+			width: 50%;
+		}
+	}
+
+	.site-branding {
+
+		a {
+			display: block;
+		}
+
+		img {
+			width: 299px;
+			height: 43.5;
+			display: block;
+		}
+	}
+
+	.site-tagline {
+		p {
+			margin: 0;
+		}
+	}
+}
