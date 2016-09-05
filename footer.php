@@ -15,6 +15,17 @@
 
 </div>
 
+<footer id="colophon">
+	<div class="container">
+		<div class="logo column">
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/logo-white.png" width="250" style="display:block;">
+		</div>
+		<div class="menu column"></div>
+		<div class="menu column"></div>
+		<div class="menu column"></div>
+	</div>
+</footer>
+
 <?php wp_footer(); ?>
 
 </body>

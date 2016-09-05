@@ -27,3 +27,18 @@ function _kt_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', '_kt_body_classes' );
+
+/**
+ *
+ * OPTIONS
+ *
+ */
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page('Theme Options');
+}
+
+function _kt_acf_init() {
+	acf_update_setting('google_api_key', 'AIzaSyDC6NXY8XZrS6mELrD8_Dj3Hg_OTqHret8');
+}
+add_action('acf/init', '_kt_acf_init');

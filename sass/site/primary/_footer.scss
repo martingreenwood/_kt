@@ -1,0 +1,19 @@
+/*==============================
+=            Footer            =
+==============================*/
+
+#colophon {
+	background: #3a3c42;
+	padding: 50px 0;
+
+	.column {
+		@include span-columns(1);
+
+		@include media($medium-screen-up) {
+			@include span-columns(2.33);
+		}
+		@include media($large-screen-up) {
+			@include span-columns(3);
+		}
+	}
+}

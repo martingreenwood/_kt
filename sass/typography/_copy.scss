@@ -3,19 +3,29 @@ html {
 }
 
 p {
+	margin-top: 0;
 	@include rem(margin-bottom, 15px);
+
+	font-size: 13px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 }
 
 dfn, cite, em, i {
 	font-style: italic;
+	font-size: 13px;
 }
 
 blockquote {
 	@include rem(margin, 0 15px);
+	font-size: 13px;
 }
 
 address {
 	@include rem(margin, 0 0 15px);
+	font-size: 13px;
 }
 
 pre {
@@ -37,11 +47,13 @@ code, kbd, tt, var {
 abbr, acronym {
 	border-bottom: 1px dotted $border-abbr;
 	cursor: help;
+	font-size: 13px;
 }
 
 mark, ins {
 	background: $background-ins;
 	text-decoration: none;
+	font-size: 13px;
 }
 
 big {

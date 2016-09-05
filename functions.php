@@ -43,6 +43,9 @@ function _kt_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'custom-logo' );
 
+	add_image_size( '169cover', '1650', '645', true );
+	add_image_size( 'large-slider', '1290', '645', true );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', '_kt' ),
@@ -106,7 +109,10 @@ function _kt_scripts() {
 	wp_enqueue_style( '_kt-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( '_ky_gmaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDC6NXY8XZrS6mELrD8_Dj3Hg_OTqHret8', array(), '', true );
+	wp_enqueue_script( '_kt_map', get_stylesheet_directory_uri() . '/js/maps.js', array(), '', true);
 	wp_enqueue_script( '_kt_base', get_stylesheet_directory_uri() . '/js/base.js', array(), '', true);
+	wp_enqueue_script( '_kt_fa', '//use.fontawesome.com/7390ec371d.js', array(), '', true);
 	wp_enqueue_script( '_kt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '', true );
 	wp_enqueue_script( '_kt-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
 
@@ -153,3 +159,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load custom posts file.
+ */
+require get_template_directory() . '/inc/cpts.php';
