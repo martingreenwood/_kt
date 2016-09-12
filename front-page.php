@@ -89,6 +89,34 @@ get_header(); ?>
 		</div>
 	</section>
 
+	<section class="break">
+		<div class="container">
+			<hr>
+		</div>
+	</section>
+
+	<section id="signup">
+		<div class="container">
+
+		<?php get_template_part( 'partials/signup', 'section' ); ?>
+
+		</div>
+	</section>
+
+	<section class="break">
+		<div class="container">
+			<hr>
+		</div>
+	</section>
+
+	<section id="blog">
+		<div class="container">
+
+		<?php get_template_part( 'partials/blog', 'section' ); ?>
+
+		</div>
+	</section>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

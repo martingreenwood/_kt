@@ -16,4 +16,24 @@
 			@include span-columns(3);
 		}
 	}
+
+	.menu {
+
+		ul {margin: 0;
+			list-style: none;
+
+			li {
+				margin-bottom: 5px;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				a {
+					color: white;
+					font-size: 18px;
+				}
+			}
+		}
+	}
 }

@@ -21,7 +21,7 @@ var $ = jQuery;
 =            Slides            =
 ==============================*/
 
-$(function () {
+(function ($) {
 	$('.slides').slick({
 		dots: false,
 		infinite: true,
@@ -32,9 +32,9 @@ $(function () {
 		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
 		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
 	});
-});
+})(jQuery);
 
-$(function () {
+(function ($) {
 	$('.es-slides').slick({
 		dots: true,
 		arrows: false,
@@ -43,13 +43,13 @@ $(function () {
 		fade: true,
 		cssEase: 'linear',
 	});
-});
+})(jQuery);
 
 /*==============================
 =            Search            =
 ==============================*/
 
-$(function () {
+(function () {
 	var screen_height = $(window).height();
 
 	$("#searchbox").css('bottom', screen_height);
@@ -65,9 +65,9 @@ $(function () {
 
 		}
 	});
-});
+})(jQuery);
 
-$(function () {
+(function () {
 	var screen_height = $(window).height();
 
 	$("#searchbox").css('bottom', screen_height);
@@ -82,13 +82,13 @@ $(function () {
 			$('#searchbox').removeClass('reveal');
 		}
 	});
-});
+})(jQuery);
 
 /*=================================
 =            Instagram            =
 =================================*/
 
-$(function () {
+(function () {
 	var igpost_height = $('.ig-column:first .ig-post').height();
 	console.log(igpost_height);
 	$('.ig-column:first .info').height(igpost_height);
@@ -100,14 +100,48 @@ $(window).resize(function(event) {
 	$('.ig-column:first .info').height(igpost_height);
 });
 
-$(function () {
+(function () {
 	var igpost_height = $('.ig-column:last .ig-post').height();
 	console.log(igpost_height);
 	$('.ig-column:last .info').height(igpost_height);
-});
+})(jQuery);
 
 $(window).resize(function(event) {
 	var igpost_height = $('.ig-column:last .ig-post').height();
 	console.log(igpost_height);
 	$('.ig-column:last .info').height(igpost_height);
 });
+
+
+/*=================================
+=            Accordion            =
+=================================*/
+
+(function($) {
+    
+	var allPanels = $('.accordion > dd').hide();
+
+	$('.accordion > dt').click(function() {
+		allPanels.slideUp();
+		$(this).next('dd').slideDown();
+		return false;
+	});
+
+})(jQuery);
+
+/*=================================
+=            Mailchimp            =
+=================================*/
+
+(function($) {
+	window.fnames = new Array(); 
+	window.ftypes = new Array();
+	fnames[0]='EMAIL';
+	ftypes[0]='email';
+	fnames[1]='FNAME';
+	ftypes[1]='text';
+	fnames[2]='LNAME';
+	ftypes[2]='text';
+}(jQuery));
+
+var $mcj = jQuery.noConflict(true);

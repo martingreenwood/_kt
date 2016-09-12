@@ -487,6 +487,36 @@ a:hover, a:active { outline: 0; }
 @media screen and (min-width: 1099px) { .home #explore .content .intro { float: left; display: block; margin-right: 2.1276595745%; width: 40.4255319149%; }
   .home #explore .content .intro:last-child { margin-right: 0; } }
 .home #explore .content .intro p { line-height: 1.2; font-size: 17px; }
+.home #signup { padding: 50px 0; }
+.home #signup .form .mc-field-group { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+.home #signup .form .mc-field-group:last-child { margin-right: 0; }
+@media screen and (min-width: 480px) { .home #signup .form .mc-field-group { float: left; display: block; margin-right: 3.2258064516%; width: 31.0967741935%; }
+  .home #signup .form .mc-field-group:last-child { margin-right: 0; } }
+@media screen and (min-width: 1099px) { .home #signup .form .mc-field-group { float: left; display: block; margin-right: 2.1276595745%; width: 31.914893617%; }
+  .home #signup .form .mc-field-group:last-child { margin-right: 0; } }
+.home #signup .form .mc-field-group input[type="text"], .home #signup .form .mc-field-group input[type="email"], .home #signup .form .mc-field-group input[type="url"], .home #signup .form .mc-field-group input[type="password"], .home #signup .form .mc-field-group input[type="search"], .home #signup .form .mc-field-group textarea { border-radius: 0; box-shadow: none; margin-bottom: 0; padding: 5px; }
+.home #signup .form .mc-field-group input[type="text"]#mce-FNAME, .home #signup .form .mc-field-group input[type="text"]#mce-LNAME, .home #signup .form .mc-field-group input[type="email"]#mce-FNAME, .home #signup .form .mc-field-group input[type="email"]#mce-LNAME, .home #signup .form .mc-field-group input[type="url"]#mce-FNAME, .home #signup .form .mc-field-group input[type="url"]#mce-LNAME, .home #signup .form .mc-field-group input[type="password"]#mce-FNAME, .home #signup .form .mc-field-group input[type="password"]#mce-LNAME, .home #signup .form .mc-field-group input[type="search"]#mce-FNAME, .home #signup .form .mc-field-group input[type="search"]#mce-LNAME, .home #signup .form .mc-field-group textarea#mce-FNAME, .home #signup .form .mc-field-group textarea#mce-LNAME { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+.home #signup .form .mc-field-group input[type="text"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="text"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="email"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="email"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="url"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="url"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="password"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="password"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="search"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="search"]#mce-LNAME:last-child, .home #signup .form .mc-field-group textarea#mce-FNAME:last-child, .home #signup .form .mc-field-group textarea#mce-LNAME:last-child { margin-right: 0; }
+@media screen and (min-width: 480px) { .home #signup .form .mc-field-group input[type="text"]#mce-FNAME, .home #signup .form .mc-field-group input[type="text"]#mce-LNAME, .home #signup .form .mc-field-group input[type="email"]#mce-FNAME, .home #signup .form .mc-field-group input[type="email"]#mce-LNAME, .home #signup .form .mc-field-group input[type="url"]#mce-FNAME, .home #signup .form .mc-field-group input[type="url"]#mce-LNAME, .home #signup .form .mc-field-group input[type="password"]#mce-FNAME, .home #signup .form .mc-field-group input[type="password"]#mce-LNAME, .home #signup .form .mc-field-group input[type="search"]#mce-FNAME, .home #signup .form .mc-field-group input[type="search"]#mce-LNAME, .home #signup .form .mc-field-group textarea#mce-FNAME, .home #signup .form .mc-field-group textarea#mce-LNAME { float: left; display: block; margin-right: 10.3734439834%; width: 44.8132780083%; }
+  .home #signup .form .mc-field-group input[type="text"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="text"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="email"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="email"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="url"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="url"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="password"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="password"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="search"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="search"]#mce-LNAME:last-child, .home #signup .form .mc-field-group textarea#mce-FNAME:last-child, .home #signup .form .mc-field-group textarea#mce-LNAME:last-child { margin-right: 0; } }
+@media screen and (min-width: 1099px) { .home #signup .form .mc-field-group input[type="text"]#mce-FNAME, .home #signup .form .mc-field-group input[type="text"]#mce-LNAME, .home #signup .form .mc-field-group input[type="email"]#mce-FNAME, .home #signup .form .mc-field-group input[type="email"]#mce-LNAME, .home #signup .form .mc-field-group input[type="url"]#mce-FNAME, .home #signup .form .mc-field-group input[type="url"]#mce-LNAME, .home #signup .form .mc-field-group input[type="password"]#mce-FNAME, .home #signup .form .mc-field-group input[type="password"]#mce-LNAME, .home #signup .form .mc-field-group input[type="search"]#mce-FNAME, .home #signup .form .mc-field-group input[type="search"]#mce-LNAME, .home #signup .form .mc-field-group textarea#mce-FNAME, .home #signup .form .mc-field-group textarea#mce-LNAME { float: left; display: block; margin-right: 6.6666666667%; width: 46.6666666667%; }
+  .home #signup .form .mc-field-group input[type="text"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="text"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="email"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="email"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="url"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="url"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="password"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="password"]#mce-LNAME:last-child, .home #signup .form .mc-field-group input[type="search"]#mce-FNAME:last-child, .home #signup .form .mc-field-group input[type="search"]#mce-LNAME:last-child, .home #signup .form .mc-field-group textarea#mce-FNAME:last-child, .home #signup .form .mc-field-group textarea#mce-LNAME:last-child { margin-right: 0; } }
+.home #signup .form .mc-field-group #mc-embedded-subscribe { border-radius: 0; margin-bottom: 0; box-shadow: none; background: #1ca75e; display: block; width: 100%; color: white; border: 1px solid transparent; }
+.home #signup .content { margin-bottom: 25px; display: inline-block; }
+.home #signup .content header { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+.home #signup .content header:last-child { margin-right: 0; }
+@media screen and (min-width: 480px) { .home #signup .content header { float: left; display: block; margin-right: 3.2258064516%; width: 48.3870967742%; }
+  .home #signup .content header:last-child { margin-right: 0; } }
+@media screen and (min-width: 1099px) { .home #signup .content header { float: left; display: block; margin-right: 2.1276595745%; width: 23.4042553191%; }
+  .home #signup .content header:last-child { margin-right: 0; } }
+.home #signup .content header h1, .home #signup .content header h2 { color: #1ca75e; font-size: 40px; text-transform: uppercase; line-height: 1; margin: 0; }
+.home #signup .content .intro { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+.home #signup .content .intro:last-child { margin-right: 0; }
+@media screen and (min-width: 480px) { .home #signup .content .intro { float: left; display: block; margin-right: 3.2258064516%; width: 48.3870967742%; }
+  .home #signup .content .intro:last-child { margin-right: 0; } }
+@media screen and (min-width: 1099px) { .home #signup .content .intro { float: left; display: block; margin-right: 2.1276595745%; width: 40.4255319149%; }
+  .home #signup .content .intro:last-child { margin-right: 0; } }
+.home #signup .content .intro p { line-height: 1.2; font-size: 17px; }
 .home #experience { padding: 50px 0; }
 .home #experience header h1, .home #experience header h2 { color: #1ca75e; font-size: 40px; text-transform: uppercase; line-height: 1; margin: 0; }
 .home #experience .grid { padding-top: 50px; }
@@ -498,7 +528,7 @@ a:hover, a:active { outline: 0; }
   .home #experience .grid .ig-column:last-child { margin-right: 0; } }
 .home #experience .grid .ig-column:first-of-type, .home #experience .grid .ig-column:last-of-type { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
 .home #experience .grid .ig-column:first-of-type:last-child, .home #experience .grid .ig-column:last-of-type:last-child { margin-right: 0; }
-@media screen and (min-width: 480px) { .home #experience .grid .ig-column:first-of-type, .home #experience .grid .ig-column:last-of-type { float: left; display: block; margin-right: 3.2258064516%; width: 26.8387096774%; }
+@media screen and (min-width: 480px) { .home #experience .grid .ig-column:first-of-type, .home #experience .grid .ig-column:last-of-type { float: left; display: block; margin-right: 3.2258064516%; width: 31.0967741935%; }
   .home #experience .grid .ig-column:first-of-type:last-child, .home #experience .grid .ig-column:last-of-type:last-child { margin-right: 0; } }
 @media screen and (min-width: 1099px) { .home #experience .grid .ig-column:first-of-type, .home #experience .grid .ig-column:last-of-type { float: left; display: block; margin-right: 2.1276595745%; width: 23.4042553191%; }
   .home #experience .grid .ig-column:first-of-type:last-child, .home #experience .grid .ig-column:last-of-type:last-child { margin-right: 0; } }
@@ -514,9 +544,34 @@ a:hover, a:active { outline: 0; }
 .home #experience .grid .ig-column .info p { border-top: 2px solid black; padding-top: 5px; }
 .home #experience .grid .ig-column .info a { color: #1ca75e; margin-top: 15px; display: block; }
 .home #experience .grid .ig-column img { display: block; }
+.home #blog { padding: 50px 0; }
+.home #blog header h1, .home #blog header h2 { color: #1ca75e; font-size: 40px; text-transform: uppercase; line-height: 1; margin: 0; }
+.home #blog .posts .item { float: left; display: block; margin-right: 33.3333333333%; width: 100%; margin-bottom: 25px; }
+.home #blog .posts .item:last-child { margin-right: 0; }
+@media screen and (min-width: 480px) { .home #blog .posts .item { float: left; display: block; margin-right: 3.2258064516%; width: 31.0967741935%; }
+  .home #blog .posts .item:last-child { margin-right: 0; }
+  .home #blog .posts .item:nth-child(3n) { margin-right: 0; }
+  .home #blog .posts .item:nth-child(3n+1) { clear: left; } }
+@media screen and (min-width: 1099px) { .home #blog .posts .item { float: left; display: block; margin-right: 2.1276595745%; width: 31.914893617%; }
+  .home #blog .posts .item:last-child { margin-right: 0; } }
+.home #blog .posts .item:first-of-type { border-top: 2px solid black; padding-top: 5px; }
+.home #blog .posts .item img { display: block; }
+.home #blog .posts .item h2, .home #blog .posts .item h3 { margin: 10px 0; text-transform: uppercase; color: #1ca75e; font-size: 23px; border-bottom: 2px solid black; padding-bottom: 5px; }
+.home #blog .posts .item a { display: block; font-size: 13px; margin-top: 10px; font-weight: bold; color: black; }
+.home #plan { padding: 50px 0; }
+.home #plan header h1, .home #plan header h2 { color: #1ca75e; font-size: 40px; text-transform: uppercase; line-height: 1; margin: 0; }
+.home #plan .map-box { padding-top: 50px; }
 .home #plan .map-box .intro { width: 25%; padding: 25px; float: left; height: 700px; background: #3a3c42; color: white; }
-.home #plan .map-box .intro p { color: white; font-size: 17px; line-height: 1.2; margin-bottom: 25px; }
-.home #plan .map-box .intro h3 { text-transform: uppercase; font-size: 17px; margin: 0; }
+.home #plan .map-box .intro h3 { text-transform: uppercase; font-size: 17px; margin: 20px 0 0 0; }
+.home #plan .map-box .intro p { color: white; line-height: 1.2; font-size: 17px; }
+.home #plan .map-box .intro .accordion { margin: 0; }
+.home #plan .map-box .intro .accordion dt, .home #plan .map-box .intro .accordion dd { padding: 10px 0; border-top: 1px solid white; border-bottom: 0; color: white; line-height: 1.2; font-size: 14px; text-transform: capitalize; font-weight: normal; margin: 0; position: relative; }
+.home #plan .map-box .intro .accordion dt:last-of-type, .home #plan .map-box .intro .accordion dd:last-of-type { border-bottom: 1px solid white; }
+.home #plan .map-box .intro .accordion dt .fa, .home #plan .map-box .intro .accordion dd .fa { position: absolute; right: 0; top: 11px; z-index: 0; }
+.home #plan .map-box .intro .accordion dt a, .home #plan .map-box .intro .accordion dd a { display: block; color: white; }
+.home #plan .map-box .intro .accordion dd { border-top: 1px solid #666; }
+.home #plan .map-box .intro .accordion dd a { line-height: 1.6; }
+.home #plan .map-box .intro .accordion dd:last-of-type { position: relative; top: -1px; }
 .home #plan .map-box .map { width: 75%; float: left; }
 .home #primary .entry-content { margin: 0; }
 
@@ -545,6 +600,10 @@ a:hover, a:active { outline: 0; }
   #colophon .column:last-child { margin-right: 0; } }
 @media screen and (min-width: 1099px) { #colophon .column { float: left; display: block; margin-right: 2.1276595745%; width: 23.4042553191%; }
   #colophon .column:last-child { margin-right: 0; } }
+#colophon .menu ul { margin: 0; list-style: none; }
+#colophon .menu ul li { margin-bottom: 5px; }
+#colophon .menu ul li:last-of-type { margin-bottom: 0; }
+#colophon .menu ul li a { color: white; font-size: 18px; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

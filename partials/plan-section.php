@@ -10,24 +10,28 @@
 
 		<h3>Make Your Selection</h3>
 
+		<dl class="accordion">
 		<?php
 		$post_type = 'poi';
 		$taxonomies = get_object_taxonomies( (object) array( 'post_type' => $post_type ) );
 		foreach( $taxonomies as $taxonomy ) : 
 			$terms = get_terms( $taxonomy );
 			foreach( $terms as $term ) : ?>
-				<h3><?php echo $term->slug; ?></h3>
-				<div class="pois">
-				<?php $args = array( 'taxonomy' => $taxonomy,'taxonomy' => $term->slug, 'post_type' => 'poi', 'posts_per_page' => -1 );
+				<dt><a href=""><?php echo $term->slug; ?></a> <i class="fa fa-caret-square-o-down" aria-hidden="true"></i></dt>
+				<dd>
+				<?php $args = array( 'taxonomy' => $taxonomy, 'term' => $term->slug, 'post_type' => $post_type, 'posts_per_page' => -1 );
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post();
 					$poi_location = get_field('poi_map'); ?>
-					<p><a class="map_link" href="#" rel="<?php echo $poi_location['lat']; ?>, <?php echo $poi_location['lng']; ?>"><?php the_title(); ?></a></p>
-				<?php endwhile; ?>
-				</div>
+					<a class="map_link" href="#" rel="<?php echo $poi_location['lat']; ?>, <?php echo $poi_location['lng']; ?>"><?php the_title(); ?></a>
+				<?php 
+				endwhile; 
+				wp_reset_postdata(); ?>
+				</dd>
 			<?php endforeach;
 		endforeach;
 		?>
+		</dl>
 
 	</div>
 

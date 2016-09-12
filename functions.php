@@ -45,10 +45,14 @@ function _kt_setup() {
 
 	add_image_size( '169cover', '1650', '645', true );
 	add_image_size( 'large-slider', '1290', '645', true );
+	add_image_size( 'hp-thumb', '410', '275', true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', '_kt' ),
+		'footer1' => esc_html__( 'Footer One', '_kt' ),
+		'footer2' => esc_html__( 'Footer Two', '_kt' ),
+		'footer3' => esc_html__( 'Footer Three', '_kt' ),
 	) );
 
 	/*
@@ -62,12 +66,6 @@ function _kt_setup() {
 		'gallery',
 		'caption',
 	) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( '_kt_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif;
 add_action( 'after_setup_theme', '_kt_setup' );
@@ -110,9 +108,12 @@ function _kt_scripts() {
 
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( '_ky_gmaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDC6NXY8XZrS6mELrD8_Dj3Hg_OTqHret8', array(), '', true );
+	wp_enqueue_script( '_kt_fa', '//use.fontawesome.com/7390ec371d.js', array(), '', true);
+	wp_enqueue_script( '_kt_mc', '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', array(), '', true);
+
+	
 	wp_enqueue_script( '_kt_map', get_stylesheet_directory_uri() . '/js/maps.js', array(), '', true);
 	wp_enqueue_script( '_kt_base', get_stylesheet_directory_uri() . '/js/base.js', array(), '', true);
-	wp_enqueue_script( '_kt_fa', '//use.fontawesome.com/7390ec371d.js', array(), '', true);
 	wp_enqueue_script( '_kt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '', true );
 	wp_enqueue_script( '_kt-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
 

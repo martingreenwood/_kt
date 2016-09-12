@@ -23,7 +23,8 @@
 		var args = {
 			zoom		: 12,
 			center		: new google.maps.LatLng(0, 0),
-			mapTypeId	: google.maps.MapTypeId.ROADMAP
+			mapTypeId	: google.maps.MapTypeId.ROADMAP,
+			scrollwheel : false,
 		};
 		
 		
@@ -174,7 +175,7 @@
 			map = new_map( $(this) );
 
 			if ($('.map:visible').length) {
-				$('.pois a').click(function(){      
+				$('dd a').click(function(){      
 				var info = $(this).attr('rel');
 				var substr = info.split(',');
 				map.panTo(new google.maps.LatLng(substr[0], substr[1]));
@@ -185,7 +186,7 @@
 					return false;
 				});
 			} else {
-				$('.type a').click(function(){
+				$('dd a').click(function(){
 					return false;
 				});
 			}

@@ -9,7 +9,12 @@
  * @package _kt
  */
 
-?><!DOCTYPE html>
+?>
+<!--
+* Built By Martin Greenwood
+* https://martingreenwood.com
+-->
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
