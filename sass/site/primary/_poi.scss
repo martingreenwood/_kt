@@ -1,0 +1,216 @@
+/*===========================
+=            POI            =
+===========================*/
+
+.page-template-discover-poi {
+
+	#primary {
+
+		.column {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(6);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(8.5);
+			}
+
+			.entry-content {
+				margin-bottom: 20px;
+				
+				p {
+					font-size: 25px;
+					line-height: 1.2;
+				}
+			}
+		}
+
+
+		#main {
+			padding: 0 0 50px 0;
+
+			.column {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(6);
+				}
+				@include media($large-screen-up) {
+					@include span-columns(8.5);
+				}
+
+				.entry-content {
+					margin-bottom: 20px;
+					
+					p {
+						font-size: 25px;
+						line-height: 1.2;
+					}
+				}
+
+				.row {
+
+					img {
+						display: block;
+						width: 100%;
+						margin-bottom: 20px;
+					}
+
+					.caption {
+						@include span-columns(1);
+
+						@include media($medium-screen-up) {
+							@include span-columns(2 of 6);
+						}
+						@include media($large-screen-up) {
+							@include span-columns(2 of 8.5);
+						}
+					}
+
+					.copy {
+						@include span-columns(1);
+
+						@include media($medium-screen-up) {
+							@include span-columns(4 of 6);
+						}
+						@include media($large-screen-up) {
+							@include span-columns(6.5 of 8.5);
+						}
+
+						p {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+
+			aside {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(2);
+				}
+				@include media($large-screen-up) {
+					@include span-columns(3.5);
+				}
+
+				.map {
+					height: 300px;
+				}
+
+				div {
+					margin-bottom: 20px;
+
+					h3 {
+						border-bottom: 2px solid black;
+						font-size: 16px;
+						margin: 0 0 5px 0;
+						text-transform: uppercase;
+						color: $brand-primary;
+					}
+				}
+			}
+		}
+	}
+
+	#share {
+		padding: 20px 0;
+
+		header {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(2);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(2);
+			}
+
+			h2 {
+				color: $brand-primary;
+				font-size: 22px;
+				text-transform: uppercase;
+				line-height: 1;
+				margin: 0;
+			}
+		}
+
+		.sharedaddy {
+			@include span-columns(1);
+			clear: none;
+
+			@include media($medium-screen-up) {
+				@include span-columns(6);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(10);
+			}
+		}
+	}
+
+	#whatson {
+		padding-bottom: 40px;
+
+		.content {
+
+			header {
+				padding: 20px 0 40px 0;
+
+				h2 {
+					color: $brand-primary;
+					font-size: 40px;
+					text-transform: uppercase;
+					line-height: 1;
+					margin: 0;
+				}
+			}
+		}
+
+		.similar {
+
+			article {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(2);
+					@include omega(4n);
+				}
+				@include media($large-screen-up) {
+					@include span-columns(3);
+				}
+
+				img {
+					display: block;
+				}
+
+				h4 {
+					margin: 10px 0;
+					border-bottom: 2px solid black;
+					padding-bottom: 2px;
+					text-transform: uppercase;
+					color: $brand-primary;
+
+					a {
+						color: inherit;
+						font-size: inherit;
+						font-weight: inherit;
+					}
+
+				}
+
+				a {
+					font-size: 14px;
+					color: $text-color;
+					margin-top: 10px;
+					font-weight: 600;
+				}
+
+				&:first-of-type {
+					border-top: 2px solid black;
+					padding-top: 5px;
+				}
+			}
+		}
+	}
+}

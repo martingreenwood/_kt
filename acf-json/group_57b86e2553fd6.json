@@ -35,6 +35,20 @@
                 "operator": "==",
                 "value": "front_page"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "discover-landing-page.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "discover-poi.php"
+            }
         ]
     ],
     "menu_order": 10,
@@ -45,5 +59,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "adds slider to hompage",
-    "modified": 1473068818
+    "modified": 1474968891
 }

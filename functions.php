@@ -46,6 +46,8 @@ function _kt_setup() {
 	add_image_size( '169cover', '1650', '645', true );
 	add_image_size( 'large-slider', '1290', '645', true );
 	add_image_size( 'hp-thumb', '410', '275', true );
+	add_image_size( '300x430', '300', '430', true );
+	add_image_size( '600x430', '600', '430', true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -112,10 +114,14 @@ function _kt_scripts() {
 	wp_enqueue_script( '_kt_mc', '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', array(), '', true);
 
 	
+	wp_enqueue_script( '_kt_pikaday', get_template_directory_uri() . '/js/pikaday.js', array(), '', true );
+	wp_enqueue_script( '_kt_pikadayJQ', get_template_directory_uri() . '/js/pikaday.jquery.js', array(), '', true );
+
+
 	wp_enqueue_script( '_kt_map', get_stylesheet_directory_uri() . '/js/maps.js', array(), '', true);
+	wp_enqueue_script( '_kt_navigation', get_template_directory_uri() . '/js/navigation.js', array(), '', true );
+
 	wp_enqueue_script( '_kt_base', get_stylesheet_directory_uri() . '/js/base.js', array(), '', true);
-	wp_enqueue_script( '_kt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '', true );
-	wp_enqueue_script( '_kt-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -140,6 +146,47 @@ function _kt_typekit () { ?>
 <?php 
 }
 add_action( 'wp_head', '_kt_typekit', 999 );
+
+function excerpt($limit) {
+
+	$excerpt = explode(' ', get_the_excerpt(), $limit);
+	if (count($excerpt)>=$limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ",$excerpt).'...';
+	} else {
+		$excerpt = implode(" ",$excerpt);
+	}
+	$excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+	return $excerpt;
+}
+
+function content($limit) {
+	$content = explode(' ', get_the_content(), $limit);
+	if (count($content)>=$limit) {
+		array_pop($content);
+		$content = implode(" ",$content).'...';
+	} else {
+		$content = implode(" ",$content);
+	}
+	$content = preg_replace('/[.+]/','', $content);
+	$content = apply_filters('the_content', $content);	
+	$content = str_replace(']]>', ']]&gt;', $content);
+	return $content;
+}
+
+/**
+ * Move Jetpack
+ */
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+ 
+add_action( 'loop_start', 'jptweak_remove_share' );
+
 
 /**
  * Custom template tags for this theme.

@@ -17,7 +17,7 @@
 		return;
 	}
 
-	menu = container.getElementsByTagName( 'ul' )[0];
+	menu = container.getElementsByClassName( 'sub-menu-wrap' )[0];
 
 	// Hide menu toggle button if menu is empty and return early.
 	if ( 'undefined' === typeof menu ) {
@@ -44,7 +44,7 @@
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );
-	subMenus = menu.getElementsByTagName( 'ul' );
+	subMenus = menu.getElementsByClassName( 'sub-menu' );
 
 	// Set menu items with submenus to aria-haspopup="true".
 	for ( i = 0, len = subMenus.length; i < len; i++ ) {

@@ -1,11 +1,11 @@
 {
-    "key": "group_57cd81943fe15",
-    "title": "Map",
+    "key": "group_57ea9660b6ece",
+    "title": "Location",
     "fields": [
         {
-            "key": "field_57cd81999c342",
-            "label": "POI Map",
-            "name": "poi_map",
+            "key": "field_57ea96752790c",
+            "label": "Location",
+            "name": "location",
             "type": "google_map",
             "instructions": "",
             "required": 0,
@@ -24,19 +24,19 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "poi"
+                "value": "discover-poi.php"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "side",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1474991951
+    "modified": 1474992030
 }

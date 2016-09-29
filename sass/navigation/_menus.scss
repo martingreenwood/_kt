@@ -3,6 +3,89 @@
 	width: 100%;
 }
 
+.ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop {
+	margin-top: 30px !important;
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+
+	&:before {
+		content: "";
+		position: absolute;
+		border-top: 2px solid black;
+		max-width: 100%;
+		top: 0;
+		left: 20px;
+		right: 20px;
+	}
+}
+
+.ubermenu {
+
+	h3.ubermenu-widgettitle {
+		font-weight: 400;
+		margin: 0 0 5px 0;
+		text-transform: uppercase;
+		color: #1ca75e;
+		font-size: 18px;
+		margin-bottom: 20px;
+		padding: 0;
+		color: $brand-primary;
+	}
+
+	.textwidget {
+		font-size: 14px;
+	}
+
+	h3.widget-title, li, a {
+		margin: 0;
+		font-size: 14px;
+		font-weight: 400;
+		color: #3B3C43;
+		line-height: 2;
+		text-transform: capitalize;
+	}
+
+	h3.widget-title {
+		font-weight: 600;
+		border-bottom: 2px solid;
+	}
+
+	.ubermenu-submenu .ubermenu-column {
+		padding-top: 0;
+		padding-bottom: 0;
+
+		ul {
+			list-style-type: none;
+			margin: 0;
+
+			li {
+				//border-bottom: 2px solid;
+			}
+		}
+	}
+
+	.ubermenu-submenu {
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		.cpo {
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+
+				li {
+					border-bottom: 2px solid;
+				}
+			}
+		}
+	}
+}
+
+.ubermenu-submenu {
+	padding: 20px 0;
+}
+
 .main-navigation {
 	clear: both;
 	display: block;
@@ -19,12 +102,16 @@
 		text-align: right;
 
 
-		ul {
+		.sub-menu-wrap {
 			float: left;
 			position: absolute;
 			@include rem(top, 15px);
 			@include rem(left, -9999px);
 			z-index: 99999;
+
+			.sub-menu {
+
+			}
 
 			ul {
 				@include rem(left, -9999px);
@@ -51,9 +138,39 @@
 			}
 		}
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
+		li:hover > .sub-menu-wrap,
+		li.focus > .sub-menu-wrap {
+			padding: 20px;
+			left: 0;
+			top: 73px;
+			width: 100%;
+
+			.sub-menu {
+				@include outer-container();
+				background: #fff;
+				padding: 20px;
+				padding-top: 0;
+				float: none;
+				margin-top: 11px;
+				box-sizing: border-box;
+
+				.jsn-bootstrap3 {
+					@include outer-container();
+				}
+
+				.sub-items {
+					border-top: 2px solid black;
+					padding-top: 20px;
+				}
+
+				li {
+					text-align: left;
+
+					a {
+
+					}
+				}
+			}
 		}
 	}
 
@@ -62,6 +179,10 @@
 		position: relative;
 		display: inline-block;
 		margin-right: 20px;
+
+		&#menu-item-30 {
+			position: initial;
+		}
 
 		&:last-of-type {
 			margin-right: 0;

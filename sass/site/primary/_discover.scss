@@ -1,0 +1,189 @@
+/*================================
+=            Discover            =
+================================*/
+
+.page-template-discover-landing-page {
+
+	#primary {
+
+		#main {
+			padding: 0 0 50px 0;
+
+			.row {
+				
+				&.top {
+					padding-top: 40px;
+
+					.one {
+
+						article {
+							@include span-columns(1 of 1);
+							height: 100%;
+							background-position: center;
+							background-size: cover;
+							min-height: 400px;
+
+							@include media($medium-screen-up) {
+								@include span-columns(2 of 4);
+							}
+
+							@include media($large-screen-up) {
+								@include span-columns(3 of 6);
+							}
+
+							.entry-content {
+								border-top: 2px solid black;
+								padding-top: 10px;
+							}
+						}
+					}
+
+					.two {
+						article {
+							@include span-columns(1 of 1);
+							height: 100%;
+							background-position: center;
+							background-size: cover;
+							min-height: 400px;
+
+							@include media($medium-screen-up) {
+								@include span-columns(4 of 4);
+							}
+
+							@include media($large-screen-up) {
+								@include span-columns(6 of 6);
+							}
+						}						
+					}
+				}
+
+				&.bottom {
+
+					.one {
+
+						article {
+							@include span-columns(1 of 1);
+							height: 100%;
+							background-position: center;
+							background-size: cover;
+							min-height: 400px;
+
+							@include media($medium-screen-up) {
+								@include span-columns(4 of 4);
+							}
+
+							@include media($large-screen-up) {
+								@include span-columns(6 of 6);
+							}
+						}
+					}
+
+					.two {
+						
+						article {
+							@include span-columns(1 of 1);
+							height: 100%;
+							background-position: center;
+							background-size: cover;
+							min-height: 400px;
+
+							@include media($medium-screen-up) {
+								@include span-columns(4 of 4);
+							}
+
+							@include media($large-screen-up) {
+								@include span-columns(6 of 6);
+							}
+						}
+
+						.right {
+							height: 100%;
+
+							article {
+								height: 50%;
+								min-height: 0;
+							}
+
+							.six {
+
+								h2 {
+									color: $brand-primary;
+									margin: 20px 0 0 0;
+									border-bottom: 2px solid black;
+									padding-bottom: 10px;
+									margin-bottom: 10px;
+									font-size: 18px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.column {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(4);
+				}
+
+				@include media($large-screen-up) {
+					@include span-columns(6);
+				}
+
+				article {
+					position: relative;
+				}
+
+				img {
+					display: block;
+				}
+				
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					span {
+						background: rgba(0,0,0,0.7);
+						color: white;
+						width: 100%;
+						display: block;
+						padding: 5px;
+						font-size: 14px;
+					}
+				}
+				
+				&.two {
+
+					.left {
+						@include span-columns(1 of 1);
+
+						@include media($medium-screen-up) {
+							@include span-columns(2 of 4);
+						}
+
+						@include media($large-screen-up) {
+							@include span-columns(3 of 6);
+						}
+					}
+
+					.right {
+						@include span-columns(1 of 1);
+
+						@include media($medium-screen-up) {
+							@include span-columns(2 of 4);
+						}
+
+						@include media($large-screen-up) {
+							@include span-columns(3 of 6);
+						}
+					}
+				}
+			}
+		}
+	}
+}

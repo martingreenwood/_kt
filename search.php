@@ -7,42 +7,118 @@
  * @package _kt
  */
 
-get_header(); ?>
+get_header();
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	/* Search Total Count */
+	$allsearch = new WP_Query("s=$s&showposts=-1");
+	$count = $allsearch->post_count;
 
-		<?php
-		if ( have_posts() ) : ?>
+	wp_reset_query();
 
+	/* Number of posts per page and page number */
+	$num_of_posts = 11;
+	$pageNumber = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+	/* Showing the lower post value */
+	$n = ($pageNumber-1)*$num_of_posts;
+	$n = $n+1;
+
+	/* Showing the higher/highest post value */
+	$m = $pageNumber * $num_of_posts;
+	if($m > $count){
+		// if m is bigger than the count var, it sets the
+		// highest value equal to the count, this is for the last page of results
+		$m = $count;
+	}
+	
+	?>
+
+	<section class="break">
+		<div class="container">
+			<hr>
+		</div>
+	</section>
+
+
+	<section id="header">
+		<div class="container">
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', '_kt' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+				<h1 class="page-title"><?php printf( esc_html__( 'You Searched For %s', '_kt' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</header>
+		</div>
+	</section>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+	<section class="break">
+		<div class="container">
+			<hr>
+		</div>
+	</section>
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+	<section id="counters">
+		<div class="container">
+			<div class="column">
+				<?php
+				if($count > 0){
+				echo '
+				Showing <strong>'.$n.'</strong>
+				-<strong>'.$m.'</strong>
+				of <strong>'.$count.'</strong>';
+				}
+				else{
+				echo '<strong>No Results</strong>';
+				} ?>
+			</div>
+			<div class="column">
+				<?php wp_pagenavi(); ?>
+			</div>
+		</div>
+	</section>
 
-			endwhile;
+	<section class="break">
+		<div class="container">
+			<hr>
+		</div>
+	</section>
 
-			the_posts_navigation();
+	<section id="search">
+		<div class="container">
 
-		else :
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main" role="main">
 
-			get_template_part( 'template-parts/content', 'none' );
+				<div id="searchcontiner">
 
-		endif; ?>
+				<article class="post">
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+					<p>Lorem ipsum dolor sitet eriasa amet, consectetur adipiscing elit aliqua pretium justo id leo ornare, ac varius eros consectetur ut hendre ritamol metus id aliquet. </p>
+
+					<p>Vestibulum lorem es lorem, vehicula id fermentum maximus, ornare at lectus suspendise aies pellentesque, libero nec euismod auctor, lorem ligula aliquet nibh.</p>
+
+				</article>
+
+				<?php
+				if ( have_posts() ) : 
+
+					/* Start the Loop */
+					while ( have_posts() ) : the_post();
+
+						get_template_part( 'template-parts/content', 'search' );
+
+					endwhile;
+
+				else :
+
+					//get_template_part( 'template-parts/content', 'none' );
+
+				endif; ?>
+
+				</div>
+
+				</main>
+			</div>
+
+		</div>
+	</section>
 
 <?php
-get_sidebar();
 get_footer();

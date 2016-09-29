@@ -19,10 +19,184 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	@include rem(margin, 15px 0 0);
+	@include rem(margin, 0);
 }
 
 .page-links {
 	clear: both;
-	@include rem(margin, 0 0 15px);
+	@include rem(margin, 0);
 }
+
+.breadcrumbs {
+	padding: 10px 0;
+	font-size: 14px;
+	color: $text-color;
+
+	a {
+		color: $text-color;
+	}
+}
+
+.title {
+	h1 {
+		color: $brand-primary;
+		text-transform: uppercase;
+		font-size: 40px;
+		margin: 20px 0;
+	}
+}
+
+/*==============================
+=            SLiDER            =
+==============================*/
+
+.slider{
+	margin: 0;
+	position: relative;
+
+	.arrow-box {
+		position: absolute;
+		bottom: 180px;
+		width: 100%;
+		z-index: 99;
+		color: white;
+
+		button {
+			width: auto;
+			height: auto;
+			margin: 0;
+			top: 0;
+			transform: inherit;
+
+			.fa {
+				font-size: 54px;
+				color: white;
+			}
+		}
+	}
+
+	.slide {
+		position: relative;
+
+		.caption {
+			position: absolute;
+			bottom: 70px;
+			width: 100%;
+			z-index: 99;
+			color: white;
+			text-align: center;
+
+			h2 {
+				font-size: 80px;
+				text-transform: uppercase;
+				margin: 0 0 20px 0;
+				line-height: 1;
+			}
+
+			h3 {
+				font-size: 22px;
+				text-transform: uppercase;
+				line-height: 1;
+				margin: 0;
+			}
+		}
+
+		.image {
+			width: 100%;
+			display: block;
+		}
+	}
+}
+
+/*===============================
+=            EXPLORE            =
+===============================*/
+
+#explore {
+	padding: 50px 0;
+
+	.slider {
+
+		.es-slides {
+			position: relative;
+
+			.slide {
+				position: relative;
+			}
+
+			.slick-dots {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: auto;
+				list-style: decimal;
+				z-index: 999;
+
+				li {
+					color: white;
+					width: inherit;
+					margin: 0;
+					display: list-item;
+					float: left;
+					height: 25px;
+
+					button {
+						opacity: 0;
+					}
+				}
+			}
+
+			.caption {
+				text-align: left;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				line-height: 2;
+				font-size: 13px;
+				color: white;
+				background: rgba(0, 0, 0, 0.5);
+				text-indent: 5px;
+			}
+		}
+	}
+
+	.content {
+		margin-top: 25px;
+
+		header {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(4);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(3);
+			}
+
+			h1, h2, {
+				color: $brand-primary;
+				font-size: 40px;
+				text-transform: uppercase;
+				line-height: 1;
+				margin: 0;
+			}
+		}
+
+		.intro {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(4);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(5);
+			}
+
+			p {
+				line-height: 1.2;
+				font-size: 17px;
+			}
+		}
+	}
+}
+

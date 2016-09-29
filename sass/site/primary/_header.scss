@@ -10,6 +10,10 @@
 	z-index: 9999;
 	background: white;
 
+	.table {
+		position: relative;
+	}
+
 	.site-branding, {
 		width: 100%;
 
@@ -47,10 +51,12 @@
 	height: 100vh;
 	background: rgba(0,110,115,0.8);
 	opacity: 0;
+	display: none;
 
 	transition: top 300ms ease-in-out, opacity 300ms ease-in-out;
 
 	&.reveal {
+		display: block;
 		bottom: 0;
 		opacity: 1;
 	}

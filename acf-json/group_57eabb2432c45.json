@@ -1,12 +1,12 @@
 {
-    "key": "group_57cd81943fe15",
-    "title": "Map",
+    "key": "group_57eabb2432c45",
+    "title": "Why Not Try",
     "fields": [
         {
-            "key": "field_57cd81999c342",
-            "label": "POI Map",
-            "name": "poi_map",
-            "type": "google_map",
+            "key": "field_57eabb2d38930",
+            "label": "Why Not Try Text",
+            "name": "why_not_try_text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,18 +15,18 @@
                 "class": "",
                 "id": ""
             },
-            "center_lat": "",
-            "center_lng": "",
-            "zoom": "",
-            "height": ""
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "poi"
+                "value": "discover-poi.php"
             }
         ]
     ],
@@ -38,5 +38,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1474991951
+    "modified": 1475001181
 }

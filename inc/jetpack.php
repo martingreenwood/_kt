@@ -15,10 +15,17 @@
  */
 function _kt_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
+
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'render'    => '_kt_infinite_scroll_render',
-		'footer'    => 'page',
+		'container' 	 => 'searchcontiner',
+		'footer' 		 => false,
+	    'type'           => 'scroll',
+	    'footer_widgets' => false,
+	    'container'      => 'content',
+	    'wrapper'        => true,
+	    'render'         => false,
+	    'posts_per_page' => '11',
+
 	) );
 
 	// Add theme support for Responsive Videos.

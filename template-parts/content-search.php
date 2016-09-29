@@ -10,21 +10,20 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if(has_post_thumbnail(  )): ?>
+		<?php the_post_thumbnail( 'hp-thumb' ); ?>
+	<?php else: ?>
+		<img src="http://placehold.it/410x275" alt="">
+	<?php endif; ?>
+
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php _kt_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+	</header>
 
 	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+		<p><?php echo excerpt('17'); ?></p>
+	</div>
 
-	<footer class="entry-footer">
-		<?php _kt_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+	<a href="<?php the_permalink(); ?>">Read More...</a>
+
+</article>
