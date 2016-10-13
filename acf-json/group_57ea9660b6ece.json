@@ -26,7 +26,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "discover-poi.php"
+                "value": "info-page.php"
             }
         ]
     ],
@@ -37,6 +37,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "",
-    "modified": 1474992030
+    "description": "Info page",
+    "modified": 1476346498
 }

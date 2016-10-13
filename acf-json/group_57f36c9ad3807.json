@@ -1,11 +1,29 @@
 {
-    "key": "group_57ea418e5369c",
-    "title": "Content Repeater",
+    "key": "group_57f36c9ad3807",
+    "title": "Essentials Grid",
     "fields": [
         {
-            "key": "field_57ea41c6ba9fb",
-            "label": "",
-            "name": "cr_repeater",
+            "key": "field_57f36ce21857a",
+            "label": "Essentials Intro",
+            "name": "essentials_intro",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
+            "key": "field_57f36caa18575",
+            "label": "Essentials Grid",
+            "name": "essentials_grid",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -18,13 +36,13 @@
             "collapsed": "",
             "min": "",
             "max": "",
-            "layout": "block",
+            "layout": "table",
             "button_label": "Add Row",
             "sub_fields": [
                 {
-                    "key": "field_57ea41dcba9fc",
+                    "key": "field_57f36cb218576",
                     "label": "Image",
-                    "name": "cr_image",
+                    "name": "image",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -34,8 +52,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "id",
-                    "preview_size": "medium",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -46,9 +64,28 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_57ea41e7ba9fd",
-                    "label": "Caption",
-                    "name": "cr_caption",
+                    "key": "field_57f36cbe18577",
+                    "label": "Heading",
+                    "name": "heading",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_57f36cc618578",
+                    "label": "Intro",
+                    "name": "intro",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -65,10 +102,10 @@
                     "new_lines": "wpautop"
                 },
                 {
-                    "key": "field_57ea4201ba9fe",
-                    "label": "Content",
-                    "name": "cr_content",
-                    "type": "wysiwyg",
+                    "key": "field_57f36cd218579",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "page_link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -77,10 +114,15 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1
+                    "post_type": [
+
+                    ],
+                    "taxonomy": [
+
+                    ],
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
                 }
             ]
         }
@@ -88,16 +130,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "page",
                 "operator": "==",
-                "value": "default"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "info-page.php"
+                "value": "25"
             }
         ]
     ],
@@ -108,6 +143,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "info template and default tempalate pages",
-    "modified": 1476346456
+    "description": "Plan Your Visit page",
+    "modified": 1476098657
 }

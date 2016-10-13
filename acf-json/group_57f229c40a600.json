@@ -1,9 +1,9 @@
 {
-    "key": "group_57e250df8b191",
-    "title": "Feature Pages",
+    "key": "group_57f229c40a600",
+    "title": "Feature Pages (Discover)",
     "fields": [
         {
-            "key": "field_57e25350b7fed",
+            "key": "field_57f229c40df58",
             "label": "Feature One",
             "name": "feature_one",
             "type": "post_object",
@@ -27,26 +27,7 @@
             "ui": 1
         },
         {
-            "key": "field_57fe1ab810330",
-            "label": "Feature One Intro",
-            "name": "feature_one_intro",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop"
-        },
-        {
-            "key": "field_57e2536eb7fee",
+            "key": "field_57f229c40dfe2",
             "label": "Feature Two",
             "name": "feature_two",
             "type": "post_object",
@@ -70,26 +51,7 @@
             "ui": 1
         },
         {
-            "key": "field_57fe1adb10331",
-            "label": "Feature Two Intro",
-            "name": "feature_two_intro",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop"
-        },
-        {
-            "key": "field_57e2537eb7fef",
+            "key": "field_57f229c40e069",
             "label": "Feature Three",
             "name": "feature_three",
             "type": "post_object",
@@ -113,26 +75,7 @@
             "ui": 1
         },
         {
-            "key": "field_57fe1aee10332",
-            "label": "Feature Three Intro",
-            "name": "feature_three_intro",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop"
-        },
-        {
-            "key": "field_57e25389b7ff0",
+            "key": "field_57f229c40e115",
             "label": "Feature Four",
             "name": "feature_four",
             "type": "post_object",
@@ -156,26 +99,7 @@
             "ui": 1
         },
         {
-            "key": "field_57fe1afb10333",
-            "label": "Feature Four Intro",
-            "name": "feature_four_intro",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop"
-        },
-        {
-            "key": "field_57e25391b7ff1",
+            "key": "field_57f229c40e1a1",
             "label": "Feature Five",
             "name": "feature_five",
             "type": "post_object",
@@ -199,10 +123,10 @@
             "ui": 1
         },
         {
-            "key": "field_57fe1b0b10334",
-            "label": "Feature Five Intro",
-            "name": "feature_five_intro",
-            "type": "textarea",
+            "key": "field_57f229d5e38e3",
+            "label": "Feature Six",
+            "name": "feature_six",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -211,14 +135,43 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop"
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
         },
         {
-            "key": "field_57e253afb7ff2",
+            "key": "field_57f229d4e38e2",
+            "label": "Feature Seven",
+            "name": "feature_seven",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_57f229c40e233",
             "label": "Feature Text",
             "name": "feature_text",
             "type": "wysiwyg",
@@ -239,9 +192,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "page_type",
                 "operator": "==",
-                "value": "landing-page.php"
+                "value": "front_page"
             }
         ]
     ],
@@ -252,6 +205,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "Info LP",
-    "modified": 1476270886
+    "description": "For Homepage",
+    "modified": 1475488280
 }

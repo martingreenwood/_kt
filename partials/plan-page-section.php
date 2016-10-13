@@ -1,7 +1,3 @@
-<header>
-	<h2>Plan Your Visit</h2>
-</header>
-
 <article class="map-box">
 
 	<div class="intro">
@@ -25,11 +21,11 @@
 					$poi_location = get_field('poi_map'); ?>
 					<a class="map_link" href="#" rel="<?php echo $poi_location['lat']; ?>, <?php echo $poi_location['lng']; ?>"><?php the_title(); ?></a>
 				<?php 
-				endwhile; 
-				wp_reset_postdata(); wp_reset_query(); ?>
+				endwhile; ?>
 				</dd>
 			<?php endforeach;
 		endforeach;
+		wp_reset_postdata(); wp_reset_query();
 		?>
 		</dl>
 

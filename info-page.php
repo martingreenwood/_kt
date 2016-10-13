@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Discover POI
+ * Template Name: Info Page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -87,7 +87,6 @@ get_header(); ?>
 
 					<?php 
 					$image = get_sub_field('cr_image'); $size = 'full';
-
 					if( $image ) {
 					echo wp_get_attachment_image( $image, $size );
 					}

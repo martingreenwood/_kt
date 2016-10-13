@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Discover Landing
+ * Template Name: Top Landing Page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -79,6 +79,7 @@ get_header(); ?>
 					endwhile;
 
 					$featOne = get_field('feature_one');
+					if ($featOne):
 					$featOneID = get_post_thumbnail_id( $featOne->ID );
 					$featOneURL = wp_get_attachment_image_src( $featOneID, 'full' );
 					?>
@@ -87,16 +88,31 @@ get_header(); ?>
 							<div class="table">
 								<div class="cell bottom">
 									<span><?php echo get_the_title( $featOne->ID ); ?></span>
+									<div class="excerpt">
+									<?php 
+										if (get_field( 'feature_one_intro' )):
+											$excerpt = get_field( 'feature_one_intro' );
+										else:
+											$excerpt = "<p>".get_the_excerpt( $featOne->ID )."</p>"; 
+										endif;
+										echo $excerpt; 
+									?>
+									</div>
 								</div>
 							</div>
 						</a>
 					</article>
+					<?php else: ?>
+					<article class="one" style="background-image: url(//upload.wikimedia.org/wikipedia/commons/2/24/Kendal-Cumbria-4.jpg);">
+					</article>
+					<?php endif; ?>
 
 				</div>
 
 				<div class="column eq-height two">
 					<?php
 					$featTwo = get_field('feature_two');
+					if($featTwo):
 					$featTwoID = get_post_thumbnail_id( $featTwo->ID );
 					$featTwoURL = wp_get_attachment_image_src( $featTwoID, 'full' );
 					?>
@@ -105,10 +121,25 @@ get_header(); ?>
 							<div class="table">
 								<div class="cell bottom">
 									<span><?php echo get_the_title( $featTwo->ID ); ?></span>
+									<div class="excerpt">
+									<?php 
+										if (get_field( 'feature_two_intro' )):
+											$excerpt = get_field( 'feature_two_intro' );
+										else:
+											$excerpt = "<p>".get_the_excerpt( $featTwo->ID )."</p>"; 
+										endif;
+										echo $excerpt; 
+									?>
+									</div>
 								</div>
 							</div>
 						</a>
 					</article>
+					<?php else: ?>
+					<article class="two" style="background-image: url(//upload.wikimedia.org/wikipedia/commons/2/24/Kendal-Cumbria-4.jpg);">
+					</article>
+					<?php endif; ?>
+
 				</div>
 
 			</div>
@@ -119,6 +150,7 @@ get_header(); ?>
 				<div class="column one">
 					<?php
 					$featThree = get_field('feature_three');
+					if($featThree):
 					$featThreeID = get_post_thumbnail_id( $featThree->ID );
 					$featThreeURL = wp_get_attachment_image_src( $featThreeID, 'full' );
 					?>
@@ -127,10 +159,25 @@ get_header(); ?>
 							<div class="table">
 								<div class="cell bottom">
 									<span><?php echo get_the_title( $featThree->ID ); ?></span>
+									<div class="excerpt">
+									<?php 
+										if (get_field( 'feature_three_intro' )):
+											$excerpt = get_field( 'feature_three_intro' );
+										else:
+											$excerpt = "<p>".get_the_excerpt( $featThree->ID )."</p>"; 
+										endif;
+										echo $excerpt; 
+									?>
+									</div>
 								</div>
 							</div>
 						</a>
 					</article>
+					<?php else: ?>
+					<article class="three" style="background-image: url(//upload.wikimedia.org/wikipedia/commons/2/24/Kendal-Cumbria-4.jpg);">
+					</article>
+					<?php endif; ?>
+
 				</div>
 				
 				<div class="column two">
@@ -138,6 +185,7 @@ get_header(); ?>
 					<div class="left eq-height">
 						<?php
 						$featFour = get_field('feature_four');
+						if($featFour):
 						$featFourID = get_post_thumbnail_id( $featFour->ID );
 						$featFourURL = wp_get_attachment_image_src( $featFourID, 'full' );
 						?>
@@ -146,15 +194,31 @@ get_header(); ?>
 								<div class="table">
 									<div class="cell bottom">
 										<span><?php echo get_the_title( $featFour->ID ); ?></span>
+										<div class="excerpt">
+										<?php 
+											if (get_field( 'feature_four_intro' )):
+												$excerpt = get_field( 'feature_four_intro' );
+											else:
+												$excerpt = "<p>".get_the_excerpt( $featFour->ID )."</p>"; 
+											endif;
+											echo $excerpt; 
+										?>
+										</div>
 									</div>
 								</div>
 							</a>
 						</article>
+						<?php else: ?>
+						<article class="two" style="background-image: url(//upload.wikimedia.org/wikipedia/commons/2/24/Kendal-Cumbria-4.jpg);">
+						</article>
+						<?php endif; ?>
+
 					</div>
 					
 					<div class="right eq-height">
 						<?php
 						$featFive = get_field('feature_five');
+						if($featFive):
 						$featFiveID = get_post_thumbnail_id( $featFive->ID );
 						$featFiveURL = wp_get_attachment_image_src( $featFiveID, 'full' );
 						?>
@@ -163,10 +227,24 @@ get_header(); ?>
 								<div class="table">
 									<div class="cell bottom">
 										<span><?php echo get_the_title( $featFive->ID ); ?></span>
+										<div class="excerpt">
+										<?php 
+											if (get_field( 'feature_five_intro' )):
+												$excerpt = get_field( 'feature_five_intro' );
+											else:
+												$excerpt = "<p>".get_the_excerpt( $featFive->ID )."</p>"; 
+											endif;
+											echo $excerpt; 
+										?>
+										</div>
 									</div>
 								</div>
 							</a>
 						</article>
+						<?php else: ?>
+						<article class="two" style="background-image: url(//upload.wikimedia.org/wikipedia/commons/2/24/Kendal-Cumbria-4.jpg);">
+						</article>
+						<?php endif; ?>
 
 						<article class="six">
 							<?php echo get_field('feature_text'); ?>
@@ -194,19 +272,30 @@ get_header(); ?>
 		</div>
 	</section>
 
+	<?php $feed = get_field('feed'); ?>
+
+	<?php if ($feed != 'none' || !isset($feed)): ?>
+
 	<section class="break">
 		<div class="container">
 			<hr>
 		</div>
 	</section>
 
-	<section id="whatson">
+	<section id="whatson" class="<?php echo $feed; ?>">
 		<div class="container">
 
-		<?php get_template_part( 'partials/whatson', 'section' ); ?>
+		<?php if ($feed == 'events'): ?>
+			<?php get_template_part( 'partials/whatson', 'section' ); ?>
+		<?php elseif ($feed == 'businesses'): ?>
+			<?php get_template_part( 'partials/businesses', 'section' ); ?>
+		<?php elseif ($feed == 'clubs'): ?>
+			<?php get_template_part( 'partials/clubs', 'section' ); ?>
+		<?php endif; ?>
 
 		</div>
 	</section>
+	<?php endif; ?>
 
 <?php
 get_footer();

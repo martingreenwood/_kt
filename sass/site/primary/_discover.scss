@@ -2,7 +2,7 @@
 =            Discover            =
 ================================*/
 
-.page-template-discover-landing-page {
+.page-template-discover-landing-page, .page-template-top-landing-page, .page-template-landing-page {
 
 	#primary {
 
@@ -154,6 +154,34 @@
 						display: block;
 						padding: 5px;
 						font-size: 14px;
+						font-weight: 800;
+					}
+
+					.excerpt {
+						max-height: 0;
+						overflow: hidden;
+						transition: max-height $base-transition;
+
+						background: rgba(0,0,0,0.7);
+						color: white;
+						width: 100%;
+						display: block;
+						padding: 0 5px;
+						font-size: 14px;
+
+						p {
+							color: #eeeeee;
+							color: inherit;
+							font-size: inherit;
+							margin: 0 0 5px 0;
+						}
+					}
+
+					&:hover {
+						.excerpt {
+							max-height: 500px;
+							transition: max-height $base-transition;
+						}
 					}
 				}
 				
@@ -181,6 +209,14 @@
 						@include media($large-screen-up) {
 							@include span-columns(3 of 6);
 						}
+					}
+				}
+
+				.six {
+
+					a {
+						position: relative;
+						display: inline;
 					}
 				}
 			}

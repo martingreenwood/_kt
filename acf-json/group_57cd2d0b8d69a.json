@@ -77,7 +77,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "discover-landing-page.php"
+                "value": "landing-page.php"
             }
         ]
     ],
@@ -88,6 +88,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "explore section for homepage",
-    "modified": 1474969820
+    "description": "slider with text section for templates",
+    "modified": 1476099007
 }

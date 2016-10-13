@@ -9,47 +9,125 @@
 			<aside class="text">
 				<p>Lorem ipsum esterio dolor sit amet, consectetur adipicing elit etiam vitae. porta at, tristique elitas purus nulla, posuere acsia esi estibulum rutrum elit eros luctus.</p>
 			</aside>
-			
-			<aside class="image" style="background-image: url(http://local.kendal.co.uk/wp-content/uploads/2016/08/Kendal-Castle-Dairy-Food-Drink.jpg);">
-				<div class="caption">Arts, Music &amp; Cinema</div>
+
+			<?php
+			$feature_one = get_field('feature_one');
+			$feature_oneID = get_post_thumbnail_id( $feature_one->ID );
+			$feature_oneURL = wp_get_attachment_image_src( $feature_oneID, 'full' );
+			?>
+			<aside class="image" style="background-image: url(<?php echo $feature_oneURL[0]; ?>);">
+				<a href="<?php echo get_permalink( $feature_one->ID ); ?>">
+					<div class="table">
+						<div class="cell bottom">
+							<span><?php echo get_the_title( $feature_one->ID ); ?></span>
+						</div>
+					</div>
+				</a>
 			</aside>
-			
-			<aside class="image" style="background-image: url(http://local.kendal.co.uk/wp-content/uploads/2016/08/Kendal-Castle-Dairy-Food-Drink.jpg);">
-				<div class="caption">Great Outdoors</div>
+
+			<?php
+			$feature_two = get_field('feature_two');
+			$feature_twoID = get_post_thumbnail_id( $feature_two->ID );
+			$feature_twoURL = wp_get_attachment_image_src( $feature_twoID, 'full' );
+			?>
+			<aside class="image" style="background-image: url(<?php echo $feature_twoURL[0]; ?>);">
+				<a href="<?php echo get_permalink( $feature_two->ID ); ?>">
+					<div class="table">
+						<div class="cell bottom">
+							<span><?php echo get_the_title( $feature_two->ID ); ?></span>
+						</div>
+					</div>
+				</a>
 			</aside>
-			
-			<aside class="image" style="background-image: url(http://local.kendal.co.uk/wp-content/uploads/2016/08/Kendal-Castle-Dairy-Food-Drink.jpg);">
-				<div class="caption">Food &amp; Drink</div>
+
+			<?php
+			$feature_three = get_field('feature_three');
+			$feature_threeID = get_post_thumbnail_id( $feature_three->ID );
+			$feature_threeURL = wp_get_attachment_image_src( $feature_threeID, 'full' );
+			?>
+			<aside class="image" style="background-image: url(<?php echo $feature_threeURL[0]; ?>);">
+				<a href="<?php echo get_permalink( $feature_three->ID ); ?>">
+					<div class="table">
+						<div class="cell bottom">
+							<span><?php echo get_the_title( $feature_three->ID ); ?></span>
+						</div>
+					</div>
+				</a>
 			</aside>
+
 		</div>
 		<div class="column">
-			<aside class="image full" style="background-image: url(http://local.kendal.co.uk/wp-content/uploads/2016/08/Kendal-Castle-Dairy-Food-Drink.jpg);">
-				<div class="caption">Events &amp; Festivals</div>
+			<?php
+			$feature_four = get_field('feature_four');
+			$feature_fourID = get_post_thumbnail_id( $feature_four->ID );
+			$feature_fourURL = wp_get_attachment_image_src( $feature_fourID, 'full' );
+			?>
+			<aside class="image full" style="background-image: url(<?php echo $feature_fourURL[0]; ?>);">
+				<a href="<?php echo get_permalink( $feature_four->ID ); ?>">
+					<div class="table">
+						<div class="cell bottom">
+							<span><?php echo get_the_title( $feature_four->ID ); ?></span>
+						</div>
+					</div>
+				</a>
 			</aside>
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="column">
-			<aside class="image full" style="background-image: url(http://local.kendal.co.uk/wp-content/uploads/2016/08/Kendal-Castle-Dairy-Food-Drink.jpg);">
-				<div class="caption">Activities for all ages</div>
+			<?php
+			$feature_five = get_field('feature_five');
+			$feature_fiveID = get_post_thumbnail_id( $feature_five->ID );
+			$feature_fiveURL = wp_get_attachment_image_src( $feature_fiveID, 'full' );
+			?>
+			<aside class="image full" style="background-image: url(<?php echo $feature_fiveURL[0]; ?>);">
+				<a href="<?php echo get_permalink( $feature_five->ID ); ?>">
+					<div class="table">
+						<div class="cell bottom">
+							<span><?php echo get_the_title( $feature_five->ID ); ?></span>
+						</div>
+					</div>
+				</a>
 			</aside>
 		</div>
 		<div class="column">
 			<div class="half">
-				<aside class="image tall" style="margin-bottom: 0; background-image: url(http://local.kendal.co.uk/wp-content/uploads/2016/08/Kendal-Castle-Dairy-Food-Drink.jpg);">
-					<div class="caption">Shopping</div>
+				<?php
+				$feature_six = get_field('feature_six');
+				$feature_sixID = get_post_thumbnail_id( $feature_six->ID );
+				$feature_sixURL = wp_get_attachment_image_src( $feature_sixID, 'full' );
+				?>
+				<aside class="image tall" style="background-image: url(<?php echo $feature_sixURL[0]; ?>);">
+					<a href="<?php echo get_permalink( $feature_six->ID ); ?>">
+						<div class="table">
+							<div class="cell bottom">
+								<span><?php echo get_the_title( $feature_six->ID ); ?></span>
+							</div>
+						</div>
+					</a>
 				</aside>
 			</div>
 	
 			<div class="half">
-				<aside class="image" style="background-image: url(http://local.kendal.co.uk/wp-content/uploads/2016/08/Kendal-Castle-Dairy-Food-Drink.jpg);">
-					<div class="caption">History &amp; Heritage</div>
+				<?php
+				$feature_seven = get_field('feature_seven');
+				$feature_sevenID = get_post_thumbnail_id( $feature_seven->ID );
+				$feature_sevenURL = wp_get_attachment_image_src( $feature_sevenID, 'full' );
+				?>
+				<aside class="image" style="background-image: url(<?php echo $feature_sevenURL[0]; ?>);">
+					<a href="<?php echo get_permalink( $feature_seven->ID ); ?>">
+						<div class="table">
+							<div class="cell bottom">
+								<span><?php echo get_the_title( $feature_seven->ID ); ?></span>
+							</div>
+						</div>
+					</a>
 				</aside>
+
 				
 				<aside class="text">
-					<h3>GET YOUR GUIDE</h3>
-					<p>Click here to down your official guide to everything that’s on offer in Kendal.</p>
+					<?php the_field('feature_text'); ?>
 				</aside>
 			</div>
 		</div>

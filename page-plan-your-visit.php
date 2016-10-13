@@ -1,5 +1,12 @@
 <?php
 /**
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package _kt
@@ -26,6 +33,10 @@ get_header(); ?>
 				<?php endif; ?>
 			</div>
 			<?php endforeach; ?>
+			<?php else: ?>
+				<div class="slide">
+					<?php the_post_thumbnail('full'); ?>
+				</div>
 			<?php endif; ?>
 		</div>
 		<div class="arrow-box">
@@ -56,61 +67,22 @@ get_header(); ?>
 		</div>
 	</section>
 
-	<section class="title">
+	<section id="primary">
 		<div class="container">
-			<h1><?php the_title(); ?></h1>
+			<header>
+				<h2><?php the_title(); ?></h2>
+			</header>
+
+			<?php
+			while ( have_posts() ) : the_post();
+
+				get_template_part( 'template-parts/content', 'page-alt' );
+
+			endwhile; // End of the loop.
+			?>
+
 		</div>
 	</section>
-
-	<div id="primary" class="content-area container">
-
-		<div class="row">
-			<div class="column">
-			<?php 
-			while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/content', 'page-alt' );
-			endwhile; 
-			?>
-			</div>
-		</div>
-
-		<main id="main" class="site-main row" role="main">
-				
-			<div class="column">
-
-				<?php 
-				if( have_rows('cr_repeater') ): while ( have_rows('cr_repeater') ) : the_row(); 
-					?>
-					<article class="row">
-
-					<?php 
-					$image = get_sub_field('cr_image'); $size = 'full';
-					if( $image ) {
-					echo wp_get_attachment_image( $image, $size );
-					}
-					?>
-
-			        <div class="caption">
-			        	<?php the_sub_field('cr_caption'); ?> 
-			        </div>
-
-			        <div class="copy">
-			        	<?php the_sub_field('cr_content'); ?>
-			        </div>
-
-			        </article>
-			       <?php
-			    endwhile; endif; 
-				?>
-
-			</div>
-
-			<aside>
-				
-			</aside>
-
-		</main>
-	</div>
 
 	<section class="break">
 		<div class="container">
@@ -118,13 +90,28 @@ get_header(); ?>
 		</div>
 	</section>
 
-	<section id="share">
+	<section id="plan">
 		<div class="container">
 
-		<?php get_template_part( 'partials/share', 'section' ); ?>
+		<?php get_template_part( 'partials/plan-page', 'section' ); ?>
 
 		</div>
 	</section>
+
+	<section class="break">
+		<div class="container">
+			<hr>
+		</div>
+	</section>
+
+	<section id="essentials">
+		<div class="container">
+
+		<?php get_template_part( 'partials/essentials', 'section' ); ?>
+
+		</div>
+	</section>
+
 
 <?php
 get_footer();

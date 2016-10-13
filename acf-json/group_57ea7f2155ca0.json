@@ -1,6 +1,6 @@
 {
     "key": "group_57ea7f2155ca0",
-    "title": "Opening Times \/ ETC",
+    "title": "Opening Times",
     "fields": [
         {
             "key": "field_57ea7f2f9ea99",
@@ -27,7 +27,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "discover-poi.php"
+                "value": "info-page.php"
             }
         ]
     ],
@@ -38,6 +38,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "",
-    "modified": 1474992108
+    "description": "for info pages",
+    "modified": 1476346494
 }

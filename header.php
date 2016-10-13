@@ -25,7 +25,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="<?php echo $pagename; ?>">
 <div id="page" class="site">
 
 

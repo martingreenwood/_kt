@@ -1,10 +1,29 @@
 {
     "key": "group_57cd75bc4a6c9",
-    "title": "Plan Your Visit Map",
+    "title": "Plan Your Visit",
     "fields": [
         {
+            "key": "field_57f364e4b7145",
+            "label": "Intro",
+            "name": "planning_intro",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop"
+        },
+        {
             "key": "field_57cd75cb98aa6",
-            "label": "",
+            "label": "Map Center",
             "name": "planning_map",
             "type": "google_map",
             "instructions": "",
@@ -37,6 +56,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "",
-    "modified": 1473082864
+    "description": "for plan map defults in theme options",
+    "modified": 1476098884
 }
