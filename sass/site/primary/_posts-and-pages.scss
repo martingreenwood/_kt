@@ -317,3 +317,58 @@
 		}
 	}
 }
+
+/*============================================
+=            SOCIAL WALL TEMPLATE            =
+============================================*/
+
+.page-template-template-social {
+
+	#primary {
+
+		#main {
+			padding: 50px 0;
+		}
+
+		.logo {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(2);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(1.5);
+			}
+		}
+		.column {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(6);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(9);
+				@include shift(1.5);
+			}
+
+			h1 {
+				font-size: 26px;
+				text-transform: uppercase;
+				margin: 0 0 10px 0;
+				color: $brand-primary;
+			}
+		}
+	}
+
+	#social {
+		#timeline_wall1.sboard.sb-modern2 {
+			.sb-item {
+				.sb-info { 
+					a {
+						line-height: 25px;
+					}
+				}
+			}
+		}
+	}
+}

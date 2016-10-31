@@ -538,6 +538,24 @@ a:hover, a:active { outline: 0; }
 #whatson .content header { margin-top: 25px; margin-bottom: 25px; }
 #whatson .content header h2 { color: #1ca75e; font-size: 40px; text-transform: uppercase; line-height: 1; margin: 0; }
 
+/*============================================
+=            SOCIAL WALL TEMPLATE            =
+============================================*/
+.page-template-template-social #primary #main { padding: 50px 0; }
+.page-template-template-social #primary .logo { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+.page-template-template-social #primary .logo:last-child { margin-right: 0; }
+@media screen and (min-width: 480px) { .page-template-template-social #primary .logo { float: left; display: block; margin-right: 3.2258064516%; width: 22.5806451613%; }
+  .page-template-template-social #primary .logo:last-child { margin-right: 0; } }
+@media screen and (min-width: 1099px) { .page-template-template-social #primary .logo { float: left; display: block; margin-right: 2.1276595745%; width: 10.6382978723%; }
+  .page-template-template-social #primary .logo:last-child { margin-right: 0; } }
+.page-template-template-social #primary .column { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+.page-template-template-social #primary .column:last-child { margin-right: 0; }
+@media screen and (min-width: 480px) { .page-template-template-social #primary .column { float: left; display: block; margin-right: 3.2258064516%; width: 74.1935483871%; }
+  .page-template-template-social #primary .column:last-child { margin-right: 0; } }
+@media screen and (min-width: 1099px) { .page-template-template-social #primary .column { float: left; display: block; margin-right: 2.1276595745%; width: 74.4680851064%; margin-left: 12.7659574468%; }
+  .page-template-template-social #primary .column:last-child { margin-right: 0; } }
+.page-template-template-social #primary .column h1 { font-size: 26px; text-transform: uppercase; margin: 0 0 10px 0; color: #1ca75e; }
+
 /*================================
 =            HomePage            =
 ================================*/
