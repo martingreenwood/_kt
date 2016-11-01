@@ -89,8 +89,8 @@ get_header(); ?>
 
 			echo social_stream(
 				array(
-					'id' => '1',
-					'type' => 'wall',
+					'id' 	=> '1',
+					'type' 	=> 'wall',
 					'network' => array(
 						'facebook' => array(
 							'facebook_id_1' => array(
@@ -101,7 +101,10 @@ get_header(); ?>
 						'twitter' => array(                
 							'twitter_id_3' => array(
 								'#kendalcumbria', // Twitter #hashtag
-								'#kendal' // Twitter #hastag
+								'#mintcake', // Twitter #hastag
+								'#jumpintokendal', // Twitter #hastag
+								'#kendal16', // Twitter #hastag
+								'#thekendalcard', // Twitter #hastag
 							),
 						),
 						'instagram' => array(
@@ -110,12 +113,14 @@ get_header(); ?>
 							)
 						)
 					),
-					'theme' => 'sb-modern2-light',
+					'theme' 	=> 'sb-modern2-light',
 					'itemwidth' => 250,
-					'results' => '',
-					'debuglog' => 0,
+					'results' 	=> '50',
+					'debuglog' 	=> true,
+					'cache' 	=> 60,
 					'add_files' => true,
-					'filters' => false
+					'loadmore' 	=> false,
+					'filters' 	=> false,
 				)
 			);
 		?>

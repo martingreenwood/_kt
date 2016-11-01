@@ -109,6 +109,7 @@ function _kt_scripts() {
 	wp_enqueue_style( '_kt-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jquery' );
+
 	wp_enqueue_script( '_ky_gmaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDC6NXY8XZrS6mELrD8_Dj3Hg_OTqHret8', array(), '', true );
 	wp_enqueue_script( '_kt_fa', '//use.fontawesome.com/7390ec371d.js', array(), '', true);
 	
@@ -187,7 +188,6 @@ function jptweak_remove_share() {
         remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
     }
 }
- 
 add_action( 'loop_start', 'jptweak_remove_share' );
 
 
