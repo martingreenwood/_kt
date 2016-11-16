@@ -28,3 +28,6 @@ $_['added_photos'] = 'Tilføjet fotos';
 $_['shared_story'] = 'Fælles historie';
 $_['created_note'] = 'Opret note';
 $_['mobile_status_update'] = 'Mobil statusopdatering';
+$_['added_video'] = 'Tilføjet video';
+$_['wall_post'] = 'Wall indlæg';
+$_['created_event'] = 'Created event';

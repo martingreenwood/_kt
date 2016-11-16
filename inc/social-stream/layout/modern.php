@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP Social Stream 2.5
+ * PHP Social Stream 2.5.1
  * Copyright 2015 Axent Media (axentmedia@gmail.com)
  */
 
@@ -9,7 +9,7 @@ class ss_modern_layout {
     public $target, $output;
     
     function create_item( $feed_class, $param, $attr = array(), $output = array(), $sbi = 0 ) {
-        $iconSocial = ( @$param['icon'][0] ) ? '<img src="'.$param['icon'][0].'" class="origin-flag" style="vertical-align:middle">' : '<span class="origin-flag sb-' . $feed_class . '"><i class="sb-icon sb-' . $feed_class . '"></i></span>';
+        $iconSocial = ( @$param['icon'][0] ) ? '<img src="'.$param['icon'][0].'" class="origin-flag" style="vertical-align:middle" alt="">' : '<span class="origin-flag sb-' . $feed_class . '"><i class="sb-icon sb-' . $feed_class . '"></i></span>';
         $playstate = (@$param['play']) ? '<div class="sb-playstate"></div>' : '';
         $user_title = (@$param['user']['title']) ? $param['user']['title'] : $param['user']['name'];
         $imglayout = (@$attr['layout_image']) ? ' sb-'.$attr['layout_image'] : '';
@@ -47,7 +47,7 @@ class ss_modern_layout {
             } else {
                 if (@$param['user']['image'] && @$attr['layout_user'] == 'usernopic') {
                     $cropclass .= ' sb-userimg';
-                    $thumb = '<div class="'.$cropclass.'"><img src="' . $param['user']['image'] . '" alt=""><br /><span>'.$user_title.'</span></div>';
+                    $thumb = '<div class="'.$cropclass.'"><img src="' . $param['user']['image'] . '" alt="'.$user_title.'"><br /><span>'.$user_title.'</span></div>';
                 }
             }
             if (@$thumb)
@@ -71,7 +71,7 @@ class ss_modern_layout {
 				}
                 $sbthumb .= '
                 <div class="sb-thumb">
-                    <a href="' . $aurl . '"'.@$iframe.$datasize.$this->target.'><img data-original="' . htmlspecialchars($param['thumb']) . '" alt="">'.$playstate.'</a>
+                    <a href="' . $aurl . '"'.@$iframe.$datasize.$this->target.'><img data-original="' . htmlspecialchars($param['thumb']) . '" src="'.SB_PATH.'public/img/oval.svg" alt="">'.$playstate.'</a>
                 </div>';
             } else {
                 if (@$attr['carousel'] && @$param['user']['image']) {
@@ -201,7 +201,7 @@ class ss_modern_layout {
         </div>';
         
         if ( $attr['type'] == 'timeline' ) {
-            $icon = ( @$param['icon'][1] ) ? '<img src="'.$param['icon'][1].'" style="vertical-align:middle">' : '<i class="sb-bico sb-wico sb-' . $param['type'] . '"></i>';
+            $icon = ( @$param['icon'][1] ) ? '<img src="'.$param['icon'][1].'" style="vertical-align:middle" alt="">' : '<i class="sb-bico sb-wico sb-' . $param['type'] . '"></i>';
             $out = '
           <div class="timeline-row"'.$idstr.'>
             <div class="timeline-time">
@@ -220,7 +220,7 @@ class ss_modern_layout {
           </div>
         </div>' . "\n";
         } else {
-            $iconType = ( @$param['icon'][0] ) ? '<img src="'.$param['icon'][0].'" style="vertical-align:middle">' : '<i class="sb-bico sb-' . $param['type'] . '" title="' . ucfirst($param['type']) . '"></i>';
+            $iconType = ( @$param['icon'][0] ) ? '<img src="'.$param['icon'][0].'" style="vertical-align:middle" alt="">' : '<i class="sb-bico sb-' . $param['type'] . '" title="' . ucfirst($param['type']) . '"></i>';
             $tag = ( $attr['type'] != 'feed' || @$attr['carousel'] ) ? 'div' : 'li';
             $out1 = '
             <'.$tag.' class="sb-item sb-' . $feed_class . $sbinline.'"'.$idstr.$inline.'>

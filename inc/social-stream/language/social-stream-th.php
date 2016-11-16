@@ -28,3 +28,6 @@ $_['added_photos'] = 'เพิ่มรูปภาพ';
 $_['shared_story'] = 'เรื่องราวที่ใช้ร่วมกัน';
 $_['created_note'] = 'สร้างบันทึก';
 $_['mobile_status_update'] = 'อัปเดตสถานะมือถือ';
+$_['added_video'] = 'เพิ่มวิดีโอ';
+$_['wall_post'] = 'โพสต์ผนัง';
+$_['created_event'] = 'Created event';

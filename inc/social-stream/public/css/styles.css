@@ -1,5 +1,5 @@
 /**
- * PHP Social Stream 2.5
+ * PHP Social Stream 2.5.1
  * Author: Axent Media
  * Author URI: http://axentmedia.com/
  * Copyright 2015 Axent Media (email: axentmedia@gmail.com)
@@ -383,7 +383,7 @@
 }
 .sboard .sb-content .sb-loading {
     height: 50px;
-    background: url('../img/oval.svg') no-repeat center center transparent;
+    background: url('../img/oval-bg.svg') no-repeat center center transparent;
     background-size: 50px;
     text-align: center;
     margin: 50px 0 0 0;

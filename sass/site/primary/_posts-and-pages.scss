@@ -46,6 +46,21 @@
 	}
 }
 
+.pika-button {
+	text-align: center;
+	background: #f9f9f9;
+
+	&:hover {
+		background: $brand-primary;
+		border-radius: 0;
+	}
+}
+
+.is-today .pika-button {
+	background: $brand-primary;
+	color: white;
+}
+
 /*==============================
 =            SLiDER            =
 ==============================*/
@@ -313,6 +328,81 @@
 				text-transform: uppercase;
 				line-height: 1;
 				margin: 0;
+			}
+		}
+
+		.filters {
+			margin-bottom: 40px;
+			@include row;
+
+			.colunn {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(2.66);
+					@include omega(3n);
+				}
+				@include media($large-screen-up) {
+					@include span-columns(4);
+				}
+			}
+
+			input, select {
+				margin: 0;
+			}
+
+		}
+
+		.events {
+			.event {
+				@include span-columns(1);
+				margin-bottom: 20px;
+
+				@include media($medium-screen-up) {
+					@include span-columns(2.66);
+					@include omega(3n);
+					margin-bottom: 25px;
+				}
+				@include media($large-screen-up) {
+					@include span-columns(4);
+					margin-bottom: 30px;
+				}
+
+				.meta {
+
+					ul {
+						float: left;
+						width: 100%;
+						list-style: none;
+						margin: 0;
+						font-size: 13px;
+
+						li {
+							float: left;
+							width: 30%;
+
+							&.price {
+								text-align-last: right;
+								width: 70%;
+							}
+						}
+					}
+				}
+
+				h3 {
+					color: $brand-primary;
+					border-bottom: 1px solid black;
+					margin: 10px 0 7px 0;
+					padding: 0 0 7px 0;
+					font-size: 17px;
+				}
+
+				a {
+					display: block;
+					margin-top: 10px;
+					color: black;
+					font-size: 14px;
+				}
 			}
 		}
 	}

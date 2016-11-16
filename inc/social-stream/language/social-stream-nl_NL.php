@@ -28,3 +28,6 @@ $_['added_photos'] = 'toegevoegde foto`s';
 $_['shared_story'] = 'gedeelde verhaal';
 $_['created_note'] = 'Maak notitie';
 $_['mobile_status_update'] = 'Mobile status update';
+$_['added_video'] = 'Toegevoegd video';
+$_['wall_post'] = 'prikbordbericht';
+$_['created_event'] = 'Created event';

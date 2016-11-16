@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP Social Stream 2.5
+ * PHP Social Stream 2.5.1
  * Copyright 2015 Axent Media (axentmedia@gmail.com)
  */
 
@@ -9,7 +9,7 @@ class ss_default_slidelayout {
     public $target, $output;
     
     function create_slideitem( $feed_class, $param, $attr = array(), $output = array(), $sbi = 0 ) {
-        $iconSocial = ( @$param['icon'][0] ) ? '<img src="'.$param['icon'][0].'" class="origin-flag" style="vertical-align:middle">' : '<span class="sb-slide-icon sb-' . $feed_class . '"><i class="sb-micon sb-' . $feed_class . '"></i></span>';
+        $iconSocial = ( @$param['icon'][0] ) ? '<img src="'.$param['icon'][0].'" class="origin-flag" style="vertical-align:middle" alt="">' : '<span class="sb-slide-icon sb-' . $feed_class . '"><i class="sb-micon sb-' . $feed_class . '"></i></span>';
         $user_title = (@$param['user']['title']) ? $param['user']['title'] : $param['user']['name'];
         
         $innerthumb = '';

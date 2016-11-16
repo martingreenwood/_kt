@@ -1,12 +1,12 @@
 <?php
 
 /**
- * PHP Social Stream 2.0
+ * PHP Social Stream 2.5.1
  * Copyright 2015 Axent Media (axentmedia@gmail.com)
  */
 
 // Path to script directory (non-relative)
-define( 'SB_PATH', '/wp-content/themes/_kt/inc/social-stream/' );
+define( 'SB_PATH', './social-stream/' );
 
 // Locale & language
 define( 'SB_LOCALE', 'en' );
@@ -77,7 +77,7 @@ define( 'SB_DATE_FORMAT', '%B %e, %Y' );
 define( 'SB_TIME_FORMAT', '%I:%M %p' );
 
 // For Ajax Security
-define( 'SB_NONCE_KEY', '9h6dnot4' ); // Replace this with a different unique phrases
+define( 'SB_NONCE_KEY', '1a2b3c4d' ); // Replace this with a different unique phrases
 
 // Social API connection timeout (sec)
 define( 'SB_API_TIMEOUT', 15 );
@@ -85,25 +85,25 @@ define( 'SB_API_TIMEOUT', 15 );
 // API Credentials
 $GLOBALS['api'] = array(
     'facebook' => array(
-        'facebook_access_token' => '1627040697588831|M20rSVjEJSl1qSz-DeyUIryzRfA' // Replace with your Facebook App Token
+        'facebook_access_token' => '121790231341908|jXKDP3PLen7ZYmYf6nk4ifV5Z8s' // Replace with your Facebook App Token
     ),
     'twitter' => array(
-        'twitter_api_key' => 'ek4yVdNK1FvKPPoDo2esESlPb', // Replace with your Twitter API Key
-        'twitter_api_secret' => 'Q1PGkgvJVCDdm7iAIqfRbGnI1MAVmCeabIhygUmGuvyQJyvxfX', // Replace with your Twitter API Secret
-        'twitter_access_token' => '1365348631-7iIfDpbltLQYl0ST4HwnlJcjB6opvrReq3qgY7v', // Replace with your Twitter OAuth Access Token
-        'twitter_access_token_secret' => 'wnDiQgva3MiWUNPSrBv5aMcxPZfyfDqB5M2eq7Iepjn7P' // Replace with your Twitter OAuth Access Token Secret
+        'twitter_api_key' => 'yujkJkm88AFCSxvfLXY9moFF6', // Replace with your Twitter API Key
+        'twitter_api_secret' => 'PAU885xC6OR2SrKaAWnkP442UlNrX3NoXJgzE6vdOkTLQl72JQ', // Replace with your Twitter API Secret
+        'twitter_access_token' => '909884989-vrWqv5oWb0ltzLNfhHcvtS67r943uZdweQuw0mbY', // Replace with your Twitter OAuth Access Token
+        'twitter_access_token_secret' => 'vFDEgDQ98Oqm8AdNMTVnlCiq61ykU4pCsN2yiZCLMZeqK' // Replace with your Twitter OAuth Access Token Secret
     ),
     'google' => array(
-        'google_api_key' => 'AIzaSyD2_7HEkXMrq8WtvTAo5Smw3qMI3Jb1IAg' // Replace with your Google API KEY
+        'google_api_key' => 'AIzaSyDMRAcDBYDVBBKMle3DhO4Gk-qwfnyMhE0' // Replace with your Google API KEY
     ),
     'instagram' => array(
-        'instagram_access_token' => '49232234.0912694.73bf1af4cfbf49539c74cdf832dc6551' // Replace with your Instagram Access Token
+        'instagram_access_token' => '1434345251.0912694.e05a7ec593bd47f6aba1212ac3d6a7b5' // Replace with your Instagram Access Token
     ),
     'flickr' => array(
-        'flickr_api_key' => '78a5c53c1748f38d2f9b0d4d837d79cd' // Replace with your Flickr API Key
+        'flickr_api_key' => 'e4b0bb48c04a0b6ae60fd846dada774e' // Replace with your Flickr API Key
     ),
     'tumblr' => array(
-        'tumblr_api_key' => 'EPC2dQOAV3cfBpLR66TfykzrnLG2nze5KKpc5QkjVVni1s4YgZ' // Replace with your Tumblr API Key
+        'tumblr_api_key' => 'RmZdHauN285M0JqaiZ0B8U5qM7cWL42eA5DqADDSdQhBxxGd4G' // Replace with your Tumblr API Key
     ),
     'soundcloud' => array(
         'soundcloud_client_id' => '8a6a123e2c4cad997f8c0ac8280ad8cf' // Replace with your SoundCloud Client ID

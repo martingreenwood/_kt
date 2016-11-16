@@ -28,3 +28,6 @@ $_['added_photos'] = 'fotos adicionadas';
 $_['shared_story'] = 'história compartilhada';
 $_['created_note'] = 'Criar nota';
 $_['mobile_status_update'] = 'atualização de status móvel';
+$_['added_video'] = 'video Adicionado';
+$_['wall_post'] = 'pós parede';
+$_['created_event'] = 'Created event';

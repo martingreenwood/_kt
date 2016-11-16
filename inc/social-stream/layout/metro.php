@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP Social Stream 2.5
+ * PHP Social Stream 2.5.1
  * Copyright 2015 Axent Media (axentmedia@gmail.com)
  */
 
@@ -70,7 +70,7 @@ class ss_metro_layout {
 				}
                 $sbthumb = '
                 <div class="sb-thumb">
-                    <a href="' . $aurl . '"'.$iframe.$datasize.$this->target.'><img data-original="' . htmlspecialchars($param['thumb']) . '" alt="">'.$playstate.'</a>
+                    <a href="' . $aurl . '"'.$iframe.$datasize.$this->target.'><img data-original="' . htmlspecialchars($param['thumb']) . '" src="'.SB_PATH.'public/img/oval.svg" alt="">'.$playstate.'</a>
                 </div>';
             }
         }

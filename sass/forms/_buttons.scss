@@ -1,17 +1,21 @@
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button, input[type="button"], input[type="reset"], input[type="submit"] {
 	border: 1px solid;
-	border-color: $base-border-color;
-	background: $background-button;
-	color: $text-color;
-	@include rem(padding, 10px 20px);
+	border-color: $brand-primary;
+	background: $brand-primary;
+	color: white;
+	padding: 8px;
+	line-height: 1.625;
+	border-radius: 0;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
 
 	&:hover {
+		outline: 0;
 	}
 
 	&:active,
 	&:focus {
+		outline: 0;
 	}
 }

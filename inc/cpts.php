@@ -29,6 +29,16 @@ $cpts = array(
 		array('title','editor','thumbnail'),
 		true,
 	),
+
+	// Shows
+	array(
+		'shows',
+		'Shows',
+		'Show',
+		'dashicons-tickets-alt', 
+		array('title','editor','thumbnail'),
+		true,
+	),
 );
 
 

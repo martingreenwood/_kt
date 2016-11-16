@@ -4,11 +4,16 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: $text-input;
-	border: 1px solid $border-input;
+	color: $text-color;
+	border: 1px solid #ddd;
+	border-radius: 0;
+	box-sizing: border-box;
+	box-shadow: none;
+	padding: 8px;
 
-	&:focus {
-
+	&:focus, &:hover {
+		outline: 0;
+		box-shadow: none;
 	}
 }
 
@@ -17,9 +22,27 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	
 }
 
 textarea {
-	
+}
+
+select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	color: $text-color;
+	border: 1px solid #ddd;
+	outline: 0;
+	border-radius: 0;
+	background-color: #ffffff;
+	background-image: url(assets/arrow_drop_down.svg);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: contain;
+	box-sizing: border-box;
+	box-shadow: none;
+	padding: 8px;
+	width: 100%;
 }

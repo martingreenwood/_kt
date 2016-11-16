@@ -28,3 +28,6 @@ $_['added_photos'] = 'додані фотографії';
 $_['shared_story'] = 'Загальна історія';
 $_['created_note'] = 'створити замітку';
 $_['mobile_status_update'] = 'Оновлення мобільного статусу';
+$_['added_video'] = 'Додано відео';
+$_['wall_post'] = 'Стіна пост';
+$_['created_event'] = 'Created event';

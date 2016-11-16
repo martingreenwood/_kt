@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP Social Stream 2.0
+ * PHP Social Stream 2.5.1
  * Copyright 2015 Axent Media (axentmedia@gmail.com)
  */
 

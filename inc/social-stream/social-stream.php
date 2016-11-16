@@ -5,7 +5,7 @@
  * Script URI: http://axentmedia.com/php-social-stream/
  * Description: Combine all your social media network & feed updates (Facebook, Twitter, Google+, Flickr, YouTube, RSS, ...) into one feed and display on your website.
  * Tags: social media, social networks, social feed, social tabs, social wall, social timeline, social stream, php social stream, feed reader, facebook, twitter, google+, tumblr, delicious, pinterest, flickr, instagram, youtube, vimeo, stumbleupon, deviantart, rss, soundcloud, vk, linkedin, vine
- * Version: 2.5
+ * Version: 2.5.3
  * Author: Axent Media
  * Author URI: http://axentmedia.com/
  * License: http://codecanyon.net/licenses/standard
@@ -14,24 +14,23 @@
  */
 
 // Load configuration
-define( 'SB_DIR', realpath(dirname(__FILE__)) );
+define( 'SB_DIR', dirname( __FILE__ ) );
 require( SB_DIR . '/config.php' );
 
 if ( ! defined( 'SB_PATH' ) )
     exit('Path to PHP Social Stream script directory is not defined!');
 
-// For load more
-if ( ! session_id() ) {
-    //session_start();
-}
+// For load more feature
+if ( ! session_id() )
+    session_start();
 
 // Make sure feeds are getting local timestamps
 if ( ! ini_get('date.timezone') )
 	date_default_timezone_set('UTC');
 
 // DateTime localization
-if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN') {
-    setlocale(LC_ALL, ss_win_locale(SB_LOCALE));
+if (strtoupper(substr(PHP_OS, 0, 3) ) == 'WIN') {
+    setlocale(LC_ALL, ss_win_locale(SB_LOCALE) );
 } else {
     setlocale(LC_ALL, SB_LOCALE);
 }
@@ -97,7 +96,7 @@ class SocialStream {
             ),
             'wallsetting' => array(
                 'transition' => '400',
-                'stagger' => '',
+                'stagger' => '0',
                 'originLeft' => 'true',
                 'fixWidth' => 'false',
                 'breakpoints' => array('5', '4', '4', '3', '2', '2', '1'),
@@ -256,12 +255,12 @@ class SocialStream {
                 // calculate breakpoints
                 $bpsizes = array(1200, 960, 768, 600, 480, 320, 180);
                 foreach ($attr['breakpoints'] as $bpkey => $breakpoint) {
-                    $gut = round(($gutterX * 100) / $bpsizes[$bpkey], 3);
-                    $yut = round(($gutterY * 100) / $bpsizes[$bpkey], 3);
-                    $bpyut = round($bpsizes[$bpkey] / (100/$yut), 3);
-                    $tw = round(100 - (($breakpoint - 1) * $gut), 3);
+                    $gut = number_format( ($gutterX * 100) / $bpsizes[$bpkey], 3, '.', '');
+                    $yut = number_format( ($gutterY * 100) / $bpsizes[$bpkey], 3, '.', '');
+                    $bpyut = number_format($bpsizes[$bpkey] / (100/$yut), 3, '.', '');
+                    $tw = number_format(100 - ( ($breakpoint - 1) * $gut), 3, '.', '');
                     if ($tw < 100) {
-                        $bpgrid = round($tw / $breakpoint, 3);
+                        $bpgrid = number_format($tw / $breakpoint, 3, '.', '');
                         $bpgut = $gut;
                     } else {
                         $bpgrid = 100;
@@ -774,7 +773,7 @@ class SocialStream {
                                 // get closest image width
                                 $closest = null;
                                 foreach ($entry->images as $image) {
-                                    if ($closest === null || abs($image_width - $closest) > abs($image->width - $image_width)) {
+                                    if ($closest === null || abs($image_width - $closest) > abs($image->width - $image_width) ) {
                                         $closest = $image->width;
                                         $source = $image->source;
                                     }
@@ -784,7 +783,7 @@ class SocialStream {
                             if ($iframe) {
                                 $closest = null;
                                 foreach ($entry->images as $image2) {
-                                    if ($closest === null || abs($image_width_iframe - $closest) > abs($image2->width - $image_width_iframe)) {
+                                    if ($closest === null || abs($image_width_iframe - $closest) > abs($image2->width - $image_width_iframe) ) {
                                         $closest = $image2->width;
                                         $url = $image2->source;
                                         $mediasize = $image2->width.','.$image2->height;
@@ -888,20 +887,18 @@ class SocialStream {
                     }
                 }
                 // Twitter
-        		elseif ( $feed_class == 'twitter' ) {
+        		elseif ($feed_class == 'twitter') {
                     if (@$feed) {
-                        if ($i == 3)
-                            $feed = $feed->statuses;
-
                         $twitter_output = ( ! empty($this->sboption['twitter']['twitter_output']) ) ? ss_explode($this->sboption['twitter']['twitter_output']) : array('thumb' => true, 'text' => true, 'user' => true, 'share' => true, 'info' => true);
                         
-                    foreach ( $feed as $data ) {
-                        if ( isset($data->created_at) ) {
+                    foreach ($feed as $data) {
+                        if (isset($data->created_at) ) {
                         if (@$_SESSION[$label]['loadcrawl'][$feed_class.$i.$ifeed] == $data->id_str)
                             continue;
                         $link = $protocol.'://twitter.com/' . $data->user->screen_name . '/status/' . $data->id_str;
-                        if ( $this->make_remove($link) ) {
-                            $text = (@$attr['words']) ? $this->word_limiter($data->text) : @$this->format_text($data->text);
+                        if ($this->make_remove($link) ) {
+                            $text = (@$data->text) ? $data->text : $data->full_text;
+                            $text = (@$attr['words']) ? $this->word_limiter($text) : @$this->format_text($text);
                             $text = $this->twitter_add_links($text);
                         
                         // get image
@@ -923,9 +920,13 @@ class SocialStream {
                                 if ($iframe) {
                                     if ($variants = @$extmediaobj->video_info->variants) {
                                         $lastvar = end($variants);
+                                        foreach ($variants as $vari) {
+                                            if ( isset($vari->bitrate) )
+                                                $lastvar = $vari;
+                                        }
                                         $url = $lastvar->url;
                                         // add 30% to media size
-                                        $mediasize = round($extmediaobj->sizes->large->w * 1.3).','.round($extmediaobj->sizes->large->h * 1.3);
+                                        $mediasize = number_format($extmediaobj->sizes->large->w * 1.3, 0, '.', '').','.number_format($extmediaobj->sizes->large->h * 1.3, 0, '.', '');
                                     }
                                 }
                             }
@@ -1022,7 +1023,7 @@ class SocialStream {
                                         $url = $attachments->embed->url;
                                         // add 30% to media size
                                         $medias = explode(',', $mediasize);
-                                        $mediasize = round($medias[0] * 1.3).','.round($medias[1] * 1.3);
+                                        $mediasize = number_format($medias[0] * 1.3, 0, '.', '').','.number_format($medias[1] * 1.3, 0, '.', '');
                                     } else {
                                         $url = $image_url;
                                     }
@@ -1141,7 +1142,7 @@ class SocialStream {
                                         if ($player->width == $tumblr_video) {
                                             $object = $player->embed_code;
 											if (@$original->height) {
-												$player_height = round( ($player->width * $original->height) / $original->width );
+												$player_height = number_format( ($player->width * $original->height) / $original->width, 0, '.', '');
 												$mediasize = $player->width.','.$player_height;
 											}
 											break;
@@ -1303,7 +1304,7 @@ class SocialStream {
                         
                         // fix the links in description
                         $pattern = "/(?<=href=(\"|'))[^\"']+(?=(\"|'))/";
-                        if (preg_match($pattern, @$pin->description, $url1)) {
+                        if (preg_match($pattern, @$pin->description, $url1) ) {
                             $description = preg_replace($pattern, "https://www.pinterest.com$url1[0]", @$pin->description);
                         } else {
                             $description = @$pin->description;
@@ -1322,7 +1323,7 @@ class SocialStream {
                             if ($iframe) {
                                 $mediasrc = $bigthumb;
                                 $newwidth = 450;
-                                $newheight = round( ($newwidth * $thumbobj->height) / $thumbobj->width );
+                                $newheight = number_format( ($newwidth * $thumbobj->height) / $thumbobj->width, 0, '.', '');
                                 $mediasize = $newwidth.','.$newheight;
                             }
                         }
@@ -1337,8 +1338,8 @@ class SocialStream {
                             $meta .= '
                             <span class="sb-text">
                                 <span class="sb-meta">
-                                    <span class="shares"><i class="sb-bico sb-star-o"></i> ' . $pin->repin_count . ' '.ucfirst(ss_lang( 'repin' )).'</span>
-                                    <span class="comments"><i class="sb-bico sb-thumbs-up"></i> ' . $pin->like_count . ' '.ucfirst(ss_lang( 'likes' )).'</span>
+                                    <span class="shares"><i class="sb-bico sb-star-o"></i> ' . $pin->repin_count . ' '.ucfirst(ss_lang( 'repin' ) ).'</span>
+                                    <span class="comments"><i class="sb-bico sb-thumbs-up"></i> ' . $pin->like_count . ' '.ucfirst(ss_lang( 'likes' ) ).'</span>
                                 </span>
                             </span>';
                         }
@@ -1638,7 +1639,7 @@ class SocialStream {
                         'thumb' => $thumb,
                         'thumburl' => ($mediasrc) ? $mediasrc : $link,
                         'iframe' => $iframe ? 'iframe' : '',
-                        'title' => '<a href="' . $link . '"'.$iframe.$target.'>' . (@$attr['titles'] ? $this->title_limiter($title) : $title) . '</a>',
+                        'title' => '<a href="' . $link . '"'.$target.'>' . (@$attr['titles'] ? $this->title_limiter($title) : $title) . '</a>',
                         'text' => $text,
                         'url' => $link,
                         'date' => $dateof,
@@ -1893,7 +1894,7 @@ class SocialStream {
                                     $url = (@$thumb) ? $thumb : '';
                             }
                             if (@$thumb && @$attr['https'])
-                                $thumb = "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?".http_build_query(array('container' => 'focus', 'refresh' => 3600, 'url' => $thumb));
+                                $thumb = "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?".http_build_query(array('container' => 'focus', 'refresh' => 3600, 'url' => $thumb) );
                             
                             $sbi = $this->make_timestr($item->pubDate, $link);
                             $itemdata = array(
@@ -1982,7 +1983,7 @@ class SocialStream {
                             if ($iframe)
                                 $url = (@$thumb) ? $thumb : '';
                             if (@$thumb && @$attr['https'])
-                                $thumb = "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?".http_build_query(array('container' => 'focus', 'refresh' => 3600, 'url' => $thumb));
+                                $thumb = "https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?".http_build_query(array('container' => 'focus', 'refresh' => 3600, 'url' => $thumb) );
                             
                             $sbi = $this->make_timestr($item->published, $link);
                             $itemdata = array(
@@ -2281,13 +2282,13 @@ class SocialStream {
                             if (@$linkedin_output['comments'] && $comments_data)
                                 $meta .= '
                                 <span class="sb-meta">
-                                    <span class="comments"><i class="sb-bico sb-comments"></i> ' . @$updateComments->_total . ' '.ucfirst(ss_lang( 'comments' )).'</span>
+                                    <span class="comments"><i class="sb-bico sb-comments"></i> ' . @$updateComments->_total . ' '.ucfirst(ss_lang( 'comments' ) ).'</span>
                                 </span>
                                 ' . $comments_data;
                             if (@$linkedin_output['likes'] && $likes_data)
                             $meta .= '
                                 <span class="sb-meta">
-                                    <span class="likes"><i class="sb-bico sb-star"></i> ' . @$data->numLikes . ' '.ucfirst(ss_lang( 'likes' )).'</span>
+                                    <span class="likes"><i class="sb-bico sb-star"></i> ' . @$data->numLikes . ' '.ucfirst(ss_lang( 'likes' ) ).'</span>
                                 </span>
                                 <span class="sb-meta item-likes">
                                     ' . $likes_data . '
@@ -2403,13 +2404,13 @@ class SocialStream {
                             if (@$vine_output['comments'] && $comments_data)
                                 $meta .= '
                                 <span class="sb-meta">
-                                    <span class="comments"><i class="sb-bico sb-comments"></i> ' . @$data->likes->count . ' '.ucfirst(ss_lang( 'comments' )).'</span>
+                                    <span class="comments"><i class="sb-bico sb-comments"></i> ' . @$data->likes->count . ' '.ucfirst(ss_lang( 'comments' ) ).'</span>
                                 </span>
                                 ' . $comments_data;
                             if (@$vine_output['likes'] && $likes_data)
                             $meta .= '
                                 <span class="sb-meta">
-                                    <span class="likes"><i class="sb-bico sb-star"></i> ' . @$data->comments->count . ' '.ucfirst(ss_lang( 'likes' )).'</span>
+                                    <span class="likes"><i class="sb-bico sb-star"></i> ' . @$data->comments->count . ' '.ucfirst(ss_lang( 'likes' ) ).'</span>
                                 </span>
                                 <span class="sb-meta item-likes">
                                     ' . $likes_data . '
@@ -2501,7 +2502,7 @@ class SocialStream {
                 }
                 $i = $rnum;
                 foreach ($ranking as $cfeed) {
-                    $rank[$cfeed] = round( ($i * 100) / $rsum );
+                    $rank[$cfeed] = number_format( ($i * 100) / $rsum, 0, '.', '');
                     $i--;
                 }
             }
@@ -2509,7 +2510,7 @@ class SocialStream {
             if ( @$rankcount ) {
                 $maxcountkey = array_search(max($rankcount), $rankcount);
                 foreach ($rankcount as $rkey => $rval) {
-                    $fresults[$rkey] = @round($rank[$rkey] * $results / 100);
+                    $fresults[$rkey] = @number_format($rank[$rkey] * $results / 100, 0, '.', '');
                 }
                 foreach ($rankcount as $rkey => $rval) {
                     if ( $fresults[$rkey] > $rval ) {
@@ -2805,8 +2806,7 @@ class SocialStream {
         $lazyload_output = '
 			$(".sb-thumb img").lazyload({
 				effect: "fadeIn",
-				skip_invisible: true,
-				placeholder: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iLTQzIC00MyAxMjQgMTI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0cm9rZT0iI2ZmZiI+ICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIiBzdHJva2Utd2lkdGg9IjIiPiAgICAgICAgICAgIDxjaXJjbGUgc3Ryb2tlLW9wYWNpdHk9Ii41IiBjeD0iMTgiIGN5PSIxOCIgcj0iMTgiLz4gICAgICAgICAgICA8cGF0aCBkPSJNMzYgMThjMC05Ljk0LTguMDYtMTgtMTgtMTgiPiAgICAgICAgICAgICAgICA8YW5pbWF0ZVRyYW5zZm9ybSAgICAgICAgICAgICAgICAgICAgYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiAgICAgICAgICAgICAgICAgICAgdHlwZT0icm90YXRlIiAgICAgICAgICAgICAgICAgICAgZnJvbT0iMCAxOCAxOCIgICAgICAgICAgICAgICAgICAgIHRvPSIzNjAgMTggMTgiICAgICAgICAgICAgICAgICAgICBkdXI9IjFzIiAgICAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4gICAgICAgICAgICA8L3BhdGg+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4="
+				skip_invisible: true
 			});';
             
         // loadmore ajax function
@@ -2952,8 +2952,7 @@ class SocialStream {
 					skip_invisible: true,
 					container: $("'.$ticker_id.'"),
 					threshold: '.($block_height * 2).',
-					failure_limit: '.$results.',
-					placeholder: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iLTQzIC00MyAxMjQgMTI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0cm9rZT0iI2ZmZiI+ICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIiBzdHJva2Utd2lkdGg9IjIiPiAgICAgICAgICAgIDxjaXJjbGUgc3Ryb2tlLW9wYWNpdHk9Ii41IiBjeD0iMTgiIGN5PSIxOCIgcj0iMTgiLz4gICAgICAgICAgICA8cGF0aCBkPSJNMzYgMThjMC05Ljk0LTguMDYtMTgtMTgtMTgiPiAgICAgICAgICAgICAgICA8YW5pbWF0ZVRyYW5zZm9ybSAgICAgICAgICAgICAgICAgICAgYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiAgICAgICAgICAgICAgICAgICAgdHlwZT0icm90YXRlIiAgICAgICAgICAgICAgICAgICAgZnJvbT0iMCAxOCAxOCIgICAgICAgICAgICAgICAgICAgIHRvPSIzNjAgMTggMTgiICAgICAgICAgICAgICAgICAgICBkdXI9IjFzIiAgICAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4gICAgICAgICAgICA8L3BhdGg+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4="
+					failure_limit: '.$results.'
 				});';
                 
                 $output .= '
@@ -3083,7 +3082,6 @@ class SocialStream {
                 $ticker_id_t = ' '.$ticker_id;
         } elseif ( $is_wall ) {
             if ( ! empty($feeds) ) {
-            $stagger = (@$attr['stagger']) ? 'stagger: '.$attr['stagger'] : '';
             $columnWidth = (@$attr['fixWidth'] == 'false') ? '".sb-item"' : $itemwidth;
             $gutter = (@$attr['fixWidth'] == 'false') ? '".sb-gsizer"' : $gutterX;
             $percentPosition = (@$attr['fixWidth'] == 'false') ? 'true' : 'false';
@@ -3098,7 +3096,7 @@ class SocialStream {
                     },
                     transitionDuration: '.@$attr['transition'].',
                     originLeft: '.@$attr['originLeft'].',
-                    '.$stagger.'
+                    stagger: '.@$attr['stagger'].'
     			});
 				' . $lazyload_output . '
                 
@@ -3158,8 +3156,7 @@ class SocialStream {
 			$output .= '
 				$(".sb-thumb img").lazyload({
 					effect: "fadeIn",
-					skip_invisible: true,
-					placeholder: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iLTQzIC00MyAxMjQgMTI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0cm9rZT0iI2ZmZiI+ICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIiBzdHJva2Utd2lkdGg9IjIiPiAgICAgICAgICAgIDxjaXJjbGUgc3Ryb2tlLW9wYWNpdHk9Ii41IiBjeD0iMTgiIGN5PSIxOCIgcj0iMTgiLz4gICAgICAgICAgICA8cGF0aCBkPSJNMzYgMThjMC05Ljk0LTguMDYtMTgtMTgtMTgiPiAgICAgICAgICAgICAgICA8YW5pbWF0ZVRyYW5zZm9ybSAgICAgICAgICAgICAgICAgICAgYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiAgICAgICAgICAgICAgICAgICAgdHlwZT0icm90YXRlIiAgICAgICAgICAgICAgICAgICAgZnJvbT0iMCAxOCAxOCIgICAgICAgICAgICAgICAgICAgIHRvPSIzNjAgMTggMTgiICAgICAgICAgICAgICAgICAgICBkdXI9IjFzIiAgICAgICAgICAgICAgICAgICAgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiLz4gICAgICAgICAgICA8L3BhdGg+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4="
+					skip_invisible: true
 				});';
             if (@$more_output)
                 $output .= $more_output;
@@ -3451,7 +3448,7 @@ class SocialStream {
                             }
                         }
                			if ( ! $forceCrawl )
-                            $cache->set_cache($label, json_encode($feed));
+                            $cache->set_cache($label, json_encode($feed) );
                     } else {
                         $feed = @json_decode($content);
                     }
@@ -3473,10 +3470,6 @@ class SocialStream {
                 }
             break;
             case 'twitter':
-                $consumer_key = @trim($GLOBALS['api']['twitter']['twitter_api_key']);
-                $consumer_secret = @trim($GLOBALS['api']['twitter']['twitter_api_secret']);
-                $oauth_access_token = @trim($GLOBALS['api']['twitter']['twitter_access_token']);
-                $oauth_access_token_secret = @trim($GLOBALS['api']['twitter']['twitter_access_token_secret']);
                 if ( isset($sboption['twitter_feeds']) )
                     $twitter_feeds = explode(',', str_replace(' ', '', $sboption['twitter_feeds']) );
                 else
@@ -3508,10 +3501,12 @@ class SocialStream {
                         $feed_value = urlencode($feed_value);
                         if ( ! in_array('retweets', $twitter_feeds) )
                             $feed_value .= ' AND -filter:retweets';
-                        $params = array('q' => $feed_value);
+                        $params = array('q' => $feed_value, 'include_entities' => 'false');
                 	break;
                 }
                 $params['count'] = $results;
+                if ($i != 3)
+                    $params['tweet_mode'] = 'extended';
                 
                 if ($id_from = @$sboption['twitter_since_id'])
                     $params['since_id'] = $id_from;
@@ -3522,41 +3517,25 @@ class SocialStream {
                 if ($max_id = @$_SESSION[$sb_label]['loadcrawl'][$feed_key.$i.$key2])
                     $params['max_id'] = $max_id;
         		
-                $get_feed = TRUE;
-                $label = 'https://api.twitter.com/1.1/'.$rest.'/'.serialize($params);
-                if ( ! $forceCrawl ) {
-                    if ( $cache->is_cached($label) ) {
-                        $content = $cache->get_cache($label);
-                        $get_feed = FALSE;
-                    }
-                }
-                if ($get_feed) {
-                    if ( ! class_exists( 'TwitterOAuth' ) )
-                        require_once('oauth/twitteroauth.php');
-                    $auth = new TwitterOAuth($consumer_key, $consumer_secret, $oauth_access_token, $oauth_access_token_secret);
-                    $auth->timeout = SB_API_TIMEOUT;
-                    $auth->connecttimeout = SB_API_TIMEOUT;
-                    $auth->decode_json = FALSE;
-                    $content = $auth->get( $rest, $params );
-                    if ( ! $content ) {
-                    	if (@$this->attr['debuglog'])
-                            ss_debug_log( 'Twitter error: An error occurs while reading the feed, please check your connection or settings.', SB_LOGFILE );
-                    }
-                    else {
-                        $feed = @json_decode($content);
-                        if ( isset( $feed->errors ) ) {
-                            foreach( $feed->errors as $key => $val ) {
-                                if (@$this->attr['debuglog'])
-                                    ss_debug_log( 'Twitter error: '.$val->message.' - ' . $rest, SB_LOGFILE );
+                // Fetch the feed
+                $feed = $this->twitter_get_feed($rest, $params, $forceCrawl, $cache);
+                
+                // if search/tweets
+                if ($i == 3) {
+                    if (@$feed) {
+                        $feed = $feed->statuses;
+                        foreach ( $feed as $data ) {
+                            if ( isset($data->id_str) ) {
+                                $lookupIDs[] = $data->id_str;
                             }
-                            $feed = null;
+                        }
+                        if (@$lookupIDs) {
+                            $rest = "statuses/lookup";
+                            $params = array('id' => implode(',', $lookupIDs) );
+                            $feed = $this->twitter_get_feed($rest, $params, $forceCrawl, $cache);
                         }
                     }
-           			if ( ! $forceCrawl )
-                        $cache->set_cache($label, $content);
                 }
-                else
-                    $feed = @json_decode($content);
     		break;
     		case 'google':
     			$google_api_key = @$GLOBALS['api']['google']['google_api_key'];
@@ -3601,7 +3580,7 @@ class SocialStream {
                     if (@$feed[0]->status == 'success') {
                         // get rss data
                         $rss_uri = ($i == 1) ? '/feed.rss' : '.rss';
-                        $feed_url = "https://www.pinterest.com/" . $feed_value . "$rss_uri";
+                        $feed_url = "https://www.pinterest.com/" . $feed_value . "$rss_uri/";
                         $content = ( ! $forceCrawl) ? $cache->get_data($feed_url, $feed_url) : $cache->do_curl($feed_url);
                         $feed[1] = @simplexml_load_string($content);
                     } else {
@@ -3750,7 +3729,7 @@ class SocialStream {
                 $content = ( ! $forceCrawl) ? $cache->get_data($feed_url, $feed_url) : $cache->do_curl($feed_url);
                 $content = @mb_convert_encoding($content, "UTF-8", "auto");
                 $feed = @json_decode($content);
-                if (is_object($feed))
+                if (is_object($feed) )
                     $feed->offset = $offset;
             break;
             case 'linkedin':
@@ -3833,7 +3812,7 @@ class SocialStream {
         }
         
     	preg_match('/^\s*+(?:\S++\s*+){1,'.(int) $limit.'}/', $str, $matches);
-        if (strlen($str) == strlen($matches[0])) {
+        if (strlen($str) == strlen($matches[0]) ) {
     		$end_char = '';
     	}
         $str = $this->append_links($matches[0]);
@@ -3860,7 +3839,7 @@ class SocialStream {
 
     	preg_match('/^\s*+(?:\S++\s*+){1,'.(int) $limit.'}/', $str, $matches);
 
-        if (strlen($str) == strlen($matches[0]))
+        if (strlen($str) == strlen($matches[0]) )
     	{
     		$end_char = '';
     	}
@@ -3892,7 +3871,7 @@ class SocialStream {
     
     // Word counter function
     function str_word_count_utf8($str) {
-        return count(preg_split('~[^\p{L}\p{N}\']+~u',$str));
+        return count(preg_split('~[^\p{L}\p{N}\']+~u', $str) );
     }
     
     // get all URLs from string
@@ -3922,6 +3901,50 @@ class SocialStream {
         
         return $text;
     }
+    
+    function twitter_get_feed($rest, $params, $forceCrawl, $cache) {
+        $consumer_key = @trim($GLOBALS['api']['twitter']['twitter_api_key']);
+        $consumer_secret = @trim($GLOBALS['api']['twitter']['twitter_api_secret']);
+        $oauth_access_token = @trim($GLOBALS['api']['twitter']['twitter_access_token']);
+        $oauth_access_token_secret = @trim($GLOBALS['api']['twitter']['twitter_access_token_secret']);
+        $get_feed = TRUE;
+        $label = 'https://api.twitter.com/1.1/'.$rest.'/'.serialize($params);
+        if ( ! $forceCrawl ) {
+            if ( $cache->is_cached($label) ) {
+                $content = $cache->get_cache($label);
+                $get_feed = FALSE;
+            }
+        }
+        if ($get_feed) {
+            if ( ! class_exists('TwitterOAuth', false) )
+                require_once('oauth/twitteroauth.php');
+            $auth = new TwitterOAuth($consumer_key, $consumer_secret, $oauth_access_token, $oauth_access_token_secret);
+            $auth->timeout = SB_API_TIMEOUT;
+            $auth->connecttimeout = SB_API_TIMEOUT;
+            $auth->decode_json = FALSE;
+            $content = $auth->get( $rest, $params );
+            if ( ! $content ) {
+            	if (@$this->attr['debuglog'])
+                    ss_debug_log( 'Twitter error: An error occurs while reading the feed, please check your connection or settings.', SB_LOGFILE );
+            }
+            else {
+                $feed = @json_decode($content);
+                if ( isset( $feed->errors ) ) {
+                    foreach( $feed->errors as $key => $val ) {
+                        if (@$this->attr['debuglog'])
+                            ss_debug_log( 'Twitter error: '.$val->message.' - ' . $rest, SB_LOGFILE );
+                    }
+                    $feed = null;
+                }
+            }
+   			if ( ! $forceCrawl )
+                $cache->set_cache($label, $content);
+        }
+        else
+            $feed = @json_decode($content);
+        
+        return @$feed;
+    }
 
     function vk_get_photo($photo){
         foreach ($photo as $ikey => $iphoto) {
@@ -3935,7 +3958,7 @@ class SocialStream {
 
 // Check for Windows to find and replace the %e modifier correctly
 function ss_format_locale( $format ) {
-    if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN') {
+    if (strtoupper(substr(PHP_OS, 0, 3) ) == 'WIN') {
         $format = preg_replace('#(?<!%)((?:%%)*)%e#', '\1%d', $format);
     }
     return $format;
@@ -4036,7 +4059,7 @@ function ss_friendly_date( $date ) {
 	}
 	
 	// HTML 5 FTW
-	return '<time title="' . strftime( SB_DT_FORMAT, $post_time ) . '" datetime="' . date( 'c', $post_time ) . '" pubdate>' . ucfirst( $friendly_date ) . '</time>';
+	return '<time title="' . strftime( SB_DT_FORMAT, $post_time ) . '" datetime="' . date( 'c', $post_time ) . '">' . ucfirst( $friendly_date ) . '</time>';
 }
 
 // i18n dates
@@ -4061,13 +4084,13 @@ function ss_hex2rgb($hex, $str = true) {
    $hex = str_replace("#", "", $hex);
 
    if(strlen($hex) == 3) {
-      $r = hexdec(substr($hex,0,1).substr($hex,0,1));
-      $g = hexdec(substr($hex,1,1).substr($hex,1,1));
-      $b = hexdec(substr($hex,2,1).substr($hex,2,1));
+      $r = hexdec(substr($hex, 0, 1).substr($hex, 0, 1) );
+      $g = hexdec(substr($hex, 1, 1).substr($hex, 1, 1) );
+      $b = hexdec(substr($hex, 2, 1).substr($hex, 2, 1) );
    } else {
-      $r = hexdec(substr($hex,0,2));
-      $g = hexdec(substr($hex,2,2));
-      $b = hexdec(substr($hex,4,2));
+      $r = hexdec(substr($hex, 0, 2) );
+      $g = hexdec(substr($hex, 2, 2) );
+      $b = hexdec(substr($hex, 4, 2) );
    } 
    // returns the rgb values separated by commas OR returns an array with the rgb values
    $rgb = ($str) ? "$r, $g, $b" : array($r, $g, $b);
@@ -4076,7 +4099,7 @@ function ss_hex2rgb($hex, $str = true) {
 
 // Shuffle associative and non-associative array
 function ss_shuffle_assoc($list) {
-  if (!is_array($list)) return $list;
+  if ( ! is_array($list) ) return $list;
 
   $keys = array_keys($list);
   shuffle($keys);
@@ -4176,8 +4199,8 @@ function ss_win_locale($locale) {
 // grab the layout files
 function ss_getFileTitles( $path = '/layout/' ) {
     $_aFileTitles = array();
-    if ($handle = opendir( SB_DIRNAME . $path )) {
-        while($file = readdir($handle)) {
+    if ($handle = opendir( SB_DIRNAME . $path ) ) {
+        while($file = readdir($handle) ) {
             if ($file !== '.' && $file !== '..')
             {
                 $finfo = pathinfo($file);

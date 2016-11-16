@@ -1,4 +1,13 @@
-Version 2.5 - 05.06.2016
+Version 2.5.3 - 15.11.2016
+- W3 Markup Validation passed for stream HTML contents.
+- Gutter X size issue fixed, when set to less than 10 it was displaying post in full width.
+- Twitter unknown video lightbox problem fixed.
+- Twitter videos problem when using hashtags with search API fixed.
+- Pinterest feed problem fixed.
+- Problem with decimal separator in setlocale has been fixed.
+- Notice errors while no twitter search terms result exist resolved.
+
+Version 2.5 - 05.07.2016
 - Problem with pinned & remove items fixed.
 - Duplicate items problem from tag feeds fixed.
 - Load more problem fixed for Facebook album/page photos and page videos.

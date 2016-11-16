@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP Social Stream 2.5
+ * PHP Social Stream 2.5.1
  * Copyright 2015 Axent Media (axentmedia@gmail.com)
  */
 
@@ -70,7 +70,7 @@ class ss_default_layout {
                 $iframe = (@$param['iframe']) ? ' class="'.$param['iframe'].'"' : '';
                 $sbthumb .= '
                 <div class="sb-thumb">
-                    <a href="' . $aurl . '"'.@$iframe.$datasize.$this->target.'><img data-original="' . htmlspecialchars($param['thumb']) . '" alt="">'.$playstate.'</a>
+                    <a href="' . $aurl . '"'.@$iframe.$datasize.$this->target.'><img data-original="' . htmlspecialchars($param['thumb']) . '" src="'.SB_PATH.'public/img/oval.svg" alt="">'.$playstate.'</a>
                 </div>';
             }
         }
@@ -191,7 +191,7 @@ class ss_default_layout {
         </div>';
         
         if ( $attr['type'] == 'timeline' ) {
-            $icon = ( @$param['icon'][1] ) ? '<img src="'.$param['icon'][1].'" style="vertical-align:middle">' : '<i class="sb-icon sb-' . $feed_class . '"></i>';
+            $icon = ( @$param['icon'][1] ) ? '<img src="'.$param['icon'][1].'" style="vertical-align:middle" alt="">' : '<i class="sb-icon sb-' . $feed_class . '"></i>';
             $out = '
           <div class="timeline-row"'.$idstr.'>
             <div class="timeline-time">
@@ -210,7 +210,7 @@ class ss_default_layout {
           </div>
         </div>' . "\n";
         } else {
-            $icon = ( @$param['icon'][0] ) ? '<img src="'.$param['icon'][0].'" style="vertical-align:middle">' : '<i class="sb-icon sb-' . $feed_class . '"></i>';
+            $icon = ( @$param['icon'][0] ) ? '<img src="'.$param['icon'][0].'" style="vertical-align:middle" alt="">' : '<i class="sb-icon sb-' . $feed_class . '"></i>';
             $tag = ( $attr['type'] != 'feed' || @$attr['carousel'] ) ? 'div' : 'li';
             
             $out1 = '
