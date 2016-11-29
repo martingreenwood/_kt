@@ -4,9 +4,6 @@
 }
 
 .ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop {
-	margin-top: 30px !important;
-	padding-top: 20px !important;
-	padding-bottom: 20px !important;
 
 	&:before {
 		content: "";
@@ -16,6 +13,17 @@
 		top: 0;
 		left: 20px;
 		right: 20px;
+	}
+}
+
+.ubermenu.ubermenu-main {
+	
+	.ubermenu-item-level-0 {
+		
+		.ubermenu-target {
+			padding: 0 20px;
+			line-height: 6;
+		}
 	}
 }
 
@@ -48,6 +56,10 @@
 	h3.widget-title {
 		font-weight: 600;
 		border-bottom: 2px solid;
+	}
+
+	.ubermenu-nav .ubermenu-column-1-2 {
+		width: 100% !important;
 	}
 
 	.ubermenu-submenu .ubermenu-column {

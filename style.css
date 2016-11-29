@@ -331,9 +331,9 @@ a:hover, a:active { outline: 0; }
 --------------------------------------------------------------*/
 #primary-menu { float: left; width: 100%; }
 
-.ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop { margin-top: 30px !important; padding-top: 20px !important; padding-bottom: 20px !important; }
-
 .ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop:before { content: ""; position: absolute; border-top: 2px solid black; max-width: 100%; top: 0; left: 20px; right: 20px; }
+
+.ubermenu.ubermenu-main .ubermenu-item-level-0 .ubermenu-target { padding: 0 20px; line-height: 6; }
 
 .ubermenu h3.ubermenu-widgettitle { font-weight: 400; margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; font-size: 18px; margin-bottom: 20px; padding: 0; color: #1ca75e; }
 
@@ -342,6 +342,8 @@ a:hover, a:active { outline: 0; }
 .ubermenu h3.widget-title, .ubermenu li, .ubermenu a { margin: 0; font-size: 14px; font-weight: 400; color: #3B3C43; line-height: 2; text-transform: capitalize; }
 
 .ubermenu h3.widget-title { font-weight: 600; border-bottom: 2px solid; }
+
+.ubermenu .ubermenu-nav .ubermenu-column-1-2 { width: 100% !important; }
 
 .ubermenu .ubermenu-submenu .ubermenu-column { padding-top: 0; padding-bottom: 0; }
 
@@ -485,7 +487,7 @@ a:hover, a:active { outline: 0; }
 /*================================
 =            HomePage            =
 ================================*/
-#masthead { padding: 30px 0; position: relative; top: 0; width: 100%; z-index: 9999; background: white; }
+#masthead { position: relative; top: 0; width: 100%; z-index: 9999; background: white; }
 
 #masthead .table { position: relative; }
 
