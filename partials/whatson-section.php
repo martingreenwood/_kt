@@ -21,7 +21,7 @@
 	</header>
 
 	<aside class="filters">
-	<form method="get" accept-charset="utf-8" id="whatson_filter">
+	<form method="get" accept-charset="utf-8" id="whatson_filter" action="#whatson">
 		<div class="colunn">
 			<?php 
 			foreach ($event_data_obj as $event_data) {
@@ -41,7 +41,7 @@
 			</select>
 		</div>
 		<div class="colunn">
-			<input type="text" name="start" class="datepicker">
+			<input type="text" name="start" id="datepicker" class="datepicker" placeholder="Select Date">
 		</div>
 		<div class="colunn">
 			<input type="submit" name="submit" id="submit" value="Search">
@@ -49,7 +49,11 @@
 	</form>
 	</aside>
 
-	<div class="events">
+	<div class="search-error">
+		<span>Sorry, no results match your search, please try something else.</span>
+	</div>
+
+	<div class="events event-list">
 		<?php
 		// url to get events from http://www.exploresouthlakeland.co.uk/exports/events/
 		// this needs a date and passwoed set to the i= 
@@ -93,34 +97,63 @@
 				}
 			}
 
+			$start_date = date("d-m-Y", strtotime($start_date));
+			$end_date = date("d-m-Y", strtotime($end_date));
+
 			$e_start_time = strtotime($start_date);
 			$e_end_time = strtotime($end_date);
 			$now = time('now');
 
+			// if events are now or inf the future
 			if ( $e_start_time > $now ):
+
 			?>
 
-		<div class="event" data-min-price="<?php echo $min_price; ?>" data-max-price="<?php echo $max_price; ?>" data-id="<?php echo $id; ?>" data-type="<?php echo $type_id; ?>" data-start="<?php echo $start_date; ?>" data-end="<?php echo $end_date; ?>">
+			<div class="event" data-min-price="<?php echo $min_price; ?>" data-max-price="<?php echo $max_price; ?>" data-id="<?php echo $id; ?>" data-type="<?php echo $type_id; ?>" data-start="<?php echo $start_date; ?>" data-end="<?php echo $end_date; ?>">
 
-			<img src="//placehold.it/500x300">
 
-			<div class="meta">
-				<ul>
-					<li><?php echo date("D dS M Y", $e_start_time); ?></li>
-					<?php if ($price): ?>
-					<li class="price"><?php echo $price; ?></li>
-					<?php endif; ?>
-				</ul>
-				<div class="clear"></div>
+				<div class="img">
+				<?php
+				$args = array(
+					'post_type' => 'shows',
+					'meta_query'  => array(
+						array(
+							'key' => '_kendal_id',
+							'value' => $id
+						)
+					)
+				);
+
+				$loop = new WP_Query( $args );
+				if ($loop->have_posts()) {
+					while ( $loop->have_posts() ) : $loop->the_post(); 
+						the_post_thumbnail("600x430");
+					endwhile; 
+				} else {
+					echo '<img src="//lorempixel.com/600/430/abstract">';
+				}
+				?>
+
+					<div class="cat"><?php echo $type; ?></div>
+				</div>
+
+				<div class="meta">
+					<ul>
+						<li><?php echo date("D dS M Y", $e_start_time); ?></li>
+						<?php if ($price): ?>
+						<li class="price"><?php echo $price; ?></li>
+						<?php endif; ?>
+					</ul>
+					<div class="clear"></div>
+				</div>
+
+				<div class="info">
+					<h3><?php echo $name; ?></h3>
+					<p><?php echo substr($description, 0, 150); ?>...</p>
+					<a href="#">read more...</a>
+				</div>
+
 			</div>
-
-			<div class="info">
-				<h3><?php echo $name; ?></h3>
-				<p><?php echo substr($description, 0, 150); ?>...</p>
-				<a href="#">read more...</a>
-			</div>
-
-		</div>
 
 			<?php 
 			endif;

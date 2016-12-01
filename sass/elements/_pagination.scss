@@ -1,0 +1,30 @@
+.easyPaginateNav {
+	text-align: right;
+	margin: 40px 0;
+	display: inline-block;
+
+	&:before {
+		content: "pages";
+		text-transform: uppercase;
+		color: $brand-primary;
+		margin-right: 10px;
+	}
+
+	a {
+		display: inline-block;
+		width: 26px;
+		line-height: 26px;
+		text-align: center;
+		color: #666;
+		border-right: 1px solid #666;
+
+		&.current {
+			color: $brand-primary;
+		}
+	}
+
+	.first, .last, .prev, .next {
+		display: none;
+	}
+
+}

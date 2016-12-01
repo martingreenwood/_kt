@@ -137,6 +137,10 @@
 
 			.slide {
 				position: relative;
+
+				img {
+					display: block;
+				}
 			}
 
 			.slick-dots {
@@ -318,6 +322,22 @@
 
 	.content {
 
+		.search-error {
+			width: 100%;
+			padding: 20px;
+			text-align: center;
+			background: rgb(232,71,90);
+			margin-bottom: 40px;
+			color: white;
+			font-weight: 800;
+			font-size: 22px;
+			display: none;
+
+			&.show {
+				display: block;
+			}
+		}
+
 		header {
 			margin-top: 25px;
 			margin-bottom: 25px;
@@ -354,9 +374,14 @@
 		}
 
 		.events {
+			
 			.event {
 				@include span-columns(1);
 				margin-bottom: 20px;
+
+				&.no-match {
+					opacity: 0.4;
+				}
 
 				@include media($medium-screen-up) {
 					@include span-columns(2.66);
@@ -366,6 +391,27 @@
 				@include media($large-screen-up) {
 					@include span-columns(4);
 					margin-bottom: 30px;
+				}
+
+				.img {
+					position: relative;
+					margin-bottom: 10px;
+
+					img {
+						display: block;
+					}
+
+					.cat {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						z-index: 10;
+						background: rgba(0,0,0,0.5);
+						color: white;
+						text-transform: uppercase;
+						font-size: 12px;
+						padding: 5px 10px;
+					}
 				}
 
 				.meta {

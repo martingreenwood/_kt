@@ -236,6 +236,16 @@ img { height: auto; /* Make sure images are scaled correctly. */ max-width: 100%
 
 table { margin: 0 0 15px; margin: 0 0 1.5rem; width: 100%; }
 
+.easyPaginateNav { text-align: right; margin: 40px 0; display: inline-block; }
+
+.easyPaginateNav:before { content: "pages"; text-transform: uppercase; color: #1ca75e; margin-right: 10px; }
+
+.easyPaginateNav a { display: inline-block; width: 26px; line-height: 26px; text-align: center; color: #666; border-right: 1px solid #666; }
+
+.easyPaginateNav a.current { color: #1ca75e; }
+
+.easyPaginateNav .first, .easyPaginateNav .last, .easyPaginateNav .prev, .easyPaginateNav .next { display: none; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -584,6 +594,8 @@ a:hover, a:active { outline: 0; }
 
 #explore .slider .es-slides .slide { position: relative; }
 
+#explore .slider .es-slides .slide img { display: block; }
+
 #explore .slider .es-slides .slick-dots { position: absolute; bottom: 0; right: 0; width: auto; list-style: decimal; z-index: 999; }
 
 #explore .slider .es-slides .slick-dots li { color: white; width: inherit; margin: 0; display: list-item; float: left; height: 25px; }
@@ -654,6 +666,10 @@ a:hover, a:active { outline: 0; }
 /*======================================================
 =            EVENTS / WHATS ON / BUSINESSES            =
 ======================================================*/
+#whatson .content .search-error { width: 100%; padding: 20px; text-align: center; background: #e8475a; margin-bottom: 40px; color: white; font-weight: 800; font-size: 22px; display: none; }
+
+#whatson .content .search-error.show { display: block; }
+
 #whatson .content header { margin-top: 25px; margin-bottom: 25px; }
 
 #whatson .content header h2 { color: #1ca75e; font-size: 40px; text-transform: uppercase; line-height: 1; margin: 0; }
@@ -680,6 +696,8 @@ a:hover, a:active { outline: 0; }
 
 #whatson .content .events .event:last-child { margin-right: 0; }
 
+#whatson .content .events .event.no-match { opacity: 0.4; }
+
 @media screen and (min-width: 480px) { #whatson .content .events .event { float: left; display: block; margin-right: 3.2258064516%; width: 31.0967741935%; margin-bottom: 25px; }
   #whatson .content .events .event:last-child { margin-right: 0; }
   #whatson .content .events .event:nth-child(3n) { margin-right: 0; }
@@ -687,6 +705,12 @@ a:hover, a:active { outline: 0; }
 
 @media screen and (min-width: 1099px) { #whatson .content .events .event { float: left; display: block; margin-right: 2.1276595745%; width: 31.914893617%; margin-bottom: 30px; }
   #whatson .content .events .event:last-child { margin-right: 0; } }
+
+#whatson .content .events .event .img { position: relative; margin-bottom: 10px; }
+
+#whatson .content .events .event .img img { display: block; }
+
+#whatson .content .events .event .img .cat { position: absolute; bottom: 0; left: 0; z-index: 10; background: rgba(0, 0, 0, 0.5); color: white; text-transform: uppercase; font-size: 12px; padding: 5px 10px; }
 
 #whatson .content .events .event .meta ul { float: left; width: 100%; list-style: none; margin: 0; font-size: 13px; }
 
