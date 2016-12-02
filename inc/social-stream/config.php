@@ -6,7 +6,7 @@
  */
 
 // Path to script directory (non-relative)
-define( 'SB_PATH', './social-stream/' );
+define( 'SB_PATH', get_stylesheet_directory_uri() . '/inc/social-stream/' );
 
 // Locale & language
 define( 'SB_LOCALE', 'en' );

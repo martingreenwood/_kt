@@ -31,6 +31,7 @@
 		file_put_contents(get_stylesheet_directory() . '/cache/business_towns.txt', $business_towns_data);
 		$business_towns_obj = json_decode($business_towns_data);
     }
+
 	?>
 
 	<header>
@@ -57,7 +58,7 @@
 				<?php
 				foreach ($unique_cats as $unique_cat) {
 					$cat = explode("_", $unique_cat);
-					echo '<option value="'.$cat[1].'">'.$cat[0].'</option>';
+					echo '<option' . if ($_GET['cat'] == $cat[1]): .' selected '. endif; . 'value="'.$cat[1].'">'.$cat[0].'</option>';
 				}
 				?>
 			</select>

@@ -190,9 +190,7 @@
 					return false;
 				});
 			}
-
 		});
-
 	});
 
 })(jQuery);

@@ -14,15 +14,15 @@
  */
 
 // Load configuration
-define( 'SB_DIR', dirname( __FILE__ ) );
+define( 'SB_DIR', get_stylesheet_directory() . "/inc/social-stream" );
 require( SB_DIR . '/config.php' );
 
 if ( ! defined( 'SB_PATH' ) )
     exit('Path to PHP Social Stream script directory is not defined!');
 
 // For load more feature
-if ( ! session_id() )
-    session_start();
+//if ( ! session_id() )
+//    session_start();
 
 // Make sure feeds are getting local timestamps
 if ( ! ini_get('date.timezone') )
