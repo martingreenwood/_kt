@@ -51,14 +51,20 @@
 				}
 			}
 			$unique_cats = array_unique($cats);
-			sort($unique_cats)
+			sort($unique_cats);
+			$selected = null;
 			?>
 			<select name="cat" class="cat">
 				<option value="">Category</option>
 				<?php
 				foreach ($unique_cats as $unique_cat) {
 					$cat = explode("_", $unique_cat);
-					echo '<option' . if ($_GET['cat'] == $cat[1]): .' selected '. endif; . 'value="'.$cat[1].'">'.$cat[0].'</option>';
+					if ($_GET['cat'] == $cat[1]):
+						$selected = 'selected';
+					else:
+						$selected = '';
+					endif;
+					echo '<option '.$selected.' value="'.$cat[1].'">'.$cat[0].'</option>';
 				}
 				?>
 			</select>
@@ -70,14 +76,20 @@
 				$towns[] = $business_town->town_name.'_'.$business_town->town_id;
 			}
 			$unique_towns = array_unique($towns);
-			sort($unique_towns)
+			sort($unique_towns);
+			$selected = null;
 			?>
 			<select name="town" class="town">
 				<option value="">Town</option>
 				<?php
 				foreach ($unique_towns as $unique_town) {
 					$town = explode("_", $unique_town);
-					echo '<option value="'.$town[1].'">'.$town[0].'</option>';
+					if ($_GET['town'] == $town[1]):
+						$selected = 'selected';
+					else:
+						$selected = '';
+					endif;
+					echo '<option '.$selected.' value="'.$town[1].'">'.$town[0].'</option>';
 				}
 				?>
 			</select>
@@ -94,7 +106,8 @@
 		// this needs a date and passwoed set to the i= 
 		// useing SHA1(PASSWORD-YYYYMMDD) defined in config.php DATENOW & PASSWORD & KTKEY
 
-		foreach ($business_data_obj as $business_data): 
+		foreach ($business_data_obj as $business_data):
+			$directory_listing_cats = null;
 			
 			$directory_id = $business_data->directory_id;
 			$directory_name = $business_data->directory_name;
@@ -112,28 +125,62 @@
 			$directory_category_id = $business_data->directory_category_id;
 			$directory_category_2_id = $business_data->directory_category_2_id;
 			$directory_category_3_id = $business_data->directory_category_3_id;
-			$directory_category_3_id = $business_data->directory_category_3_id;
 			$directory_lat = $business_data->directory_lat;
 			$directory_long = $business_data->directory_long;
+
+			foreach ($business_cat_obj as $business_cat) {
+				if (
+					$business_cat->category_id == $directory_category_id 
+					|| $business_cat->category_id == $directory_category_2_id 
+					|| $business_cat->category_id == $directory_category_3_id 
+					) {
+					$directory_listing_cats .= $business_cat->category_name . ", ";
+				}
+			}
+
 			?>
 
-		<div class="event" data-id="<?php echo $directory_id; ?>" data-town="<?php echo $directory_town_id; ?>" data-cat="<?php echo $directory_category_id; ?>">
+		<div class="event" data-id="<?php echo $directory_id; ?>" data-town="<?php echo $directory_town_id; ?>" data-cat="<?php echo $directory_category_id; ?>" data-sec-cat="<?php echo $directory_category_2_id; ?>" data-thi-cat="<?php echo $directory_category_3_id; ?>">
 
 			<div class="img">
-				<img src="//placehold.it/500x300">
-				<div class="cat">cat</div>
+			<?php
+			$args = array(
+				'post_type' => 'businesses',
+				'meta_query'  => array(
+					array(
+						'key' => '_kendal_id',
+						'value' => $directory_id
+					)
+				)
+			);
+
+			$loop = new WP_Query( $args );
+			if ($loop->have_posts()) {
+				while ( $loop->have_posts() ) : $loop->the_post(); 
+					the_post_thumbnail("600x430");
+				endwhile; 
+			} else {
+				echo '<img src="//lorempixel.com/600/430/abstract">';
+			}
+			?>
 			</div>
 
 			<div class="meta">
-				<ul>
-				</ul>
-				<div class="clear"></div>
+				<small><?php echo substr($directory_listing_cats, 0, -2); ?></small>
 			</div>
 
 			<div class="info">
 				<h3><?php echo $directory_name; ?></h3>
 				<p><?php echo $directory_description; ?></p>
-				<a href="#">read more...</a>
+				<?php
+				if ($loop->have_posts()) {
+					while ( $loop->have_posts() ) : $loop->the_post(); 
+						echo '<a href="'.get_permalink().'">read more...</a>';
+					endwhile; 
+				} else {
+					
+				}
+				?>
 			</div>
 
 		</div>

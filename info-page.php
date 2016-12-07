@@ -92,17 +92,17 @@ get_header(); ?>
 					}
 					?>
 
-			        <div class="caption">
-			        	<?php the_sub_field('cr_caption'); ?> 
-			        </div>
+					<div class="caption">
+						<?php the_sub_field('cr_caption'); ?> 
+					</div>
 
-			        <div class="copy">
-			        	<?php the_sub_field('cr_content'); ?>
-			        </div>
+					<div class="copy">
+						<?php the_sub_field('cr_content'); ?>
+					</div>
 
-			        </article>
-			       <?php
-			    endwhile; endif; 
+					</article>
+					<?php
+				endwhile; endif; 
 				?>
 
 			</div>

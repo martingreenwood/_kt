@@ -1,8 +1,8 @@
-/*===========================
-=            POI            =
-===========================*/
+/*=============================
+=            SHOWS            =
+=============================*/
 
-.page-template-discover-poi, .page-template-info-page, .page-template-default {
+.single-shows, .single-businesses {
 
 	#primary {
 
@@ -108,73 +108,21 @@
 						text-transform: uppercase;
 						color: $brand-primary;
 					}
-				}
-			}
-		}
-	}
 
-	#whatson {
-		padding-bottom: 40px;
-
-		.content {
-
-			header {
-				padding: 20px 0 40px 0;
-
-				h2 {
-					color: $brand-primary;
-					font-size: 40px;
-					text-transform: uppercase;
-					line-height: 1;
-					margin: 0;
-				}
-			}
-		}
-
-		.similar {
-
-			article {
-				@include span-columns(1);
-
-				@include media($medium-screen-up) {
-					@include span-columns(2);
-					@include omega(4n);
-				}
-				@include media($large-screen-up) {
-					@include span-columns(3);
-				}
-
-				img {
-					display: block;
-				}
-
-				h4 {
-					margin: 10px 0;
-					border-bottom: 2px solid black;
-					padding-bottom: 2px;
-					text-transform: uppercase;
-					color: $brand-primary;
-
-					a {
-						color: inherit;
-						font-size: inherit;
-						font-weight: inherit;
+					i.fa {
+						display: inline-block;
+						color: white;
+						background: green;
+						width: 30px;
+						line-height: 30px;
+						text-align: center;
+						border-radius: 50%;
+						margin-bottom: 10px;
+						margin-right: 5px;
 					}
-
-				}
-
-				a {
-					font-size: 14px;
-					color: $text-color;
-					margin-top: 10px;
-					font-weight: 600;
-				}
-
-				&:first-of-type {
-					border-top: 2px solid black;
-					padding-top: 5px;
 				}
 			}
 		}
 	}
+
 }

@@ -3,6 +3,11 @@
     "title": "Opening Times",
     "fields": [
         {
+            "default_value": "",
+            "new_lines": "wpautop",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": "",
             "key": "field_57ea7f2f9ea99",
             "label": "Opening Times",
             "name": "opening_times",
@@ -14,12 +19,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop"
+            }
         }
     ],
     "location": [
@@ -28,6 +28,13 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "info-page.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "businesses"
             }
         ]
     ],
@@ -38,6 +45,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "for info pages",
-    "modified": 1476346494
+    "description": "info page template \/ businesses",
+    "modified": 1481111850
 }

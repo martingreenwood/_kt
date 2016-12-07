@@ -3,6 +3,18 @@
     "title": "Feed Selector",
     "fields": [
         {
+            "layout": "vertical",
+            "choices": {
+                "clubs": "Clubs & Societies",
+                "events": "Events & Festival",
+                "businesses": "Business Directory",
+                "none": "None"
+            },
+            "default_value": "none",
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "allow_null": 0,
+            "return_format": "value",
             "key": "field_57fe0431539a6",
             "label": "Feed",
             "name": "feed",
@@ -14,19 +26,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "choices": {
-                "clubs": "Clubs & Societies",
-                "events": "Events & Festival",
-                "businesses": "Business Directory",
-                "none": "None"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "none",
-            "layout": "vertical",
-            "return_format": "value"
+            }
         }
     ],
     "location": [
@@ -45,6 +45,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "for landing pages",
-    "modified": 1476346189
+    "description": "top landing page templates only",
+    "modified": 1481105289
 }

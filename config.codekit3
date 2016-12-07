@@ -3689,6 +3689,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/site\/custom\/_shows.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/css\/_shows.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/site\/layout\/_layout.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -3915,6 +3928,18 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/sidebar.php",
+		"oF": 0
+		},
+	"\/single-businesses.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/single-businesses.php",
+		"oF": 0
+		},
+	"\/single-shows.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/single-shows.php",
 		"oF": 0
 		},
 	"\/single.php": {

@@ -62,7 +62,7 @@
 
 		<?php if ($counter == 3): // if first ?>
 			<div class="info bottom">
-				<h3>#KENDAL</h3>
+				<h3>#KENDALCUMBRIA</h3>
 				<p>Lorem ipsum esterio dolor sit amet, consectetur adipicing elit etiam vitae. porta at, tristique elitas purus nulla, posuere.</p>
 			</div>
 		<?php endif; ?>

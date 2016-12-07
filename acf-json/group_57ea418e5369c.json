@@ -3,25 +3,18 @@
     "title": "Content Repeater",
     "fields": [
         {
-            "key": "field_57ea41c6ba9fb",
-            "label": "",
-            "name": "cr_repeater",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": "",
-            "max": "",
-            "layout": "block",
-            "button_label": "Add Row",
             "sub_fields": [
                 {
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
                     "key": "field_57ea41dcba9fc",
                     "label": "Image",
                     "name": "cr_image",
@@ -33,19 +26,14 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    },
-                    "return_format": "id",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    }
                 },
                 {
+                    "default_value": "",
+                    "new_lines": "wpautop",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "rows": "",
                     "key": "field_57ea41e7ba9fd",
                     "label": "Caption",
                     "name": "cr_caption",
@@ -57,14 +45,14 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": "wpautop"
+                    }
                 },
                 {
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "default_value": "",
+                    "delay": 0,
                     "key": "field_57ea4201ba9fe",
                     "label": "Content",
                     "name": "cr_content",
@@ -76,13 +64,26 @@
                         "width": "",
                         "class": "",
                         "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1
+                    }
                 }
-            ]
+            ],
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Row",
+            "collapsed": "",
+            "key": "field_57ea41c6ba9fb",
+            "label": "",
+            "name": "cr_repeater",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -99,6 +100,20 @@
                 "operator": "==",
                 "value": "info-page.php"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "shows"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "businesses"
+            }
         ]
     ],
     "menu_order": 0,
@@ -108,6 +123,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "info template and default tempalate pages",
-    "modified": 1476346456
+    "description": "info template \/ default template \/ shows \/ businesses",
+    "modified": 1481111727
 }

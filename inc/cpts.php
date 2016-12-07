@@ -39,8 +39,17 @@ $cpts = array(
 		array('title','editor','thumbnail'),
 		true,
 	),
-);
 
+	// Businesses
+	array(
+		'businesses',
+		'Businesses',
+		'Business',
+		'dashicons-store', 
+		array('title','editor','thumbnail'),
+		true,
+	),
+);
 
 function cpts_register() {
 	

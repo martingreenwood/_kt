@@ -3,6 +3,11 @@
     "title": "Why Not Try",
     "fields": [
         {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0,
             "key": "field_57eabb2d38930",
             "label": "Why Not Try Text",
             "name": "why_not_try_text",
@@ -14,11 +19,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1
+            }
         }
     ],
     "location": [
@@ -37,6 +38,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "for info pages...",
-    "modified": 1476346486
+    "description": "info page template only",
+    "modified": 1481105533
 }

@@ -3,6 +3,8 @@
     "title": "Website",
     "fields": [
         {
+            "default_value": "",
+            "placeholder": "",
             "key": "field_57ea96f86c58e",
             "label": "",
             "name": "website",
@@ -14,9 +16,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
+            }
         }
     ],
     "location": [
@@ -25,6 +25,20 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "info-page.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "shows"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "businesses"
             }
         ]
     ],
@@ -35,6 +49,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "for info pages",
-    "modified": 1476346490
+    "description": "info page templates \/ shows \/ businesses",
+    "modified": 1481111832
 }

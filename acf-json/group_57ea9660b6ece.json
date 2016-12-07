@@ -3,6 +3,10 @@
     "title": "Location",
     "fields": [
         {
+            "height": "",
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
             "key": "field_57ea96752790c",
             "label": "Location",
             "name": "location",
@@ -14,11 +18,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "center_lat": "",
-            "center_lng": "",
-            "zoom": "",
-            "height": ""
+            }
         }
     ],
     "location": [
@@ -27,6 +27,20 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "info-page.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "shows"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "businesses"
             }
         ]
     ],
@@ -37,6 +51,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "Info page",
-    "modified": 1476346498
+    "description": "info page template \/ shows \/ businesses",
+    "modified": 1481111818
 }

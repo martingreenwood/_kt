@@ -3,6 +3,16 @@
     "title": "Social Logo",
     "fields": [
         {
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
             "key": "field_5811f7cacc3fd",
             "label": "Social Logo",
             "name": "social_logo",
@@ -14,17 +24,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            }
         }
     ],
     "location": [
@@ -43,6 +43,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "",
-    "modified": 1477572701
+    "description": "social wall page template",
+    "modified": 1481105410
 }

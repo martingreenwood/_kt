@@ -3,6 +3,10 @@
     "title": "Map",
     "fields": [
         {
+            "height": "",
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
             "key": "field_57cd81999c342",
             "label": "POI Map",
             "name": "poi_map",
@@ -14,11 +18,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "center_lat": "",
-            "center_lng": "",
-            "zoom": "",
-            "height": ""
+            }
         }
     ],
     "location": [
@@ -37,6 +37,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "for poi on maps...",
-    "modified": 1476098833
+    "description": "poi",
+    "modified": 1481105345
 }

@@ -751,6 +751,33 @@ a:hover, a:active { outline: 0; }
 
 .page-template-template-social #social #timeline_wall1.sboard.sb-modern2 .sb-item .sb-info a { line-height: 25px; }
 
+/*=============================
+=            SHARE            =
+=============================*/
+#share { padding: 20px 0; }
+
+#share header { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+
+#share header:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { #share header { float: left; display: block; margin-right: 3.2258064516%; width: 22.5806451613%; }
+  #share header:last-child { margin-right: 0; } }
+
+@media screen and (min-width: 1099px) { #share header { float: left; display: block; margin-right: 2.1276595745%; width: 14.8936170213%; }
+  #share header:last-child { margin-right: 0; } }
+
+#share header h2 { color: #1ca75e; font-size: 22px; text-transform: uppercase; line-height: 1; margin: 0; }
+
+#share .sharedaddy { float: left; display: block; margin-right: 33.3333333333%; width: 100%; clear: none; }
+
+#share .sharedaddy:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { #share .sharedaddy { float: left; display: block; margin-right: 3.2258064516%; width: 74.1935483871%; }
+  #share .sharedaddy:last-child { margin-right: 0; } }
+
+@media screen and (min-width: 1099px) { #share .sharedaddy { float: left; display: block; margin-right: 2.1276595745%; width: 82.9787234043%; }
+  #share .sharedaddy:last-child { margin-right: 0; } }
+
 /*================================
 =            HomePage            =
 ================================*/
@@ -1189,30 +1216,6 @@ a:hover, a:active { outline: 0; }
 
 .page-template-discover-poi #primary #main aside div h3, .page-template-info-page #primary #main aside div h3, .page-template-default #primary #main aside div h3 { border-bottom: 2px solid black; font-size: 16px; margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; }
 
-.page-template-discover-poi #share, .page-template-info-page #share, .page-template-default #share { padding: 20px 0; }
-
-.page-template-discover-poi #share header, .page-template-info-page #share header, .page-template-default #share header { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
-
-.page-template-discover-poi #share header:last-child, .page-template-info-page #share header:last-child, .page-template-default #share header:last-child { margin-right: 0; }
-
-@media screen and (min-width: 480px) { .page-template-discover-poi #share header, .page-template-info-page #share header, .page-template-default #share header { float: left; display: block; margin-right: 3.2258064516%; width: 22.5806451613%; }
-  .page-template-discover-poi #share header:last-child, .page-template-info-page #share header:last-child, .page-template-default #share header:last-child { margin-right: 0; } }
-
-@media screen and (min-width: 1099px) { .page-template-discover-poi #share header, .page-template-info-page #share header, .page-template-default #share header { float: left; display: block; margin-right: 2.1276595745%; width: 14.8936170213%; }
-  .page-template-discover-poi #share header:last-child, .page-template-info-page #share header:last-child, .page-template-default #share header:last-child { margin-right: 0; } }
-
-.page-template-discover-poi #share header h2, .page-template-info-page #share header h2, .page-template-default #share header h2 { color: #1ca75e; font-size: 22px; text-transform: uppercase; line-height: 1; margin: 0; }
-
-.page-template-discover-poi #share .sharedaddy, .page-template-info-page #share .sharedaddy, .page-template-default #share .sharedaddy { float: left; display: block; margin-right: 33.3333333333%; width: 100%; clear: none; }
-
-.page-template-discover-poi #share .sharedaddy:last-child, .page-template-info-page #share .sharedaddy:last-child, .page-template-default #share .sharedaddy:last-child { margin-right: 0; }
-
-@media screen and (min-width: 480px) { .page-template-discover-poi #share .sharedaddy, .page-template-info-page #share .sharedaddy, .page-template-default #share .sharedaddy { float: left; display: block; margin-right: 3.2258064516%; width: 74.1935483871%; }
-  .page-template-discover-poi #share .sharedaddy:last-child, .page-template-info-page #share .sharedaddy:last-child, .page-template-default #share .sharedaddy:last-child { margin-right: 0; } }
-
-@media screen and (min-width: 1099px) { .page-template-discover-poi #share .sharedaddy, .page-template-info-page #share .sharedaddy, .page-template-default #share .sharedaddy { float: left; display: block; margin-right: 2.1276595745%; width: 82.9787234043%; }
-  .page-template-discover-poi #share .sharedaddy:last-child, .page-template-info-page #share .sharedaddy:last-child, .page-template-default #share .sharedaddy:last-child { margin-right: 0; } }
-
 .page-template-discover-poi #whatson, .page-template-info-page #whatson, .page-template-default #whatson { padding-bottom: 40px; }
 
 .page-template-discover-poi #whatson .content header, .page-template-info-page #whatson .content header, .page-template-default #whatson .content header { padding: 20px 0 40px 0; }
@@ -1287,6 +1290,84 @@ a:hover, a:active { outline: 0; }
 #plan-your-visit #essentials .grid article h4 a { color: inherit; font-size: inherit; }
 
 #plan-your-visit #essentials .grid article a { display: block; margin-top: 10px; font-size: 14px; }
+
+/*--------------------------------------------------------------
+## Custom Post Types
+--------------------------------------------------------------*/
+/*=============================
+=            SHOWS            =
+=============================*/
+.single-shows #primary .column, .single-businesses #primary .column { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+
+.single-shows #primary .column:last-child, .single-businesses #primary .column:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { .single-shows #primary .column, .single-businesses #primary .column { float: left; display: block; margin-right: 3.2258064516%; width: 74.1935483871%; }
+  .single-shows #primary .column:last-child, .single-businesses #primary .column:last-child { margin-right: 0; } }
+
+@media screen and (min-width: 1099px) { .single-shows #primary .column, .single-businesses #primary .column { float: left; display: block; margin-right: 2.1276595745%; width: 70.2127659574%; }
+  .single-shows #primary .column:last-child, .single-businesses #primary .column:last-child { margin-right: 0; } }
+
+.single-shows #primary .column .entry-content, .single-businesses #primary .column .entry-content { margin-bottom: 20px; }
+
+.single-shows #primary .column .entry-content p, .single-businesses #primary .column .entry-content p { font-size: 25px; line-height: 1.2; }
+
+.single-shows #primary #main, .single-businesses #primary #main { padding: 0 0 50px 0; }
+
+.single-shows #primary #main .column, .single-businesses #primary #main .column { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+
+.single-shows #primary #main .column:last-child, .single-businesses #primary #main .column:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { .single-shows #primary #main .column, .single-businesses #primary #main .column { float: left; display: block; margin-right: 3.2258064516%; width: 74.1935483871%; }
+  .single-shows #primary #main .column:last-child, .single-businesses #primary #main .column:last-child { margin-right: 0; } }
+
+@media screen and (min-width: 1099px) { .single-shows #primary #main .column, .single-businesses #primary #main .column { float: left; display: block; margin-right: 2.1276595745%; width: 70.2127659574%; }
+  .single-shows #primary #main .column:last-child, .single-businesses #primary #main .column:last-child { margin-right: 0; } }
+
+.single-shows #primary #main .column .entry-content, .single-businesses #primary #main .column .entry-content { margin-bottom: 20px; }
+
+.single-shows #primary #main .column .entry-content p, .single-businesses #primary #main .column .entry-content p { font-size: 25px; line-height: 1.2; }
+
+.single-shows #primary #main .column .row img, .single-businesses #primary #main .column .row img { display: block; width: 100%; margin-bottom: 20px; }
+
+.single-shows #primary #main .column .row .caption, .single-businesses #primary #main .column .row .caption { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+
+.single-shows #primary #main .column .row .caption:last-child, .single-businesses #primary #main .column .row .caption:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { .single-shows #primary #main .column .row .caption, .single-businesses #primary #main .column .row .caption { float: left; display: block; margin-right: 4.347826087%; width: 30.4347826087%; }
+  .single-shows #primary #main .column .row .caption:last-child, .single-businesses #primary #main .column .row .caption:last-child { margin-right: 0; } }
+
+@media screen and (min-width: 1099px) { .single-shows #primary #main .column .row .caption, .single-businesses #primary #main .column .row .caption { float: left; display: block; margin-right: 3.0303030303%; width: 21.2121212121%; }
+  .single-shows #primary #main .column .row .caption:last-child, .single-businesses #primary #main .column .row .caption:last-child { margin-right: 0; } }
+
+.single-shows #primary #main .column .row .copy, .single-businesses #primary #main .column .row .copy { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+
+.single-shows #primary #main .column .row .copy:last-child, .single-businesses #primary #main .column .row .copy:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { .single-shows #primary #main .column .row .copy, .single-businesses #primary #main .column .row .copy { float: left; display: block; margin-right: 4.347826087%; width: 65.2173913043%; }
+  .single-shows #primary #main .column .row .copy:last-child, .single-businesses #primary #main .column .row .copy:last-child { margin-right: 0; } }
+
+@media screen and (min-width: 1099px) { .single-shows #primary #main .column .row .copy, .single-businesses #primary #main .column .row .copy { float: left; display: block; margin-right: 3.0303030303%; width: 75.7575757576%; }
+  .single-shows #primary #main .column .row .copy:last-child, .single-businesses #primary #main .column .row .copy:last-child { margin-right: 0; } }
+
+.single-shows #primary #main .column .row .copy p, .single-businesses #primary #main .column .row .copy p { font-size: 16px; }
+
+.single-shows #primary #main aside, .single-businesses #primary #main aside { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+
+.single-shows #primary #main aside:last-child, .single-businesses #primary #main aside:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { .single-shows #primary #main aside, .single-businesses #primary #main aside { float: left; display: block; margin-right: 3.2258064516%; width: 22.5806451613%; }
+  .single-shows #primary #main aside:last-child, .single-businesses #primary #main aside:last-child { margin-right: 0; } }
+
+@media screen and (min-width: 1099px) { .single-shows #primary #main aside, .single-businesses #primary #main aside { float: left; display: block; margin-right: 2.1276595745%; width: 27.6595744681%; }
+  .single-shows #primary #main aside:last-child, .single-businesses #primary #main aside:last-child { margin-right: 0; } }
+
+.single-shows #primary #main aside .map, .single-businesses #primary #main aside .map { height: 300px; }
+
+.single-shows #primary #main aside div, .single-businesses #primary #main aside div { margin-bottom: 20px; }
+
+.single-shows #primary #main aside div h3, .single-businesses #primary #main aside div h3 { border-bottom: 2px solid black; font-size: 16px; margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; }
+
+.single-shows #primary #main aside div i.fa, .single-businesses #primary #main aside div i.fa { display: inline-block; color: white; background: green; width: 30px; line-height: 30px; text-align: center; border-radius: 50%; margin-bottom: 10px; margin-right: 5px; }
 
 /*--------------------------------------------------------------
 ## Asides

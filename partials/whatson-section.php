@@ -150,7 +150,16 @@
 				<div class="info">
 					<h3><?php echo $name; ?></h3>
 					<p><?php echo substr($description, 0, 150); ?>...</p>
-					<a href="#">read more...</a>
+					
+					<?php
+					if ($loop->have_posts()) {
+						while ( $loop->have_posts() ) : $loop->the_post(); 
+							echo '<a href="'.get_permalink().'">read more...</a>';
+						endwhile; 
+					} else {
+						
+					}
+					?>
 				</div>
 
 			</div>

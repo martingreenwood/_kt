@@ -3,6 +3,11 @@
     "title": "Plan Your Visit",
     "fields": [
         {
+            "default_value": "",
+            "new_lines": "wpautop",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": "",
             "key": "field_57f364e4b7145",
             "label": "Intro",
             "name": "planning_intro",
@@ -14,14 +19,13 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": "wpautop"
+            }
         },
         {
+            "height": "",
+            "center_lat": "",
+            "center_lng": "",
+            "zoom": "",
             "key": "field_57cd75cb98aa6",
             "label": "Map Center",
             "name": "planning_map",
@@ -33,11 +37,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "center_lat": "",
-            "center_lng": "",
-            "zoom": "",
-            "height": ""
+            }
         }
     ],
     "location": [
@@ -56,6 +56,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "for plan map defults in theme options",
-    "modified": 1476098884
+    "description": "theme options only",
+    "modified": 1481105389
 }

@@ -3,6 +3,17 @@
     "title": "Feature Slider Section",
     "fields": [
         {
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "insert": "append",
             "key": "field_57cd374683ee5",
             "label": "Slider",
             "name": "explore_slider",
@@ -14,20 +25,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "min": "",
-            "max": "",
-            "insert": "append",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            }
         },
         {
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
             "key": "field_57e90fd0f26de",
             "label": "Title",
             "name": "explore_title",
@@ -39,14 +44,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            }
         },
         {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0,
             "key": "field_57cd375183ee6",
             "label": "Blurb",
             "name": "explore_blurb",
@@ -58,11 +63,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1
+            }
         }
     ],
     "location": [
@@ -88,6 +89,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "slider with text section for templates",
-    "modified": 1476099007
+    "description": "homepage \/ top landing page template",
+    "modified": 1481105498
 }

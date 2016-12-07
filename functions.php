@@ -190,6 +190,27 @@ function jptweak_remove_share() {
 }
 add_action( 'loop_start', 'jptweak_remove_share' );
 
+/*=============================
+=            CLEAN            =
+=============================*/
+
+function cleanMe($string) {
+  $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+  return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+}
+
+function cleanMeExta($string) {
+    //Lower case everything
+    $string = strtolower($string);
+    //Make alphanumeric (removes all other characters)
+    $string = preg_replace("/[^a-z0-9_\s-]/", "", $string);
+    //Clean up multiple dashes or whitespaces
+    $string = preg_replace("/[\s-]+/", "", $string);
+    //Convert whitespaces and underscore to dash
+    $string = preg_replace("/[\s_]/", "", $string);
+    return $string;
+}
+
 
 /**
  * Custom template tags for this theme.
