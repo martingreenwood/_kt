@@ -264,6 +264,7 @@ get_header(); ?>
 		</div>
 	</section>
 
+	<?php if (get_field('explore_slider')): ?>
 	<section id="explore">
 		<div class="container">
 
@@ -271,6 +272,7 @@ get_header(); ?>
 
 		</div>
 	</section>
+	<?php endif; ?>
 
 	<?php $feed = get_field('feed'); ?>
 
