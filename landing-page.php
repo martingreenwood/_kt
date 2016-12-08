@@ -258,13 +258,13 @@ get_header(); ?>
 		</main>
 	</div>
 
+	<?php if (get_field('explore_slider')): ?>
 	<section class="break">
 		<div class="container">
 			<hr>
 		</div>
 	</section>
 
-	<?php if (get_field('explore_slider')): ?>
 	<section id="explore">
 		<div class="container">
 
