@@ -135,6 +135,7 @@
 
 			article {
 				@include span-columns(1);
+				margin-bottom: 20px;
 
 				@include media($medium-screen-up) {
 					@include span-columns(2);

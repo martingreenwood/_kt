@@ -1222,7 +1222,7 @@ a:hover, a:active { outline: 0; }
 
 .page-template-discover-poi #whatson .content header h2, .page-template-info-page #whatson .content header h2, .page-template-default #whatson .content header h2 { color: #1ca75e; font-size: 40px; text-transform: uppercase; line-height: 1; margin: 0; }
 
-.page-template-discover-poi #whatson .similar article, .page-template-info-page #whatson .similar article, .page-template-default #whatson .similar article { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+.page-template-discover-poi #whatson .similar article, .page-template-info-page #whatson .similar article, .page-template-default #whatson .similar article { float: left; display: block; margin-right: 33.3333333333%; width: 100%; margin-bottom: 20px; }
 
 .page-template-discover-poi #whatson .similar article:last-child, .page-template-info-page #whatson .similar article:last-child, .page-template-default #whatson .similar article:last-child { margin-right: 0; }
 
