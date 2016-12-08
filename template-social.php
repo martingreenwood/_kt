@@ -100,7 +100,7 @@ get_header(); ?>
 						),
 						'twitter' => array(                
 							'twitter_id_3' => array(
-								//'#kendal', // Twitter #hashtag
+								'#kendal', // Twitter #hashtag
 								'#kendaltown', // Twitter #hastag
 								'#mintcake', // Twitter #hastag
 								'#jumpintokendal', // Twitter #hastag
@@ -110,9 +110,9 @@ get_header(); ?>
 						),
 						'instagram' => array(
 							'instagram_id_2' => array(
-								'#kendal', // Instagram hashtag 1
-								'#kendaltown', // Instagram hashtag 1
-								'#kendalcumbria' // Instagram hashtag 1
+								'kendal', // Instagram hashtag 1
+								'kendaltown', // Instagram hashtag 1
+								'kendalcumbria' // Instagram hashtag 1
 							)
 						)
 					),
