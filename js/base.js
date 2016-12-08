@@ -29,6 +29,7 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
 
 var $ = jQuery;
 
+
 /*===================================
 =            MatchHeight            =
 ===================================*/
@@ -152,13 +153,19 @@ var $ = jQuery;
 /*==================================
 =            DatePicker            =
 ==================================*/
-
-var picker = new Pikaday({
-	field: document.getElementById('datepicker'),
-	format: 'DD-MM-YYYY',
-	onSelect: function() {
-		console.log(this.getMoment().format('DD-MM-YYYY'));
-	}
+(function($) {
+	$('#datepicker').pickadate({
+		// Formats
+		format: 'd mmmm, yyyy',
+		formatSubmit: 'dd-mm-yyyy',
+		hiddenName: true,
+		// Editable input
+		editable: false,
+		// First day of the week
+		firstDay: 1,
+		// Date limits
+		min: new Date(),
+	})
 });
 
 /*=================================
