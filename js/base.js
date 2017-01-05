@@ -44,14 +44,12 @@ var $ = jQuery;
 
 (function ($) {
 	$('.slides').slick({
-		dots: false,
+		dots: true,
+		arrows: false,
 		infinite: true,
 		speed: 500,
 		fade: true,
 		cssEase: 'linear',
-		appendArrows: '.arrows',
-		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
-		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
 	});
 })(jQuery);
 

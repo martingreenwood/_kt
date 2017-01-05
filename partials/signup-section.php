@@ -5,7 +5,7 @@
 	</header>
 
 	<article class="intro">
-		<p>Lorem ipsum dolor sitet eriasa amet, consectetur adipiscing elit aliqua pretium justo id leo nare, acia varius eros ut hendre. Vestibulum lorem es lorem, vehicula.</p>
+		<?php the_field( 'signup_intro', 'options' ); ?>
 	</article>
 
 </div>

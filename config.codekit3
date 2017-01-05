@@ -153,6 +153,22 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/acf-json\/group_586e272e88a64.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_586e272e88a64-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/acf-json\/group_586e278881df1.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_586e278881df1-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/archive.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -947,6 +963,15 @@
 		"oAP": "\/js\/min\/customizer-min.js",
 		"oF": 0,
 		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/iframeResizer.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/iframeResizer.min-min.js",
+		"oF": 0,
+		"sC": 1,
 		"tS": 0
 		},
 	"\/js\/jquery.easyPaginate.js": {

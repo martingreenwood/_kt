@@ -142,7 +142,7 @@
 
 		<div class="event" data-id="<?php echo $directory_id; ?>" data-town="<?php echo $directory_town_id; ?>" data-cat="<?php echo $directory_category_id; ?>" data-sec-cat="<?php echo $directory_category_2_id; ?>" data-thi-cat="<?php echo $directory_category_3_id; ?>">
 
-			<div class="img">
+			<!--<div class="img">
 			<?php
 			$args = array(
 				'post_type' => 'businesses',
@@ -163,7 +163,7 @@
 				echo '<img src="//lorempixel.com/600/430/abstract">';
 			}
 			?>
-			</div>
+			</div>-->
 
 			<div class="meta">
 				<small><?php echo substr($directory_listing_cats, 0, -2); ?></small>

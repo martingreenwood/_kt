@@ -10,9 +10,7 @@
 
 	<div class="posts">
 		<div class="item">
-			<p>Lorem ipsum dolor sitet eriasa amet, consectetur adipiscing elit aliqua pretium justo id leo ornare, ac varius eros consectetur ut hendre ritamol metus id aliquet. </p>
-
-			<p>Vestibulum lorem es lorem, vehicula id fermentum maximus, ornare at lectus suspendise aies pellentesque, libero nec euismod auctor, lorem ligula aliquet nibh.</p>
+			<?php the_field( 'from_the_blog_intro' ); ?>
 		</div>
 
 		<?php $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 5 ) ); ?>

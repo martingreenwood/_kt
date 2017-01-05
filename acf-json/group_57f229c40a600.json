@@ -1,8 +1,37 @@
 {
     "key": "group_57f229c40a600",
-    "title": "Feature Pages (Discover)",
+    "title": "Discover Section",
     "fields": [
         {
+            "default_value": "",
+            "new_lines": "br",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": "",
+            "key": "field_586e3b4e6431c",
+            "label": "Discover Intro",
+            "name": "discover_intro",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1,
             "key": "field_57f229c40df58",
             "label": "Feature One",
             "name": "feature_one",
@@ -14,7 +43,9 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -24,9 +55,7 @@
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
-            "ui": 1
-        },
-        {
+            "ui": 1,
             "key": "field_57f229c40dfe2",
             "label": "Feature Two",
             "name": "feature_two",
@@ -38,7 +67,9 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -48,9 +79,7 @@
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
-            "ui": 1
-        },
-        {
+            "ui": 1,
             "key": "field_57f229c40e069",
             "label": "Feature Three",
             "name": "feature_three",
@@ -62,7 +91,9 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -72,9 +103,7 @@
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
-            "ui": 1
-        },
-        {
+            "ui": 1,
             "key": "field_57f229c40e115",
             "label": "Feature Four",
             "name": "feature_four",
@@ -86,7 +115,9 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -96,9 +127,7 @@
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
-            "ui": 1
-        },
-        {
+            "ui": 1,
             "key": "field_57f229c40e1a1",
             "label": "Feature Five",
             "name": "feature_five",
@@ -110,7 +139,9 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -120,9 +151,7 @@
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
-            "ui": 1
-        },
-        {
+            "ui": 1,
             "key": "field_57f229d5e38e3",
             "label": "Feature Six",
             "name": "feature_six",
@@ -134,7 +163,9 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -144,9 +175,7 @@
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
-            "ui": 1
-        },
-        {
+            "ui": 1,
             "key": "field_57f229d4e38e2",
             "label": "Feature Seven",
             "name": "feature_seven",
@@ -158,19 +187,14 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": [
-
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1
+            }
         },
         {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0,
             "key": "field_57f229c40e233",
             "label": "Feature Text",
             "name": "feature_text",
@@ -182,11 +206,7 @@
                 "width": "",
                 "class": "",
                 "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1
+            }
         }
     ],
     "location": [
@@ -206,5 +226,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "For Homepage",
-    "modified": 1475488280
+    "modified": 1483619191
 }

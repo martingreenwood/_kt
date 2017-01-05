@@ -112,30 +112,30 @@
 			<div class="event" data-min-price="<?php echo $min_price; ?>" data-max-price="<?php echo $max_price; ?>" data-id="<?php echo $id; ?>" data-type="<?php echo $type_id; ?>" data-start="<?php echo $start_date; ?>" data-end="<?php echo $end_date; ?>">
 
 
-				<div class="img">
-				<?php
-				$args = array(
-					'post_type' => 'shows',
-					'meta_query'  => array(
-						array(
-							'key' => '_kendal_id',
-							'value' => $id
+				<!--<div class="img">
+					<?php
+					$args = array(
+						'post_type' => 'shows',
+						'meta_query'  => array(
+							array(
+								'key' => '_kendal_id',
+								'value' => $id
+							)
 						)
-					)
-				);
+					);
 
-				$loop = new WP_Query( $args );
-				if ($loop->have_posts()) {
-					while ( $loop->have_posts() ) : $loop->the_post(); 
-						the_post_thumbnail("600x430");
-					endwhile; 
-				} else {
-					echo '<img src="//lorempixel.com/600/430/abstract">';
-				}
-				?>
+					$loop = new WP_Query( $args );
+					if ($loop->have_posts()) {
+						while ( $loop->have_posts() ) : $loop->the_post(); 
+							the_post_thumbnail("600x430");
+						endwhile; 
+					} else {
+						echo '<img src="//lorempixel.com/600/430/abstract">';
+					}
+					?>
 
 					<div class="cat"><?php echo $type; ?></div>
-				</div>
+				</div>-->
 
 				<div class="meta">
 					<ul>

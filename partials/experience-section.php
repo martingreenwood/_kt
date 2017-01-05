@@ -1,5 +1,5 @@
 <header>
-	<h2>#KENDAL</h2>
+	<h2><?php the_field( 'social_wall_title' ); ?></h2>
 </header>
 
 <article class="grid">
@@ -34,9 +34,10 @@
 
 		<?php if ($counter == 1): // if first ?>
 			<div class="info top">
-				<p>Lorem ipsum esterio dolor sit amet, consectetur adipicing elit etiam vitae. porta at, tristique elitas purus nulla, posuere acsia esi estibulum rutrum elit eros luctus.</p>
-
-				<a href="https://www.instagram.com/kendalcumbria/" target="_blank">See more posts</a>
+				<p>
+					<?php the_field( 'social_wall_intro' ); ?>
+				</p>
+				<a href="<?php the_field( 'social_wall_url' ); ?>" target="_blank"><?php the_field( 'social_wall_url_title' ); ?></a>
 			</div>
 		<?php endif; ?>
 		
@@ -62,8 +63,7 @@
 
 		<?php if ($counter == 3): // if first ?>
 			<div class="info bottom">
-				<h3>#KENDALCUMBRIA</h3>
-				<p>Lorem ipsum esterio dolor sit amet, consectetur adipicing elit etiam vitae. porta at, tristique elitas purus nulla, posuere.</p>
+				<?php the_field( 'social_wall_blurb' ); ?>
 			</div>
 		<?php endif; ?>
 

@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="column">
 			<aside class="text">
-				<p>Lorem ipsum esterio dolor sit amet, consectetur adipicing elit etiam vitae. porta at, tristique elitas purus nulla, posuere acsia esi estibulum rutrum elit eros luctus.</p>
+				<p><?php the_field( 'discover_intro' ); ?></p>
 			</aside>
 
 			<?php

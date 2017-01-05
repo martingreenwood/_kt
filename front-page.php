@@ -20,8 +20,10 @@ get_header(); ?>
 				<?php endif; ?>
 					<?php echo wp_get_attachment_image( $home_slide['id'], '169cover' ); ?>
 					<div class="caption">
+						<div class="table"><div class="cell middle">
 						<h2><?php echo $home_slide['title']; ?></h2>
 						<h3><?php echo $home_slide['caption']; ?></h3>
+						</div></div>
 					</div>
 				<?php if(get_field('internal_url', $home_slide['id'])): ?>
 				</a>
@@ -30,12 +32,12 @@ get_header(); ?>
 			<?php endforeach; ?>
 			<?php endif; ?>
 		</div>
-		<div class="arrow-box">
+		<?php /* ?><div class="arrow-box">
 			<div class="container">
 				<div class="arrows">
 				</div>
 			</div>
-		</div>
+		</div><?php */ ?>
 		
 	</section>
 
