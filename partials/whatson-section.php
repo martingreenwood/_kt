@@ -5,12 +5,12 @@
 	// this needs a date and passwoed set to the i= 
 	// useing SHA1(PASSWORD-YYYYMMDD) defined in config.php DATENOW & PASSWORD & KTKEY
 
-	if(cached_and_valid(get_stylesheet_directory() . '/cache/events.txt')){
-		$event_data = file_get_contents(get_stylesheet_directory() . '/cache/events.txt');
+	if(cached_and_valid(FEED_CACHE . 'events.txt')){
+		$event_data = file_get_contents(FEED_CACHE . 'events.txt');
 		$event_data_obj = json_decode($event_data);
 	} else {
 		$event_data = get_data('http://www.exploresouthlakeland.co.uk/exports/events/?i='.KTKEY);
-		file_put_contents(get_stylesheet_directory() . '/cache/events.txt', $event_data);
+		file_put_contents(FEED_CACHE . 'events.txt', $event_data);
 		$event_data_obj = json_decode($event_data);
     }
 

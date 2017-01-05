@@ -345,6 +345,8 @@ a:hover, a:active { outline: 0; }
 
 .ubermenu.ubermenu-main .ubermenu-item-level-0 .ubermenu-target { padding: 0 20px; line-height: 6; }
 
+.ubermenu.ubermenu-main .ubermenu-item-level-0.ubermenu-current-page-ancestor .ubermenu-target { color: #1ca75e; }
+
 .ubermenu h3.ubermenu-widgettitle { font-weight: 400; margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; font-size: 18px; margin-bottom: 20px; padding: 0; line-height: normal; padding: 0; color: #1ca75e; }
 
 .ubermenu .textwidget { font-size: 14px; }
@@ -352,6 +354,8 @@ a:hover, a:active { outline: 0; }
 .ubermenu h3.widget-title, .ubermenu li, .ubermenu a { margin: 0; font-size: 14px; font-weight: 400; color: #3B3C43; line-height: 2; text-transform: capitalize; }
 
 .ubermenu h3.widget-title { font-weight: 600; border-bottom: 2px solid; }
+
+.ubermenu h3.widget-title a { font-weight: inherit; }
 
 .ubermenu .ubermenu-nav .ubermenu-column-1-2 { width: 100% !important; }
 

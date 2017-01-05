@@ -327,12 +327,6 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/cache": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/cache",
-		"oF": 0
-		},
 	"\/comments.php": {
 		"ft": 8192,
 		"oA": 0,

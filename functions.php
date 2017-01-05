@@ -212,6 +212,19 @@ function cleanMeExta($string) {
     return $string;
 }
 
+/*=============================
+=            CACHE            =
+=============================*/
+
+function create_cache_folders() {
+  if (wp_mkdir_p(FEED_CACHE)) {
+  }
+}
+add_action( 'init', 'create_cache_folders' );
+
+
+
+
 
 /**
  * Custom template tags for this theme.

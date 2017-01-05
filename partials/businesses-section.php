@@ -5,30 +5,30 @@
 	// this needs a date and passwoed set to the i= 
 	// useing SHA1(PASSWORD-YYYYMMDD) defined in config.php DATENOW & PASSWORD & KTKEY
 
-	if(cached_and_valid(get_stylesheet_directory() . '/cache/business.txt')){
-		$business_data = file_get_contents(get_stylesheet_directory() . '/cache/business.txt');
+	if(cached_and_valid(FEED_CACHE . 'business.txt')){
+		$business_data = file_get_contents(FEED_CACHE . 'business.txt');
 		$business_data_obj = json_decode($business_data);
 	} else {
 		$business_data = get_data('http://www.exploresouthlakeland.co.uk/exports/business/?i='.KTKEY);
-		file_put_contents(get_stylesheet_directory() . '/cache/business.txt', $business_data);
+		file_put_contents(FEED_CACHE . 'business.txt', $business_data);
 		$business_data_obj = json_decode($business_data);
     }
 
-	if(cached_and_valid(get_stylesheet_directory() . '/cache/business_categories.txt')){
-		$business_cat_data = file_get_contents(get_stylesheet_directory() . '/cache/business_categories.txt');
+	if(cached_and_valid(FEED_CACHE . 'business_categories.txt')){
+		$business_cat_data = file_get_contents(FEED_CACHE . 'business_categories.txt');
 		$business_cat_obj = json_decode($business_cat_data);
 	} else {
 		$business_cat_data = get_data('http://www.exploresouthlakeland.co.uk/exports/business/categories//?i='.KTKEY);
-		file_put_contents(get_stylesheet_directory() . '/cache/business_categories.txt', $business_cat_data);
+		file_put_contents(FEED_CACHE . 'business_categories.txt', $business_cat_data);
 		$business_cat_obj = json_decode($business_cat_data);
     }
 
-	if(cached_and_valid(get_stylesheet_directory() . '/cache/business_towns.txt')){
-		$business_towns_data = file_get_contents(get_stylesheet_directory() . '/cache/business_towns.txt');
+	if(cached_and_valid(FEED_CACHE . 'business_towns.txt')){
+		$business_towns_data = file_get_contents(FEED_CACHE . 'business_towns.txt');
 		$business_towns_obj = json_decode($business_towns_data);
 	} else {
 		$business_towns_data = get_data('http://www.exploresouthlakeland.co.uk/exports/business/towns//?i='.KTKEY);
-		file_put_contents(get_stylesheet_directory() . '/cache/business_towns.txt', $business_towns_data);
+		file_put_contents(FEED_CACHE . 'business_towns.txt', $business_towns_data);
 		$business_towns_obj = json_decode($business_towns_data);
     }
 
