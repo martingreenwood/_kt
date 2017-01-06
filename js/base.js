@@ -164,7 +164,7 @@ var $ = jQuery;
 		// Date limits
 		min: new Date(),
 	})
-});
+})(jQuery);
 
 /*=================================
 =            Mailchimp            =

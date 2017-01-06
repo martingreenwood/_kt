@@ -7,7 +7,7 @@
 		"uuidString": "BF6D5048-A4DB-4D72-B8DD-3DF3CC6177F6"
 		}
 	],
-"creatorBuild": "25444",
+"creatorBuild": "25479",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -256,76 +256,6 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
-		},
-	"\/assets\/themes\/classic.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/themes\/classic-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/themes\/classic.date.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/themes\/classic.date-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/themes\/classic.time.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/themes\/classic.time-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/themes\/default.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/themes\/default-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/themes\/default.date.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/themes\/default.date-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/themes\/default.time.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/themes\/default.time-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/assets\/themes\/rtl.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/assets\/themes\/rtl-min.css",
-		"oF": 0,
-		"oS": 0
 		},
 	"\/comments.php": {
 		"ft": 8192,
@@ -995,15 +925,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/legacy.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/min\/legacy-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"\/js\/maps.js": {
 		"ft": 64,
 		"mi": 1,
@@ -1040,15 +961,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/moment.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/min\/moment.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"\/js\/navigation.js": {
 		"ft": 64,
 		"mi": 1,
@@ -1058,11 +970,29 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/js\/picker.date.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/picker.date-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/picker.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/picker-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/picker.time.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/picker.time-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -4694,6 +4624,10 @@
 			"active": 0,
 			"optionString": "{'properties': 'always'}"
 			},
+		"capitalized-comments": {
+			"active": 0,
+			"optionString": "'always', {'ignoreInlineComments': false, 'ignoreConsecutiveComments': false}"
+			},
 		"class-methods-use-this": {
 			"active": 0,
 			"optionString": "{'exceptMethods': []}"
@@ -4857,6 +4791,10 @@
 		"max-statements": {
 			"active": 0,
 			"optionString": "{'max': 10}, {'ignoreTopLevelFunctions': true}"
+			},
+		"max-statements-per-line": {
+			"active": 0,
+			"optionString": "{'max': 1}"
 			},
 		"multiline-ternary": {
 			"active": 0,
@@ -5222,6 +5160,10 @@
 			"active": 0,
 			"optionString": "'except-parens'"
 			},
+		"no-return-await": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-script-url": {
 			"active": 0,
 			"optionString": ""
@@ -5453,6 +5395,10 @@
 		"radix": {
 			"active": 0,
 			"optionString": "'always'"
+			},
+		"require-await": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-jsdoc": {
 			"active": 0,
@@ -6286,6 +6232,10 @@
 			},
 		"space-colon": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"support-ie8": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"toplevel": {
