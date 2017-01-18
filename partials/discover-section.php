@@ -98,7 +98,7 @@
 				$feature_sixID = get_post_thumbnail_id( $feature_six->ID );
 				$feature_sixURL = wp_get_attachment_image_src( $feature_sixID, 'full' );
 				?>
-				<aside class="image tall" style="background-image: url(<?php echo $feature_sixURL[0]; ?>);">
+				<aside class="image" style="background-image: url(<?php echo $feature_sixURL[0]; ?>);">
 					<a href="<?php echo get_permalink( $feature_six->ID ); ?>">
 						<div class="table">
 							<div class="cell bottom">
@@ -107,9 +107,7 @@
 						</div>
 					</a>
 				</aside>
-			</div>
-	
-			<div class="half">
+
 				<?php
 				$feature_seven = get_field('feature_seven');
 				$feature_sevenID = get_post_thumbnail_id( $feature_seven->ID );
@@ -120,6 +118,23 @@
 						<div class="table">
 							<div class="cell bottom">
 								<span><?php echo get_the_title( $feature_seven->ID ); ?></span>
+							</div>
+						</div>
+					</a>
+				</aside>
+			</div>
+	
+			<div class="half">
+				<?php
+				$feature_eight = get_field('feature_eight');
+				$feature_eightID = get_post_thumbnail_id( $feature_eight->ID );
+				$feature_eightURL = wp_get_attachment_image_src( $feature_eightID, 'full' );
+				?>
+				<aside class="image" style="background-image: url(<?php echo $feature_eightURL[0]; ?>);">
+					<a href="<?php echo get_permalink( $feature_eight->ID ); ?>">
+						<div class="table">
+							<div class="cell bottom">
+								<span><?php echo get_the_title( $feature_eight->ID ); ?></span>
 							</div>
 						</div>
 					</a>

@@ -1,26 +1,7 @@
 {
     "key": "group_57f229c40a600",
-    "title": "Discover Section",
+    "title": "Feature Pages (Discover)",
     "fields": [
-        {
-            "default_value": "",
-            "new_lines": "br",
-            "maxlength": "",
-            "placeholder": "",
-            "rows": "",
-            "key": "field_586e3b4e6431c",
-            "label": "Discover Intro",
-            "name": "discover_intro",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
         {
             "post_type": [
                 "page"
@@ -190,6 +171,30 @@
             }
         },
         {
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1,
+            "key": "field_587f8a755e715",
+            "label": "Feature Eight",
+            "name": "feature_eight",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
@@ -226,5 +231,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "For Homepage",
-    "modified": 1483619191
+    "modified": 1484753543
 }
