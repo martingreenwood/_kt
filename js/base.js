@@ -209,7 +209,7 @@ var cat = getUrlParameter('cat');
 var town = getUrlParameter('town');
 
 var myEvents = jQuery('.event').length;
-console.log("events: " + myEvents);
+//console.log("events: " + myEvents);
 
 (function($) {
 	// events
@@ -220,7 +220,7 @@ console.log("events: " + myEvents);
 			$(this).prependTo(".event-list");
 		});
 		var MatchingEvents = $('.event[data-start="'+start+'"][data-type="'+genre+'"]').length;
-		console.log('events with date and genre: ' + MatchingEvents);
+		//console.log('events with date and genre: ' + MatchingEvents);
 		if(MatchingEvents == 0) {
 			$('.search-error').addClass('show');
 		}
@@ -232,7 +232,7 @@ console.log("events: " + myEvents);
 			$(this).prependTo(".event-list");
 		});
 		var MatchingEvents = $('.event[data-start="'+start+'"]').length;
-		console.log('events with date: ' + MatchingEvents);
+		//console.log('events with date: ' + MatchingEvents);
 		if(MatchingEvents == 0) {
 			$('.search-error').addClass('show');
 		}
@@ -245,7 +245,7 @@ console.log("events: " + myEvents);
 			$(this).prependTo(".event-list");
 		});
 		var MatchingEvents = $('.event[data-type="'+genre+'"]').length;
-		console.log('events with genre: ' + MatchingEvents);
+		//console.log('events with genre: ' + MatchingEvents);
 		if(MatchingEvents == 0) {
 			$('.search-error').addClass('show');
 		}
@@ -259,7 +259,7 @@ console.log("events: " + myEvents);
 			$(this).prependTo(".event-list");
 		});
 		var MatchingEvents = $('.event[data-town="'+town+'"][data-cat="'+cat+'"]').length;
-		console.log('events with town and cat: ' + MatchingEvents);
+		//console.log('events with town and cat: ' + MatchingEvents);
 		if(MatchingEvents == 0) {
 			$('.search-error').addClass('show');
 		}
@@ -270,7 +270,7 @@ console.log("events: " + myEvents);
 			$(this).prependTo(".event-list");
 		});
 		var MatchingEvents = $('.event[data-town="'+town+'"]').length;
-		console.log('events with town: ' + MatchingEvents);
+		//console.log('events with town: ' + MatchingEvents);
 		if(MatchingEvents == 0) {
 			$('.search-error').addClass('show');
 		}
@@ -282,7 +282,7 @@ console.log("events: " + myEvents);
 			$(this).prependTo(".event-list");
 		});
 		var MatchingEvents = $('.event[data-cat="'+cat+'"]').length;
-		console.log('events with cat: ' + MatchingEvents);
+		//console.log('events with cat: ' + MatchingEvents);
 		if(MatchingEvents == 0) {
 			$('.search-error').addClass('show');
 		}
@@ -291,7 +291,7 @@ console.log("events: " + myEvents);
 	// paginate
 	$('.event-list').easyPaginate({
     	paginateElement: '.event',
-    	elementsPerPage: 18,
+    	elementsPerPage: 6,
     	effect: 'default'
 	});
 
