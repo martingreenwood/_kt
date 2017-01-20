@@ -571,7 +571,7 @@ a:hover, a:active { outline: 0; }
 .is-today .pika-button { background: #1ca75e; color: white; }
 
 /*==============================
-=            SLiDER            =
+=            SLIDER            =
 ==============================*/
 .slider { margin: 0; position: relative; }
 
@@ -590,6 +590,97 @@ a:hover, a:active { outline: 0; }
 .slider .slide .caption h3 { font-size: 22px; text-transform: uppercase; line-height: 1; margin: 0; }
 
 .slider .slide .image { width: 100%; display: block; }
+
+/*================================
+=            DISCOVER            =
+================================*/
+#discover .grid .row { display: block; }
+
+#discover .grid .row::after { clear: both; content: ""; display: table; }
+
+#discover .grid .row .column { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+
+#discover .grid .row .column:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { #discover .grid .row .column { float: left; display: block; margin-right: 3.2258064516%; width: 48.3870967742%; }
+  #discover .grid .row .column:last-child { margin-right: 0; } }
+
+@media screen and (min-width: 1099px) { #discover .grid .row .column { float: left; display: block; margin-right: 2.1276595745%; width: 48.9361702128%; }
+  #discover .grid .row .column:last-child { margin-right: 0; } }
+
+#discover .grid .row .column aside { float: left; display: block; margin-right: 33.3333333333%; width: 100%; position: relative; height: 195px; }
+
+#discover .grid .row .column aside:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { #discover .grid .row .column aside { float: left; display: block; margin-right: 6.6666666667%; width: 46.6666666667%; }
+  #discover .grid .row .column aside:last-child { margin-right: 0; }
+  #discover .grid .row .column aside:nth-child(2n) { margin-right: 0; }
+  #discover .grid .row .column aside:nth-child(2n+1) { clear: left; } }
+
+@media screen and (min-width: 1099px) { #discover .grid .row .column aside { float: left; display: block; margin-right: 4.347826087%; width: 47.8260869565%; }
+  #discover .grid .row .column aside:last-child { margin-right: 0; } }
+
+#discover .grid .row .column aside.text h1, #discover .grid .row .column aside.text h2, #discover .grid .row .column aside.text h3 { margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; font-size: 18px; }
+
+#discover .grid .row .column aside.text p { border-top: 2px solid black; padding-top: 5px; }
+
+#discover .grid .row .column aside.image { background-size: cover; background-repeat: no-repeat; background-position: center; }
+
+#discover .grid .row .column aside.image:first-of-type { margin-bottom: 30px; }
+
+#discover .grid .row .column aside.image:nth-child(2) { margin-bottom: 30px; }
+
+#discover .grid .row .column aside.image.full { float: left; display: block; margin-right: 33.3333333333%; width: 100%; margin-bottom: 0; height: 420px; }
+
+#discover .grid .row .column aside.image.full:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { #discover .grid .row .column aside.image.full { float: left; display: block; margin-right: 6.6666666667%; width: 100%; }
+  #discover .grid .row .column aside.image.full:last-child { margin-right: 0; }
+  #discover .grid .row .column aside.image.full:nth-child(2n) { margin-right: 0; }
+  #discover .grid .row .column aside.image.full:nth-child(2n+1) { clear: left; } }
+
+@media screen and (min-width: 1099px) { #discover .grid .row .column aside.image.full { float: left; display: block; margin-right: 4.347826087%; width: 100%; }
+  #discover .grid .row .column aside.image.full:last-child { margin-right: 0; } }
+
+#discover .grid .row .column aside.image.tall { height: 420px; }
+
+#discover .grid .row .column aside img { display: block; opacity: 0.1; }
+
+#discover .grid .row .column aside span { background: rgba(0, 0, 0, 0.7); color: white; width: 100%; display: block; padding: 5px; font-size: 14px; font-weight: 800; }
+
+#discover .grid .row .column aside .excerpt { max-height: 0; overflow: hidden; transition: max-height 250ms ease-in-out; background: rgba(0, 0, 0, 0.7); color: white; width: 100%; display: block; padding: 0 5px; font-size: 14px; }
+
+#discover .grid .row .column aside .excerpt p { color: #eeeeee; color: inherit; font-size: inherit; margin: 0 0 5px 0; }
+
+#discover .grid .row .column aside:hover .excerpt { max-height: 500px; transition: max-height 250ms ease-in-out; }
+
+#discover .grid .row .column .half { float: left; display: block; margin-right: 33.3333333333%; width: 100%; position: relative; }
+
+#discover .grid .row .column .half:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { #discover .grid .row .column .half { float: left; display: block; margin-right: 6.6666666667%; width: 46.6666666667%; }
+  #discover .grid .row .column .half:last-child { margin-right: 0; }
+  #discover .grid .row .column .half:nth-child(2n) { margin-right: 0; }
+  #discover .grid .row .column .half:nth-child(2n+1) { clear: left; } }
+
+@media screen and (min-width: 1099px) { #discover .grid .row .column .half { float: left; display: block; margin-right: 4.347826087%; width: 47.8260869565%; }
+  #discover .grid .row .column .half:last-child { margin-right: 0; } }
+
+#discover .grid .row .column .half aside { float: left; display: block; margin-right: 33.3333333333%; width: 100%; position: relative; margin: 0; }
+
+#discover .grid .row .column .half aside:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { #discover .grid .row .column .half aside { float: left; display: block; margin-right: 6.6666666667%; width: 100%; }
+  #discover .grid .row .column .half aside:last-child { margin-right: 0; }
+  #discover .grid .row .column .half aside:nth-child(2n) { margin-right: 0; }
+  #discover .grid .row .column .half aside:nth-child(2n+1) { clear: left; } }
+
+@media screen and (min-width: 1099px) { #discover .grid .row .column .half aside { float: left; display: block; margin-right: 4.347826087%; width: 100%; }
+  #discover .grid .row .column .half aside:last-child { margin-right: 0; } }
+
+#discover .grid .row .column .half aside .image { margin-right: 0; }
+
+#discover .grid .row .column .half:last-of-type aside:first-of-type { margin-bottom: 30px; margin-right: 0; }
 
 /*===============================
 =            EXPLORE            =

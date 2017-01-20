@@ -1,7 +1,26 @@
 {
     "key": "group_57f229c40a600",
-    "title": "Feature Pages (Discover)",
+    "title": "Top Grid Pages \/ Links",
     "fields": [
+        {
+            "default_value": "",
+            "new_lines": "br",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": "",
+            "key": "field_5881e9f2e0708",
+            "label": "Intro",
+            "name": "discover_intro",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
         {
             "post_type": [
                 "page"
@@ -17,6 +36,25 @@
             "label": "Feature One",
             "name": "feature_one",
             "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 1,
+            "key": "field_5881e8516403f",
+            "label": "Feature One Intro",
+            "name": "feature_one_intro",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -51,6 +89,25 @@
             }
         },
         {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 1,
+            "key": "field_5881e86c64040",
+            "label": "Feature Two Intro",
+            "name": "feature_two_intro",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -65,6 +122,25 @@
             "label": "Feature Three",
             "name": "feature_three",
             "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 1,
+            "key": "field_5881e87c64041",
+            "label": "Feature Three Intro",
+            "name": "feature_three_intro",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -99,6 +175,25 @@
             }
         },
         {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 1,
+            "key": "field_5881e88a64042",
+            "label": "Feature Four Intro",
+            "name": "feature_four_intro",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -113,6 +208,25 @@
             "label": "Feature Five",
             "name": "feature_five",
             "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 1,
+            "key": "field_5881e8b064043",
+            "label": "Feature Five Intro",
+            "name": "feature_five_intro",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -147,6 +261,25 @@
             }
         },
         {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 1,
+            "key": "field_5881e8b964044",
+            "label": "Feature Six Intro",
+            "name": "feature_six_intro",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -161,6 +294,25 @@
             "label": "Feature Seven",
             "name": "feature_seven",
             "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 1,
+            "key": "field_5881e8c064045",
+            "label": "Feature Seven Intro",
+            "name": "feature_seven_intro",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -197,6 +349,25 @@
         {
             "tabs": "all",
             "toolbar": "full",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 1,
+            "key": "field_5881e8c764046",
+            "label": "Feature Eight Intro",
+            "name": "feature_eight_intro",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "tabs": "all",
+            "toolbar": "full",
             "media_upload": 1,
             "default_value": "",
             "delay": 0,
@@ -221,6 +392,13 @@
                 "operator": "==",
                 "value": "front_page"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "landing-page.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -231,5 +409,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "For Homepage",
-    "modified": 1484753543
+    "modified": 1484910302
 }

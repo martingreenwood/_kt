@@ -6,7 +6,9 @@
             "post_type": [
                 "page"
             ],
-            "taxonomy": [],
+            "taxonomy": [
+
+            ],
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
@@ -47,7 +49,9 @@
             "post_type": [
                 "page"
             ],
-            "taxonomy": [],
+            "taxonomy": [
+
+            ],
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
@@ -88,7 +92,9 @@
             "post_type": [
                 "page"
             ],
-            "taxonomy": [],
+            "taxonomy": [
+
+            ],
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
@@ -129,7 +135,9 @@
             "post_type": [
                 "page"
             ],
-            "taxonomy": [],
+            "taxonomy": [
+
+            ],
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
@@ -170,7 +178,9 @@
             "post_type": [
                 "page"
             ],
-            "taxonomy": [],
+            "taxonomy": [
+
+            ],
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
@@ -197,129 +207,6 @@
             "key": "field_57fe1b0b10334",
             "label": "Feature Five Intro",
             "name": "feature_five_intro",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1,
-            "key": "field_587f954adb65c",
-            "label": "Feature Six",
-            "name": "feature_six",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "default_value": "",
-            "new_lines": "wpautop",
-            "maxlength": "",
-            "placeholder": "",
-            "rows": "",
-            "key": "field_587f9557db65d",
-            "label": "Feature Six Intro",
-            "name": "feature_six_intro",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1,
-            "key": "field_587f9571db65e",
-            "label": "Feature Severn",
-            "name": "feature_severn",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "default_value": "",
-            "new_lines": "wpautop",
-            "maxlength": "",
-            "placeholder": "",
-            "rows": "",
-            "key": "field_587f959ddb661",
-            "label": "Feature Severn Intro",
-            "name": "feature_severn_intro",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1,
-            "key": "field_587f9573db65f",
-            "label": "Feature Eight",
-            "name": "feature_eight",
-            "type": "post_object",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "default_value": "",
-            "new_lines": "wpautop",
-            "maxlength": "",
-            "placeholder": "",
-            "rows": "",
-            "key": "field_587f959ddb660",
-            "label": "Feature Eight Intro",
-            "name": "feature_eight_intro",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -365,7 +252,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": 0,
     "description": "top landing page template",
-    "modified": 1484756447
+    "modified": 1484908846
 }
