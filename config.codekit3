@@ -1198,6 +1198,12 @@
 		"oAP": "\/partials\/plan-page-section.php",
 		"oF": 0
 		},
+	"\/partials\/plan-section-old.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/plan-section-old.php",
+		"oF": 0
+		},
 	"\/partials\/plan-section.php": {
 		"ft": 8192,
 		"oA": 0,

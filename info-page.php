@@ -112,12 +112,13 @@ get_header(); ?>
 			<aside>
 
 				<div class="open">
-					<h3>Times &amp; Dates</h3>
+					<h3>Essential Info</h3>
 					<?php the_field('opening_times'); ?>
+					<p><?php the_field('website'); ?></p>
 				</div>
 
 				<div class="location">
-					<h3>GET DIRECTIONS</h3>
+					<!--<h3>GET DIRECTIONS</h3>-->
 					<?php  $location = get_field('location');
 					if( !empty($location) ):
 					?>
@@ -127,10 +128,9 @@ get_header(); ?>
 					<?php endif; ?>
 				</div>
 
-				<div class="website">
+				<!--<div class="website">
 					<h3>VISIT WEBSITE</h3>
-					<?php the_field('website'); ?>
-				</div>
+				</div>-->
 				
 			</aside>
 

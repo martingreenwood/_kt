@@ -42,8 +42,6 @@
 	<form method="get" accept-charset="utf-8" id="whatson_filter">
 		<div class="colunn">
 
-		<input type="hidden" name="datepicker" id="datepicker">
-
 			<?php
 			foreach ($business_cat_obj as $business_cat) {
 				if ($business_cat->category_status == 'Active') {
@@ -79,7 +77,7 @@
 			sort($unique_towns);
 			$selected = null;
 			?>
-			<select name="town" class="town">
+			<!--<select name="town" class="town">
 				<option value="">Town</option>
 				<?php
 				foreach ($unique_towns as $unique_town) {
@@ -92,7 +90,8 @@
 					echo '<option '.$selected.' value="'.$town[1].'">'.$town[0].'</option>';
 				}
 				?>
-			</select>
+			</select>-->
+			&nbsp;
 		</div>
 		<div class="colunn">
 			<input type="submit" name="submit" id="submit" value="Search">
@@ -137,7 +136,7 @@
 					$directory_listing_cats .= $business_cat->category_name . ", ";
 				}
 			}
-
+			if ($directory_town_id == 1):
 			?>
 
 		<div class="event" data-id="<?php echo $directory_id; ?>" data-town="<?php echo $directory_town_id; ?>" data-cat="<?php echo $directory_category_id; ?>" data-sec-cat="<?php echo $directory_category_2_id; ?>" data-thi-cat="<?php echo $directory_category_3_id; ?>">
@@ -165,12 +164,11 @@
 			?>
 			</div>-->
 
-			<div class="meta">
-				<small><?php echo substr($directory_listing_cats, 0, -2); ?></small>
-			</div>
-
 			<div class="info">
 				<h3><?php echo $directory_name; ?></h3>
+				<div class="meta" style="color: #999">
+					<small><?php echo substr($directory_listing_cats, 0, -2); ?></small>
+				</div>
 				<p><?php echo $directory_description; ?></p>
 				<?php
 				if ($loop->have_posts()) {
@@ -186,6 +184,7 @@
 		</div>
 
 		<?php 
+		endif; // end check for town ID 1 (Kendal)
 		endforeach;
 		?>
 	</div>

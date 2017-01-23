@@ -92,10 +92,10 @@ get_header(); ?>
 		</div>
 	</section>
 
-	<section id="plan">
+	<section id="essentials">
 		<div class="container">
 
-		<?php get_template_part( 'partials/plan-page', 'section' ); ?>
+		<?php get_template_part( 'partials/essentials', 'section' ); ?>
 
 		</div>
 	</section>
@@ -106,14 +106,13 @@ get_header(); ?>
 		</div>
 	</section>
 
-	<section id="essentials">
+	<section id="plan">
 		<div class="container">
 
-		<?php get_template_part( 'partials/essentials', 'section' ); ?>
+		<?php get_template_part( 'partials/plan-page', 'section' ); ?>
 
 		</div>
 	</section>
-
 
 <?php
 get_footer();

@@ -81,7 +81,7 @@ td { border-bottom: 1px solid #333; padding: 0.8125rem 0; }
 
 tr, td, th { vertical-align: middle; }
 
-body { color: #333; font-family: "tondo", sans-serif; font-feature-settings: "kern", "liga", "pnum"; font-size: 16px; line-height: 1.625; }
+body { color: #333; font-family: "tondo", sans-serif; font-feature-settings: "kern", "liga", "pnum"; font-size: 16px; line-height: 1.625; overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "tondo", sans-serif; font-size: 16px; line-height: 1.625; }
 
@@ -503,7 +503,7 @@ a:hover, a:active { outline: 0; }
 /*================================
 =            HomePage            =
 ================================*/
-#masthead { position: relative; top: 0; width: 100%; z-index: 9999; background: white; }
+#masthead { position: fixed; top: 0; width: 100%; z-index: 9999; background: white; }
 
 #masthead .table { position: relative; }
 
@@ -1002,16 +1002,18 @@ a:hover, a:active { outline: 0; }
 
 .home #signup .form .mc-field-group #mc-embedded-subscribe { border-radius: 0; margin-bottom: 0; box-shadow: none; background: #1ca75e; display: block; width: 100%; color: white; border: 1px solid transparent; }
 
-.home #signup .content { margin-bottom: 25px; display: inline-block; }
+.home #signup .content { margin-bottom: 25px; display: block; }
+
+.home #signup .content::after { clear: both; content: ""; display: table; }
 
 .home #signup .content header { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
 
 .home #signup .content header:last-child { margin-right: 0; }
 
-@media screen and (min-width: 480px) { .home #signup .content header { float: left; display: block; margin-right: 3.2258064516%; width: 48.3870967742%; }
+@media screen and (min-width: 480px) { .home #signup .content header { float: left; display: block; margin-right: 3.2258064516%; width: 35.4838709677%; }
   .home #signup .content header:last-child { margin-right: 0; } }
 
-@media screen and (min-width: 1099px) { .home #signup .content header { float: left; display: block; margin-right: 2.1276595745%; width: 23.4042553191%; }
+@media screen and (min-width: 1099px) { .home #signup .content header { float: left; display: block; margin-right: 2.1276595745%; width: 31.914893617%; }
   .home #signup .content header:last-child { margin-right: 0; } }
 
 .home #signup .content header h1, .home #signup .content header h2 { color: #1ca75e; font-size: 40px; text-transform: uppercase; line-height: 1; margin: 0; }
@@ -1020,10 +1022,10 @@ a:hover, a:active { outline: 0; }
 
 .home #signup .content .intro:last-child { margin-right: 0; }
 
-@media screen and (min-width: 480px) { .home #signup .content .intro { float: left; display: block; margin-right: 3.2258064516%; width: 48.3870967742%; }
+@media screen and (min-width: 480px) { .home #signup .content .intro { float: left; display: block; margin-right: 3.2258064516%; width: 74.1935483871%; }
   .home #signup .content .intro:last-child { margin-right: 0; } }
 
-@media screen and (min-width: 1099px) { .home #signup .content .intro { float: left; display: block; margin-right: 2.1276595745%; width: 40.4255319149%; }
+@media screen and (min-width: 1099px) { .home #signup .content .intro { float: left; display: block; margin-right: 2.1276595745%; width: 65.9574468085%; }
   .home #signup .content .intro:last-child { margin-right: 0; } }
 
 .home #signup .content .intro p { line-height: 1.2; font-size: 17px; }
@@ -1032,51 +1034,15 @@ a:hover, a:active { outline: 0; }
 
 .home #experience header h1, .home #experience header h2 { color: #1ca75e; font-size: 40px; text-transform: uppercase; line-height: 1; margin: 0; }
 
-.home #experience .grid { padding-top: 50px; }
+.home #experience .grid { padding-top: 50px; position: relative; }
 
-.home #experience .grid .ig-column { position: relative; float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+.home #experience .grid .juicer-feed { background: #f9f9f9; padding: 20px; max-height: 500px; overflow: hidden; }
 
-.home #experience .grid .ig-column:last-child { margin-right: 0; }
+.home #experience .grid .grad { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,ffffff+100&0+0,1+100 */ background: -moz-linear-gradient(top, transparent 0%, white 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(top, transparent 0%, white 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, transparent 0%, white 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */ position: absolute; bottom: 0; width: 100%; height: 80px; z-index: 1; }
 
-@media screen and (min-width: 480px) { .home #experience .grid .ig-column { float: left; display: block; margin-right: 3.2258064516%; width: 48.3870967742%; }
-  .home #experience .grid .ig-column:last-child { margin-right: 0; } }
+.home #experience .more { margin-top: 30px; text-align: right; }
 
-@media screen and (min-width: 1099px) { .home #experience .grid .ig-column { float: left; display: block; margin-right: 2.1276595745%; width: 48.9361702128%; }
-  .home #experience .grid .ig-column:last-child { margin-right: 0; } }
-
-.home #experience .grid .ig-column:first-of-type, .home #experience .grid .ig-column:last-of-type { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
-
-.home #experience .grid .ig-column:first-of-type:last-child, .home #experience .grid .ig-column:last-of-type:last-child { margin-right: 0; }
-
-@media screen and (min-width: 480px) { .home #experience .grid .ig-column:first-of-type, .home #experience .grid .ig-column:last-of-type { float: left; display: block; margin-right: 3.2258064516%; width: 31.0967741935%; }
-  .home #experience .grid .ig-column:first-of-type:last-child, .home #experience .grid .ig-column:last-of-type:last-child { margin-right: 0; } }
-
-@media screen and (min-width: 1099px) { .home #experience .grid .ig-column:first-of-type, .home #experience .grid .ig-column:last-of-type { float: left; display: block; margin-right: 2.1276595745%; width: 23.4042553191%; }
-  .home #experience .grid .ig-column:first-of-type:last-child, .home #experience .grid .ig-column:last-of-type:last-child { margin-right: 0; } }
-
-.home #experience .grid .ig-column .ig-post { position: relative; }
-
-.home #experience .grid .ig-column .ig-post:hover .overlay { opacity: 1; }
-
-.home #experience .grid .ig-column .overlay { position: absolute; width: 100%; opacity: 0; transition: all 300ms ease-in-out; height: 100%; background: rgba(0, 0, 0, 0.4); display: block; }
-
-.home #experience .grid .ig-column .overlay ul { text-align: center; list-style: none; margin: 0; }
-
-.home #experience .grid .ig-column .overlay ul li { display: inline-block; margin: 0 5px; }
-
-.home #experience .grid .ig-column .overlay ul li a { color: white; }
-
-.home #experience .grid .ig-column .info.top { margin-bottom: 24.53px; }
-
-.home #experience .grid .ig-column .info.bottom { margin-top: 24.53px; }
-
-.home #experience .grid .ig-column .info h3 { margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; }
-
-.home #experience .grid .ig-column .info p { border-top: 2px solid black; padding-top: 5px; }
-
-.home #experience .grid .ig-column .info a { color: #1ca75e; margin-top: 15px; display: block; }
-
-.home #experience .grid .ig-column img { display: block; }
+.home #experience .more a { background: #1ca75e; padding: 10px 20px; display: inline-block; color: white; font-weight: 600; }
 
 .home #blog { padding: 50px 0; }
 
@@ -1372,6 +1338,8 @@ a:hover, a:active { outline: 0; }
 
 #plan-your-visit #essentials { padding-top: 50px; padding-bottom: 50px; }
 
+#plan-your-visit #essentials header { margin-bottom: 50px; }
+
 #plan-your-visit #essentials header h1, #plan-your-visit #essentials header h2 { color: #1ca75e; font-size: 40px; text-transform: uppercase; line-height: 1; margin: 0; }
 
 #plan-your-visit #essentials .grid article { float: left; display: block; margin-right: 33.3333333333%; width: 100%; margin-bottom: 20px; }
@@ -1385,6 +1353,8 @@ a:hover, a:active { outline: 0; }
 
 @media screen and (min-width: 1099px) { #plan-your-visit #essentials .grid article { float: left; display: block; margin-right: 2.1276595745%; width: 31.914893617%; }
   #plan-your-visit #essentials .grid article:last-child { margin-right: 0; } }
+
+#plan-your-visit #essentials .grid article.intro { border-top: 2px solid black; padding-top: 10px; }
 
 #plan-your-visit #essentials .grid article img { display: block; }
 
@@ -1589,7 +1559,7 @@ embed, iframe, object { max-width: 100%; }
 
 [dir="rtl"] .slick-slide { float: right; }
 
-.slick-slide img { display: block; }
+.slick-slide img { display: block; width: 100%; height: auto; }
 
 .slick-slide.slick-loading img { display: none; }
 

@@ -72,6 +72,8 @@
 		// var
 		var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
 
+		var zoom = $marker.attr('data-icon');
+
 		var icon = {
 			url: $marker.attr('data-icon'), // url
 			size: new google.maps.Size(32, 32),     // original size you defined in the SVG file
@@ -142,7 +144,7 @@
 		{
 			// set center of map
 		    map.setCenter( bounds.getCenter() );
-		    map.setZoom( 9 );
+		    map.setZoom( 18 );
 		}
 		else
 		{

@@ -32,12 +32,6 @@ get_header(); ?>
 			<?php endforeach; ?>
 			<?php endif; ?>
 		</div>
-		<?php /* ?><div class="arrow-box">
-			<div class="container">
-				<div class="arrows">
-				</div>
-			</div>
-		</div><?php */ ?>
 		
 	</section>
 

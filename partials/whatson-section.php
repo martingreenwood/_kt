@@ -106,7 +106,7 @@
 
 			// if events are now or inf the future
 			if ( $e_start_time > $now ):
-
+				if ($town == "Kendal"):
 			?>
 
 			<div class="event" data-min-price="<?php echo $min_price; ?>" data-max-price="<?php echo $max_price; ?>" data-id="<?php echo $id; ?>" data-type="<?php echo $type_id; ?>" data-start="<?php echo $start_date; ?>" data-end="<?php echo $end_date; ?>">
@@ -137,18 +137,17 @@
 					<div class="cat"><?php echo $type; ?></div>
 				</div>-->
 
-				<div class="meta">
-					<ul>
-						<li><?php echo date("D dS M Y", $e_start_time); ?></li>
-						<?php if ($price): ?>
-						<li class="price"><?php echo $price; ?></li>
-						<?php endif; ?>
-					</ul>
-					<div class="clear"></div>
-				</div>
-
 				<div class="info">
 					<h3><?php echo $name; ?></h3>
+					<div class="meta" style="color: #999;">
+						<ul>
+							<li><?php echo date("D dS M Y", $e_start_time); ?></li>
+							<?php if ($price): ?>
+							<li class="price"><?php echo $price; ?></li>
+							<?php endif; ?>
+						</ul>
+						<div class="clear"></div>
+					</div>
 					<p><?php echo substr($description, 0, 150); ?>...</p>
 					
 					<?php
@@ -164,7 +163,8 @@
 
 			</div>
 
-			<?php 
+				<?php 
+				endif; // end of kendal
 			endif;
 		endforeach;
 		?>

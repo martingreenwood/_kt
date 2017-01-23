@@ -49,6 +49,8 @@
 		padding-bottom: 50px;	
 		
 		header {
+			margin-bottom: 50px;
+
 			h1, h2 {
 				color: $brand-primary;
 				font-size: 40px;
@@ -70,6 +72,11 @@
 				}
 				@include media($large-screen-up) {
 					@include span-columns(4);
+				}
+
+				&.intro {
+					border-top: 2px solid black;
+					padding-top: 10px;
 				}
 
 				img {
