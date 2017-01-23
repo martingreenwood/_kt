@@ -608,7 +608,7 @@ a:hover, a:active { outline: 0; }
 @media screen and (min-width: 1099px) { #discover .grid .row .column { float: left; display: block; margin-right: 2.1276595745%; width: 48.9361702128%; }
   #discover .grid .row .column:last-child { margin-right: 0; } }
 
-#discover .grid .row .column aside { float: left; display: block; margin-right: 33.3333333333%; width: 100%; position: relative; height: 195px; }
+#discover .grid .row .column aside { float: left; display: block; margin-right: 33.3333333333%; width: 100%; position: relative; height: 195px; overflow: hidden; }
 
 #discover .grid .row .column aside:last-child { margin-right: 0; }
 

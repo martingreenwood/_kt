@@ -95,7 +95,11 @@ get_header(); ?>
 					?>
 
 					<div class="caption">
-						<?php the_sub_field('cr_caption'); ?> 
+						<?php if(get_sub_field('cr_caption')): ?> 
+							<?php the_sub_field('cr_caption'); ?> 
+						<?php else: ?> 
+							<p>&nbsp;</p>
+						<?php endif; ?> 
 					</div>
 
 					<div class="copy">

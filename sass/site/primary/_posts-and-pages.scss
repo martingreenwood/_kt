@@ -150,6 +150,7 @@
 					@include span-columns(1 of 1);
 					position: relative;
 					height: 195px;
+					overflow: hidden;
 
 					@include media($medium-screen-up) {
 						@include span-columns(2 of 4);
