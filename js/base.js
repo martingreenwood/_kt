@@ -70,37 +70,26 @@ var $ = jQuery;
 
 (function () {
 	var screen_height = $(window).height();
-
 	$("#searchbox").css('bottom', screen_height);
 
-	$('.search-link a').on({
-		click: function (event) {
-			event.preventDefault();
-			$('body').addClass('disablescroll');
-			$('#searchbox').animate({
-				bottom: 0
-			});
-			$('#searchbox').addClass('reveal');
-
-		}
+	$('a[href="#searchbox"] .ubermenu-target-title').click(function(event) {
+		event.preventDefault();
+		$('body').addClass('disablescroll');
+		$('#searchbox').animate({
+			bottom: 0
+		});
+		$('#searchbox').addClass('reveal');
 	});
-})(jQuery);
 
-(function () {
-	var screen_height = $(window).height();
-
-	$("#searchbox").css('bottom', screen_height);
-
-	$('#searchbox .close').on({
-		click: function (event) {
-			event.preventDefault();
-			$('body').removeClass('disablescroll');
-			$('#searchbox').animate({
-				bottom: screen_height
-			});
-			$('#searchbox').removeClass('reveal');
-		}
+	$('#searchbox .close').on('click', function (event) {
+		event.preventDefault();
+		$('body').removeClass('disablescroll');
+		$('#searchbox').animate({
+			bottom: screen_height
+		});
+		$('#searchbox').removeClass('reveal');
 	});
+
 })(jQuery);
 
 /*=================================

@@ -16,6 +16,7 @@
 
 	.site-branding, {
 		width: 100%;
+		padding: 20px 0;
 
 		@include media($medium-screen-up) {
 			width: 40%;
