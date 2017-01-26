@@ -21,14 +21,14 @@ global $cpts;
 $cpts = array(
 	
 	// Points on Interest
-	array(
-		'poi',
-		'POI',
-		'POI',
-		'dashicons-location-alt', 
-		array('title','editor','thumbnail'),
-		true,
-	),
+	//array(
+	//	'poi',
+	//	'POI',
+	//	'POI',
+	//	'dashicons-location-alt', 
+	//	array('title','editor','thumbnail'),
+	//	true,
+	//),
 
 	// Shows
 	array(
