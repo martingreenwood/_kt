@@ -448,6 +448,56 @@
 				font-size: 17px;
 			}
 
+			ul {
+				margin: 20px 0;
+				list-style: none;
+				border-bottom: 1px solid white;
+
+				li {
+					border-top: 1px solid white;
+					line-height: 3;
+					font-size: 14px;
+					position: relative;
+
+					span {
+
+					}
+
+					input {
+						position: absolute;
+						right: 0;
+						-webkit-appearance: none;
+						background: white;
+						width: 20px;
+						height: 20px;
+						top: 50%;
+						margin-top: -10px;
+						font: normal normal normal 14px/1 FontAwesome;
+						outline: 0;
+						box-shadow: 0;
+
+						&:before {
+							content: "\f00c";
+							width: 20px;
+							height: 20px;
+							position: absolute;
+							top: 0;
+							left: 0;
+							text-align: center;
+							line-height: 20px;
+							color: $brand-primary;
+							display: none;
+						}
+
+						&:checked {
+							&:before {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+
 			.accordion {
 				margin: 0;
 

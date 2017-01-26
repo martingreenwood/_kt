@@ -229,6 +229,22 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/map-art.png": {
+		"ft": 32768,
+		"iS": 1162,
+		"oA": 0,
+		"oAP": "\/assets\/map-art.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/map-bed.png": {
+		"ft": 32768,
+		"iS": 601,
+		"oA": 0,
+		"oAP": "\/assets\/map-bed.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/assets\/map-green.png": {
 		"ft": 32768,
 		"iS": 17052,
@@ -246,6 +262,14 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/assets\/map-pin.png": {
+		"ft": 32768,
+		"iS": 500,
+		"oA": 0,
+		"oAP": "\/assets\/map-pin.png",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/assets\/map-red.png": {
 		"ft": 32768,

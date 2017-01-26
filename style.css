@@ -744,6 +744,16 @@ a:hover, a:active { outline: 0; }
 
 #plan .map-box .intro p { color: white; line-height: 1.2; font-size: 17px; }
 
+#plan .map-box .intro ul { margin: 20px 0; list-style: none; border-bottom: 1px solid white; }
+
+#plan .map-box .intro ul li { border-top: 1px solid white; line-height: 3; font-size: 14px; position: relative; }
+
+#plan .map-box .intro ul li input { position: absolute; right: 0; -webkit-appearance: none; background: white; width: 20px; height: 20px; top: 50%; margin-top: -10px; font: normal normal normal 14px/1 FontAwesome; outline: 0; box-shadow: 0; }
+
+#plan .map-box .intro ul li input:before { content: "\f00c"; width: 20px; height: 20px; position: absolute; top: 0; left: 0; text-align: center; line-height: 20px; color: #1ca75e; display: none; }
+
+#plan .map-box .intro ul li input:checked:before { display: block; }
+
 #plan .map-box .intro .accordion { margin: 0; }
 
 #plan .map-box .intro .accordion dt, #plan .map-box .intro .accordion dd { padding: 10px 0; border-top: 1px solid white; border-bottom: 0; color: white; line-height: 1.2; font-size: 14px; text-transform: capitalize; font-weight: normal; margin: 0; position: relative; }

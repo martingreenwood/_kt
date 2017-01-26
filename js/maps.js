@@ -88,6 +88,7 @@
 			map			: map,
 			icon		: icon
 		});
+		marker.setVisible(false);
 
 		// add to array
 		map.markers.push( marker );
@@ -109,6 +110,28 @@
 			});
 
 		}
+
+		google.maps.event.addListener(marker, 'art', function () {
+			if($marker.hasClass($('input[name="art_toggle"]:checked').val())) {
+				marker.setVisible(true);
+			} else {
+				marker.setVisible(false);
+			}
+		});
+		google.maps.event.addListener(marker, 'lodging', function () {
+			if($marker.hasClass($('input[name="lodging_toggle"]:checked').val())) {
+				marker.setVisible(true);
+			} else {
+				marker.setVisible(false);
+			}
+		});
+		
+		$('input[name="art_toggle"]').change(function() {
+			google.maps.event.trigger(marker, 'art');
+		});
+		$('input[name="lodging_toggle"]').change(function() {
+			google.maps.event.trigger(marker, 'lodging');
+		});
 
 	}
 

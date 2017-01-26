@@ -224,8 +224,21 @@ function create_cache_folders() {
 }
 add_action( 'init', 'create_cache_folders' );
 
+/*================================
+=            GET DATA            =
+================================*/
 
-
+function get_remote_data($url)
+{
+  $curl = curl_init();
+  $options = array(
+    CURLOPT_URL => $url,
+    CURLOPT_RETURNTRANSFER => 1,
+  );
+  curl_setopt_array($curl, $options);
+  $string = curl_exec($curl);
+  return $string;
+}
 
 
 /**
