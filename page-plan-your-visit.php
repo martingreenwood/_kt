@@ -109,7 +109,7 @@ get_header(); ?>
 	<section id="plan">
 		<div class="container">
 
-		<?php get_template_part( 'partials/plan', 'section-old' ); ?>
+		<?php get_template_part( 'partials/plan', 'section' ); ?>
 
 		</div>
 	</section>

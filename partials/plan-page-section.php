@@ -1,6 +1,30 @@
 <article class="map-box">
 
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37227.501018518524!2d-2.7760660270978614!3d54.32660223010127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487c88d357817da5%3A0x7b507b09fc3cac7e!2sKendal!5e0!3m2!1sen!2suk!4v1484929304448" width="1250" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<?php 
+	$planning_map = get_field('planning_map', 'options');
+	if( !empty($planning_map) ):
+	?>
+	<div class="map">
 
+		<div class="marker" data-icon="<?php echo get_template_directory_uri(); ?>/assets/map-pin.png" data-lat="<?php echo $planning_map['lat']; ?>" data-lng="<?php echo $planning_map['lng']; ?>">
+		</div>
+	
+		<?php
+
+		/*
+		$args = array( 'post_type' => 'poi', 'posts_per_page' => -1 );
+		$loop = new WP_Query( $args );
+		while ( $loop->have_posts() ) : $loop->the_post();
+			$poi_location = get_field('poi_map'); ?>
+			<div class="marker" data-icon="<?php echo get_template_directory_uri(); ?>/assets/map-red.png" data-lat="<?php echo $poi_location['lat']; ?>" data-lng="<?php echo $poi_location['lng']; ?>">
+				<h4><?php echo the_title(); ?></h4>
+			</div>
+		<?php endwhile; 
+		wp_reset_postdata(); wp_reset_query(); 
+		*/ 
+		?>
+
+	</div>
+	<?php endif; ?>
 	
 </article>
