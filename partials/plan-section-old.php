@@ -9,12 +9,91 @@
 	// https://maps.googleapis.com/maps/api/place/radarsearch/json?location=54.326890,-2.747581&radius=5000&type=museum&key=AIzaSyDcE-HKUQ_hzqDNWic-jom-6Usv68xtd9I
 
 	// 54.326890,-2.747581
-	
-	$local_art_gallery = get_remote_data('https://maps.googleapis.com/maps/api/place/radarsearch/json?location=54.326890,-2.747581&radius=3000&type=art_gallery&key=AIzaSyDcE-HKUQ_hzqDNWic-jom-6Usv68xtd9I');
-	$local_art_gallery_obj = json_decode($local_art_gallery);
 
-	$local_lodging = get_remote_data('https://maps.googleapis.com/maps/api/place/radarsearch/json?location=54.326890,-2.747581&radius=3000&type=lodging&key=AIzaSyDcE-HKUQ_hzqDNWic-jom-6Usv68xtd9I');
-	$local_lodging_obj = json_decode($local_lodging);
+	$gmTypes = array(
+		array(
+			'art_gallery',
+			'Art Galleries',
+		),
+		array(
+			'lodging',
+			'Lodging & Acommodation'
+		),
+		array(
+			'department_store',
+			'Shopping'
+		),
+	);
+
+	$gmTypeNameData = null;
+	$gmTypeNameObj = null;
+	$gmTypeNameInfo = null;
+	$gmTypeNameInfoObj = null;
+	
+	//$local_art_gallery = get_remote_data('https://maps.googleapis.com/maps/api/place/radarsearch/json?location=54.326890,-2.747581&radius=3000&type=art_gallery&key=AIzaSyDcE-HKUQ_hzqDNWic-jom-6Usv68xtd9I');
+	//$local_art_gallery_obj = json_decode($local_art_gallery);
+
+	//$local_lodging = get_remote_data('https://maps.googleapis.com/maps/api/place/radarsearch/json?location=54.326890,-2.747581&radius=3000&type=lodging&key=AIzaSyDcE-HKUQ_hzqDNWic-jom-6Usv68xtd9I');
+	//$local_lodging_obj = json_decode($local_lodging);
+
+	//$local_department_stores = get_remote_data('https://maps.googleapis.com/maps/api/place/radarsearch/json?location=54.326890,-2.747581&radius=3000&type=department_store&key=AIzaSyDcE-HKUQ_hzqDNWic-jom-6Usv68xtd9I');
+	//$local_department_stores_obj = json_decode($local_department_stores);
+
+		foreach($gmTypes as $gmType):
+			$gmTypeNameData = null;
+			$gmTypeNameObj = null;
+			
+			$gmTypeName = $gmType[0];
+
+			$gmTypeNameData = get_remote_data('https://maps.googleapis.com/maps/api/place/radarsearch/json?location=54.326890,-2.747581&radius=3000&type='.$gmTypeName.'&key=AIzaSyDcE-HKUQ_hzqDNWic-jom-6Usv68xtd9I');
+			$gmTypeNameObj = json_decode($gmTypeNameData);
+
+			foreach ($gmTypeNameObj->results as $mapRef):
+				$gmTypeNameInfo = null;
+				$gmTypeNameInfoObj = null;
+			?>
+
+			<div class="marker <?php echo $gmTypeName; ?>" data-type="<?php echo $gmTypeName; ?>" data-icon="<?php echo get_template_directory_uri(); ?>/assets/map-<?php echo $gmTypeName; ?>.png" data-lat="<?php echo $mapRef->geometry->location->lat; ?>" data-lng="<?php echo $mapRef->geometry->location->lng ?>">
+				
+				<?php
+				$gmTypeNameInfo = get_remote_data('https://maps.googleapis.com/maps/api/place/details/json?placeid='.$mapRef->place_id.'&key=AIzaSyDcE-HKUQ_hzqDNWic-jom-6Usv68xtd9I');
+				$gmTypeNameInfoObj = json_decode($gmTypeNameInfo);
+
+				echo '<pre>';
+					print_r($gmTypeNameInfoObj);
+				echo '</pre>';
+
+				?>
+
+				<div class="info">
+					<h2>
+						<?php echo $gmTypeNameInfoObj->result->name; ?>
+					</h2>
+					<p>
+						<?php 
+						if(isset($gmTypeNameInfoObj->result->formatted_address)){
+							echo $gmTypeNameInfoObj->result->formatted_address; 
+						}
+						?>
+						<br>
+						<?php 
+						if(isset($gmTypeNameInfoObj->result->formatted_phone_number)){
+							echo $gmTypeNameInfoObj->result->formatted_phone_number; 
+						}
+						?>
+						<br>
+						<?php 
+						if(isset($gmTypeNameInfoObj->result->website)){
+							echo $gmTypeNameInfoObj->result->website;
+						}
+						?>
+					</p>
+				</div>
+			</div>
+
+			<?php
+			endforeach;
+		endforeach;
 
 	?>
 
@@ -25,12 +104,20 @@
 		<h3>Make Your Selection</h3>
 
 		<ul>
+
+		<?php 
+			foreach($gmTypes as $gmType):
+			$gmTypeName = $gmType[0];
+			$gmTypeDisplay = $gmType[1];
+			
+			?>
 			<li>
-				<span>Art</span> <input id="artCheckbox" name="art_toggle" value="art" type="checkbox">
+				<span><?php echo $gmTypeDisplay; ?></span> <input id="<?php echo $gmTypeName; ?>" name="<?php echo $gmTypeName; ?>" value="<?php echo $gmTypeName; ?>" type="checkbox">
 			</li>
-			<li>
-				<span>Lodging / Acommodation</span> <input id="logdingCheckbox" name="lodging_toggle" value="lodging" type="checkbox">
-			</li>
+			<?php 
+			endforeach; 
+		?>
+
 		</ul>
 
 		<?php 
@@ -72,23 +159,9 @@
 
 		<div class="marker" data-icon="<?php echo get_template_directory_uri(); ?>/assets/map-pin.png" data-lat="<?php echo $planning_map['lat']; ?>" data-lng="<?php echo $planning_map['lng']; ?>">
 		</div>
-		
-		<?php foreach ($local_art_gallery_obj->results as $local_art_gallery): ?>
-		
-			<div class="marker art" data-type="art" data-icon="<?php echo get_template_directory_uri(); ?>/assets/map-art.png" data-lat="<?php echo $local_art_gallery->geometry->location->lat; ?>" data-lng="<?php echo $local_art_gallery->geometry->location->lng ?>">
-			</div>
+	
+		<?php
 
-		<?php endforeach; ?>
-
-		<?php foreach ($local_lodging_obj->results as $local_lodging): ?>
-		
-			<div class="marker lodging" data-type="lodging" data-icon="<?php echo get_template_directory_uri(); ?>/assets/map-bed.png" data-lat="<?php echo $local_lodging->geometry->location->lat; ?>" data-lng="<?php echo $local_lodging->geometry->location->lng ?>">
-			</div>
-
-		<?php endforeach; ?>
-
-
-		<?php 
 		/*
 		$args = array( 'post_type' => 'poi', 'posts_per_page' => -1 );
 		$loop = new WP_Query( $args );

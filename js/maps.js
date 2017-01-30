@@ -111,26 +111,36 @@
 
 		}
 
-		google.maps.event.addListener(marker, 'art', function () {
-			if($marker.hasClass($('input[name="art_toggle"]:checked').val())) {
+		google.maps.event.addListener(marker, 'art_gallery', function () {
+			if($marker.hasClass($('input[name="art_gallery"]:checked').val())) {
 				marker.setVisible(true);
 			} else {
 				marker.setVisible(false);
 			}
 		});
 		google.maps.event.addListener(marker, 'lodging', function () {
-			if($marker.hasClass($('input[name="lodging_toggle"]:checked').val())) {
+			if($marker.hasClass($('input[name="lodging"]:checked').val())) {
+				marker.setVisible(true);
+			} else {
+				marker.setVisible(false);
+			}
+		});
+		google.maps.event.addListener(marker, 'department_store', function () {
+			if($marker.hasClass($('input[name="department_store"]:checked').val())) {
 				marker.setVisible(true);
 			} else {
 				marker.setVisible(false);
 			}
 		});
 		
-		$('input[name="art_toggle"]').change(function() {
-			google.maps.event.trigger(marker, 'art');
+		$('input[name="art_gallery"]').change(function() {
+			google.maps.event.trigger(marker, 'art_gallery');
 		});
-		$('input[name="lodging_toggle"]').change(function() {
+		$('input[name="lodging"]').change(function() {
 			google.maps.event.trigger(marker, 'lodging');
+		});
+		$('input[name="department_store"]').change(function() {
+			google.maps.event.trigger(marker, 'department_store');
 		});
 
 	}

@@ -229,39 +229,29 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/map-art.png": {
+	"\/assets\/map-art_gallery.png": {
 		"ft": 32768,
 		"iS": 1162,
 		"oA": 0,
-		"oAP": "\/assets\/map-art.png",
+		"oAP": "\/assets\/map-art_gallery.png",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/assets\/map-bed.png": {
+	"\/assets\/map-department_store.png": {
+		"ft": 32768,
+		"iS": 980,
+		"oA": 0,
+		"oAP": "\/assets\/map-department_store.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/map-lodging.png": {
 		"ft": 32768,
 		"iS": 601,
 		"oA": 0,
-		"oAP": "\/assets\/map-bed.png",
+		"oAP": "\/assets\/map-lodging.png",
 		"oF": 0,
 		"opt": 0
-		},
-	"\/assets\/map-green.png": {
-		"ft": 32768,
-		"iS": 17052,
-		"oA": 0,
-		"oAP": "\/assets\/map-green.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/map-green.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/map-green.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
 		},
 	"\/assets\/map-pin.png": {
 		"ft": 32768,
@@ -270,24 +260,6 @@
 		"oAP": "\/assets\/map-pin.png",
 		"oF": 0,
 		"opt": 0
-		},
-	"\/assets\/map-red.png": {
-		"ft": 32768,
-		"iS": 17029,
-		"oA": 0,
-		"oAP": "\/assets\/map-red.png",
-		"oF": 0,
-		"opt": 0
-		},
-	"\/assets\/map-red.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/map-red.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
 		},
 	"\/assets\/themes\/classic.css": {
 		"aP": 0,
