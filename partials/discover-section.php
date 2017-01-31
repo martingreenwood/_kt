@@ -57,6 +57,45 @@
 
 		</div>
 		<div class="column">
+			<?php if(get_field( 'feature_four_video' )): ?>
+			<?php
+			$feature_four_video_thumbnail = get_field('feature_four_video_thumbnail');
+			?>
+			<aside class="image full" style="background-image: url(<?php echo $feature_four_video_thumbnail['url']; ?>);">
+				<a href="#" class="playbid">
+					&nbsp;
+				</a>
+				<div class="popupvid">
+					<a class="close" href="#"></a>
+					<div class="table">
+						<div class="cell middle">
+							<div class="embeder">
+							<?php
+							// get iframe HTML
+							$iframe = get_field('feature_four_video_url');
+							// use preg_match to find iframe src
+							preg_match('/src="(.+?)"/', $iframe, $matches);
+							$src = $matches[1];
+							// add extra params to iframe src
+							$params = array(
+							    'controls'    => 0,
+							    'hd'        => 1,
+							    'autohide'    => 1
+							);
+							$new_src = add_query_arg($params, $src);
+							$iframe = str_replace($src, $new_src, $iframe);
+							// add extra attributes to iframe html
+							$attributes = 'frameborder="0"';
+							$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+							// echo $iframe
+							echo $iframe;
+							?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<?php else: ?>
 			<?php
 			$feature_four = get_field('feature_four');
 			$feature_fourID = get_post_thumbnail_id( $feature_four->ID );
@@ -71,6 +110,7 @@
 					</div>
 				</a>
 			</aside>
+			<?php endif; ?>
 		</div>
 	</div>
 
