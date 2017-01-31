@@ -1507,6 +1507,26 @@ a:hover, a:active { outline: 0; }
 /* Make sure embeds and iframes fit their containers. */
 embed, iframe, object { max-width: 100%; }
 
+a.playbid { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(assets/play.svg); background-size: 64px; background-repeat: no-repeat; background-position: center; }
+
+.popupvid { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 99999; background: rgba(0, 0, 0, 0.8); padding: 6%; box-sizing: border-box; display: none; }
+
+.popupvid.show { display: block; }
+
+.popupvid .table { width: 800px; margin: 0 auto; }
+
+.popupvid .close { position: absolute; z-index: 999999; width: 40px; height: 40px; right: 2%; top: 2%; }
+
+.popupvid .close:before, .popupvid .close:after { content: ""; left: 0; top: 50%; margin-top: -1px; background: white; position: absolute; height: 2px; width: 100%; }
+
+.popupvid .close:after { transform: rotate(45deg); }
+
+.popupvid .close:before { transform: rotate(-45deg); }
+
+.embeder { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; }
+
+.embeder iframe, .embeder object, .embeder embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/

@@ -3,6 +3,22 @@
     "title": "Top Grid Pages \/ Links",
     "fields": [
         {
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_589074cfbfd82",
+            "label": "Intro Text",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "default_value": "",
             "new_lines": "br",
             "maxlength": "",
@@ -12,6 +28,22 @@
             "label": "Intro",
             "name": "discover_intro",
             "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_58905ee5956ac",
+            "label": "Feature One",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -65,6 +97,22 @@
             }
         },
         {
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_58905f04956ad",
+            "label": "Feature Two",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -98,6 +146,22 @@
             "label": "Feature Two Intro",
             "name": "feature_two_intro",
             "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_58905f0d956ae",
+            "label": "Feature Three",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -151,6 +215,41 @@
             }
         },
         {
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_58905f19956af",
+            "label": "Feature Four",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 0,
+            "message": "Enable?",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_5890759523e63",
+            "label": "Feature Four Video?",
+            "name": "feature_four_video",
+            "type": "true_false",
+            "instructions": "Check to make this box a video container",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -167,7 +266,15 @@
             "type": "post_object",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5890759523e63",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -185,6 +292,105 @@
             "name": "feature_four_intro",
             "type": "wysiwyg",
             "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5890759523e63",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_589075bf23e64",
+            "label": "Feature Four Video Thumbnail",
+            "name": "feature_four_video_thumbnail",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5890759523e63",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "width": "",
+            "height": "",
+            "key": "field_589075c623e65",
+            "label": "Feature Four Video URL",
+            "name": "feature_four_video_url",
+            "type": "oembed",
+            "instructions": "Enter Video URL from vimeo \/ youtube.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5890759523e63",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_58905f2c956b0",
+            "label": "Feature Five",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": 0,
+            "message": "Enable?",
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_58906776956ba",
+            "label": "Feature Five Video?",
+            "name": "feature_five_video",
+            "type": "true_false",
+            "instructions": "Check to make this box a video container",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -210,7 +416,15 @@
             "type": "post_object",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58906776956ba",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -227,6 +441,86 @@
             "label": "Feature Five Intro",
             "name": "feature_five_intro",
             "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58906776956ba",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "key": "field_58906231956b8",
+            "label": "Feature Five Video Thumbnail",
+            "name": "feature_five_video_thumbnail",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58906776956ba",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "width": "",
+            "height": "",
+            "key": "field_5890674c956b9",
+            "label": "Feature Five Video URL",
+            "name": "feature_five_video_url",
+            "type": "oembed",
+            "instructions": "Enter Video URL from vimeo \/ youtube.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58906776956ba",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_58905f37956b1",
+            "label": "Feature Six",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -280,6 +574,22 @@
             }
         },
         {
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_58905f43956b2",
+            "label": "Feature Seven",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "post_type": [
                 "page"
             ],
@@ -313,6 +623,22 @@
             "label": "Feature Seven Intro",
             "name": "feature_seven_intro",
             "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_58905f4e956b3",
+            "label": "Feature Eight",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -366,6 +692,22 @@
             }
         },
         {
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_58905f57956b4",
+            "label": "Feature Text",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1,
@@ -409,5 +751,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "For Homepage",
-    "modified": 1484910302
+    "modified": 1485862410
 }

@@ -38,6 +38,23 @@ var $ = jQuery;
     $('.eq-height').equalHeights();
 })(jQuery);
 
+/*=================================
+=            popup vid            =
+=================================*/
+
+(function($) {
+	$('.playbid').on('click', function(event) {
+		event.preventDefault();
+		$(this).next('.popupvid').addClass('show');
+	});
+
+	$('.close').on('click', function(event) {
+		event.preventDefault();
+		$(this).parent('.popupvid').removeClass('show');
+	});
+})(jQuery);
+
+
 /*==============================
 =            Slides            =
 ==============================*/
