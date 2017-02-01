@@ -77,7 +77,7 @@ get_header(); ?>
 						<div class="row">
 							<div class="column">
 								<aside class="text">
-									<?php the_field( 'discover_intro' ); ?>
+									<p><?php the_field( 'discover_intro' ); ?></p>
 								</aside>
 
 								<?php
