@@ -161,6 +161,8 @@
 					}
 
 					&.text {
+						border-top: 2px solid black;
+						padding-top: 5px;
 
 						h1, h2, h3 {
 							margin: 0 0 5px 0;
@@ -170,8 +172,6 @@
 						}
 						
 						p {
-							border-top: 2px solid black;
-							padding-top: 5px;
 						}
 					}
 

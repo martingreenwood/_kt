@@ -620,9 +620,9 @@ a:hover, a:active { outline: 0; }
 @media screen and (min-width: 1099px) { #discover .grid .row .column aside { float: left; display: block; margin-right: 4.347826087%; width: 47.8260869565%; }
   #discover .grid .row .column aside:last-child { margin-right: 0; } }
 
-#discover .grid .row .column aside.text h1, #discover .grid .row .column aside.text h2, #discover .grid .row .column aside.text h3 { margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; font-size: 18px; }
+#discover .grid .row .column aside.text { border-top: 2px solid black; padding-top: 5px; }
 
-#discover .grid .row .column aside.text p { border-top: 2px solid black; padding-top: 5px; }
+#discover .grid .row .column aside.text h1, #discover .grid .row .column aside.text h2, #discover .grid .row .column aside.text h3 { margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; font-size: 18px; }
 
 #discover .grid .row .column aside.image { background-size: cover; background-repeat: no-repeat; background-position: center; }
 
