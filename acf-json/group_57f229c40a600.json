@@ -19,15 +19,15 @@
             }
         },
         {
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
             "default_value": "",
-            "new_lines": "br",
-            "maxlength": "",
-            "placeholder": "",
-            "rows": "",
+            "delay": 0,
             "key": "field_5881e9f2e0708",
             "label": "Intro",
             "name": "discover_intro",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -751,5 +751,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "For Homepage",
-    "modified": 1485862410
+    "modified": 1485954203
 }
