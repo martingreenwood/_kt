@@ -105,6 +105,7 @@ var $ = jQuery;
 		speed: 500,
 		fade: true,
 		cssEase: 'linear',
+		adaptiveHeight: true
 	});
 })(jQuery);
 

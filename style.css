@@ -602,6 +602,8 @@ a:hover, a:active { outline: 0; }
 
 .slider .slide .image { width: 100%; display: block; }
 
+#content { margin-top: 87px; }
+
 /*================================
 =            DISCOVER            =
 ================================*/
