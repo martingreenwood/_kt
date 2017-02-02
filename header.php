@@ -28,6 +28,12 @@
 <body <?php body_class(); ?> id="<?php echo $pagename; ?>">
 <div id="page" class="site">
 
+	<div id="loader">
+		<div id="loading">
+			<div id="progstat"></div>
+			<div id="progress"></div>
+		</div>
+	</div>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">

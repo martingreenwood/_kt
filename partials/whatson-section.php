@@ -17,7 +17,7 @@
 	?>
 
 	<header>
-		<h2>Events &amp; Festivals</h2>
+		<h2>What's On</h2>
 	</header>
 
 	<aside class="filters">
