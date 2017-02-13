@@ -132,8 +132,7 @@
 						$_GET['cat'] == $club_category_2_id ||
 						$_GET['cat'] == $directory_category_3_id ):
 					?>
-			?>
-
+					
 			<div class="event" data-id="<?php echo $club_id; ?>" data-town="<?php echo $club_town_id; ?>" data-cat="<?php echo $club_category_id; ?>" data-sec-cat="<?php echo $club_category_2_id; ?>" data-thi-cat="<?php echo $club_category_3_id; ?>">
 
 				<?php
