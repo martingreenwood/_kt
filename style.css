@@ -637,8 +637,6 @@ a:hover, a:active { outline: 0; }
 
 #discover .grid .row .column aside.text h1, #discover .grid .row .column aside.text h2, #discover .grid .row .column aside.text h3 { margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; font-size: 18px; }
 
-#discover .grid .row .column aside.text p a { display: inline-block; position: relative; width: auto; height: auto; top: auto; left: auto; }
-
 #discover .grid .row .column aside.image { background-size: cover; background-repeat: no-repeat; background-position: center; }
 
 #discover .grid .row .column aside.image:first-of-type { margin-bottom: 30px; }
@@ -1204,6 +1202,8 @@ a:hover, a:active { outline: 0; }
 .page-template-discover-landing-page #primary #main .column article, .page-template-top-landing-page #primary #main .column article, .page-template-landing-page #primary #main .column article { position: relative; }
 
 .page-template-discover-landing-page #primary #main .column img, .page-template-top-landing-page #primary #main .column img, .page-template-landing-page #primary #main .column img { display: block; }
+
+.page-template-discover-landing-page #primary #main .column aside p a, .page-template-top-landing-page #primary #main .column aside p a, .page-template-landing-page #primary #main .column aside p a { display: inline-block; position: relative; width: auto; height: auto; top: auto; left: auto; }
 
 .page-template-discover-landing-page #primary #main .column a, .page-template-top-landing-page #primary #main .column a, .page-template-landing-page #primary #main .column a { display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 
