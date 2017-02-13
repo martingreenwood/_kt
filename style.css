@@ -1292,6 +1292,8 @@ a:hover, a:active { outline: 0; }
 
 .page-template-discover-poi #primary #main .column .row .copy p, .page-template-info-page #primary #main .column .row .copy p, .page-template-default #primary #main .column .row .copy p { font-size: 16px; }
 
+.page-template-discover-poi #primary #main .column .row .copy p img, .page-template-info-page #primary #main .column .row .copy p img, .page-template-default #primary #main .column .row .copy p img { width: auto; }
+
 .page-template-discover-poi #primary #main aside, .page-template-info-page #primary #main aside, .page-template-default #primary #main aside { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
 
 .page-template-discover-poi #primary #main aside:last-child, .page-template-info-page #primary #main aside:last-child, .page-template-default #primary #main aside:last-child { margin-right: 0; }

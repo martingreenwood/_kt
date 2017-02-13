@@ -298,6 +298,7 @@ get_header(); ?>
 									$feature_six = get_field('feature_six');
 									$feature_sixID = get_post_thumbnail_id( $feature_six->ID );
 									$feature_sixURL = wp_get_attachment_image_src( $feature_sixID, 'full' );
+									$excerpt = null;
 									?>
 									<aside class="image" style="background-image: url(<?php echo $feature_sixURL[0]; ?>);">
 										<a href="<?php echo get_permalink( $feature_six->ID ); ?>">
