@@ -308,7 +308,7 @@ get_header(); ?>
 													<div class="excerpt">
 													<?php 
 														if (get_field( 'feature_six_intro' )):
-															$excerpt = get_field( 'feature_two_intro' );
+															$excerpt = get_field( 'feature_six_intro' );
 														else:
 															$excerpt = "<p>".get_the_excerpt( $feature_six§->ID )."</p>"; 
 														endif;
