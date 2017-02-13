@@ -77,20 +77,6 @@
 			sort($unique_towns);
 			$selected = null;
 			?>
-			<!--<select name="town" class="town">
-				<option value="">Town</option>
-				<?php
-				foreach ($unique_towns as $unique_town) {
-					$town = explode("_", $unique_town);
-					if ($_GET['town'] == $town[1]):
-						$selected = 'selected';
-					else:
-						$selected = '';
-					endif;
-					echo '<option '.$selected.' value="'.$town[1].'">'.$town[0].'</option>';
-				}
-				?>
-			</select>-->
 			&nbsp;
 		</div>
 		<div class="colunn">
@@ -141,52 +127,88 @@
 			}
 
 			if ($club_town_id == 1):
+				if (isset($_GET['cat'])):
+					if ($_GET['cat'] == $club_category_id ||
+						$_GET['cat'] == $club_category_2_id ||
+						$_GET['cat'] == $directory_category_3_id ):
+					?>
 			?>
 
-		<div class="event" data-id="<?php echo $club_id; ?>" data-town="<?php echo $club_town_id; ?>" data-cat="<?php echo $club_category_id; ?>" data-sec-cat="<?php echo $club_category_2_id; ?>" data-thi-cat="<?php echo $club_category_3_id; ?>">
+			<div class="event" data-id="<?php echo $club_id; ?>" data-town="<?php echo $club_town_id; ?>" data-cat="<?php echo $club_category_id; ?>" data-sec-cat="<?php echo $club_category_2_id; ?>" data-thi-cat="<?php echo $club_category_3_id; ?>">
 
-			<!--<div class="img">
-			<?php
-			$args = array(
-				'post_type' => 'clubs',
-				'meta_query'  => array(
-					array(
-						'key' => '_kendal_id',
-						'value' => $club_id
-					)
-				)
-			);
-
-			$loop = new WP_Query( $args );
-			if ($loop->have_posts()) {
-				while ( $loop->have_posts() ) : $loop->the_post(); 
-					the_post_thumbnail("600x430");
-				endwhile; 
-			} else {
-				echo '<img src="//lorempixel.com/600/430/abstract">';
-			}
-			?>
-			</div>-->
-
-			<div class="info">
-				<h3><?php echo $club_name; ?></h3>
-				<p><?php echo $club_description; ?></p>
 				<?php
-				if ($loop->have_posts()) {
-					while ( $loop->have_posts() ) : $loop->the_post(); 
-						echo '<a href="'.get_permalink().'">read more...</a>';
-					endwhile; 
-				} else {
-					
-				}
+				$args = array(
+					'post_type' => 'clubs',
+					'meta_query'  => array(
+						array(
+							'key' => '_kendal_id',
+							'value' => $club_id
+						)
+					)
+				);
+
+				$loop = new WP_Query( $args );
 				?>
+
+				<div class="info">
+					<h3><?php echo $club_name; ?></h3>
+					<p><?php echo $club_description; ?></p>
+					<?php
+					if ($loop->have_posts()) {
+						while ( $loop->have_posts() ) : $loop->the_post(); 
+							echo '<a href="'.get_permalink().'">read more...</a>';
+						endwhile; 
+					} else {
+						
+					}
+					?>
+				</div>
+
 			</div>
 
-		</div>
+					<?php 
+					endif; // end if cat matches
+				
+				else:
+				?>
 
-		<?php 
-		endif; // end check if town === 1
-		endforeach;
+
+			<div class="event" data-id="<?php echo $club_id; ?>" data-town="<?php echo $club_town_id; ?>" data-cat="<?php echo $club_category_id; ?>" data-sec-cat="<?php echo $club_category_2_id; ?>" data-thi-cat="<?php echo $club_category_3_id; ?>">
+
+				<?php
+				$args = array(
+					'post_type' => 'clubs',
+					'meta_query'  => array(
+						array(
+							'key' => '_kendal_id',
+							'value' => $club_id
+						)
+					)
+				);
+
+				$loop = new WP_Query( $args );
+				?>
+
+				<div class="info">
+					<h3><?php echo $club_name; ?></h3>
+					<p><?php echo $club_description; ?></p>
+					<?php
+					if ($loop->have_posts()) {
+						while ( $loop->have_posts() ) : $loop->the_post(); 
+							echo '<a href="'.get_permalink().'">read more...</a>';
+						endwhile; 
+					} else {
+						
+					}
+					?>
+				</div>
+
+			</div>
+				<?php
+				endif;  // end if search set
+
+			endif; // end check for town ID 1 (Kendal)
+		endforeach; // end loop businesses
 		?>
 	</div>
 

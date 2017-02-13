@@ -137,55 +137,89 @@
 				}
 			}
 			if ($directory_town_id == 1):
-			?>
+				
+				if (isset($_GET['cat'])):
+					if ($_GET['cat'] == $directory_category_id ||
+						$_GET['cat'] == $directory_category_2_id ||
+						$_GET['cat'] == $directory_category_3_id ):
+					?>
 
-		<div class="event" data-id="<?php echo $directory_id; ?>" data-town="<?php echo $directory_town_id; ?>" data-cat="<?php echo $directory_category_id; ?>" data-sec-cat="<?php echo $directory_category_2_id; ?>" data-thi-cat="<?php echo $directory_category_3_id; ?>">
+			<div class="event" data-id="<?php echo $directory_id; ?>" data-town="<?php echo $directory_town_id; ?>" data-cat="<?php echo $directory_category_id; ?>" data-sec-cat="<?php echo $directory_category_2_id; ?>" data-thi-cat="<?php echo $directory_category_3_id; ?>">
 
-			<!--<div class="img">
-			<?php
-			$args = array(
-				'post_type' => 'businesses',
-				'meta_query'  => array(
-					array(
-						'key' => '_kendal_id',
-						'value' => $directory_id
-					)
-				)
-			);
-
-			$loop = new WP_Query( $args );
-			if ($loop->have_posts()) {
-				while ( $loop->have_posts() ) : $loop->the_post(); 
-					the_post_thumbnail("600x430");
-				endwhile; 
-			} else {
-				echo '<img src="//lorempixel.com/600/430/abstract">';
-			}
-			?>
-			</div>-->
-
-			<div class="info">
-				<h3><?php echo $directory_name; ?></h3>
-				<div class="meta" style="color: #999">
-					<small><?php echo substr($directory_listing_cats, 0, -2); ?></small>
-				</div>
-				<p><?php echo $directory_description; ?></p>
 				<?php
-				if ($loop->have_posts()) {
-					while ( $loop->have_posts() ) : $loop->the_post(); 
-						echo '<a href="'.get_permalink().'">read more...</a>';
-					endwhile; 
-				} else {
-					
-				}
+				$args = array(
+				    'post_type' => 'businesses',
+				    'meta_query'  => array(
+				        array(
+				            'key' => '_kendal_id',
+				            'value' => $directory_id
+				        )
+				    )
+				);
+				$loop = new WP_Query( $args );
 				?>
+
+				<div class="info">
+					<h3><?php echo $directory_name; ?></h3>
+					<div class="meta" style="color: #999">
+						<small><?php echo substr($directory_listing_cats, 0, -2); ?></small>
+					</div>
+					<p><?php echo $directory_description; ?></p>
+					<?php
+					if ($loop->have_posts()) {
+						while ( $loop->have_posts() ) : $loop->the_post(); 
+							echo '<a href="'.get_permalink().'">read more...</a>';
+						endwhile; 
+					} else {
+						
+					}
+					?>
+				</div>
+
 			</div>
+					<?php 
+					endif; // end if cat matches
+				
+				else:
+				?>
+			<div class="event" data-id="<?php echo $directory_id; ?>" data-town="<?php echo $directory_town_id; ?>" data-cat="<?php echo $directory_category_id; ?>" data-sec-cat="<?php echo $directory_category_2_id; ?>" data-thi-cat="<?php echo $directory_category_3_id; ?>">
 
-		</div>
+				<?php
+				$args = array(
+				    'post_type' => 'businesses',
+				    'meta_query'  => array(
+				        array(
+				            'key' => '_kendal_id',
+				            'value' => $directory_id
+				        )
+				    )
+				);
+				$loop = new WP_Query( $args );
+				?>
 
-		<?php 
-		endif; // end check for town ID 1 (Kendal)
-		endforeach;
+				<div class="info">
+					<h3><?php echo $directory_name; ?></h3>
+					<div class="meta" style="color: #999">
+						<small><?php echo substr($directory_listing_cats, 0, -2); ?></small>
+					</div>
+					<p><?php echo $directory_description; ?></p>
+					<?php
+					if ($loop->have_posts()) {
+						while ( $loop->have_posts() ) : $loop->the_post(); 
+							echo '<a href="'.get_permalink().'">read more...</a>';
+						endwhile; 
+					} else {
+						
+					}
+					?>
+				</div>
+
+			</div>
+				<?php
+				endif;  // end if search set
+
+			endif; // end check for town ID 1 (Kendal)
+		endforeach; // end loop businesses
 		?>
 	</div>
 

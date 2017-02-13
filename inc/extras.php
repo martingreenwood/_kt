@@ -97,3 +97,30 @@ function cached_and_valid($file) {
   return file_exists($file) && filemtime($file) > $expired_time;
 }
 
+
+
+
+/*
+<!--<div class="img">
+<?php
+$args = array(
+    'post_type' => 'businesses',
+    'meta_query'  => array(
+        array(
+            'key' => '_kendal_id',
+            'value' => $directory_id
+        )
+    )
+);
+
+$loop = new WP_Query( $args );
+if ($loop->have_posts()) {
+    while ( $loop->have_posts() ) : $loop->the_post(); 
+        the_post_thumbnail("600x430");
+    endwhile; 
+} else {
+    echo '<img src="//lorempixel.com/600/430/abstract">';
+}
+?>
+</div>-->
+*/

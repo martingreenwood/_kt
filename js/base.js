@@ -256,83 +256,8 @@ var town = getUrlParameter('town');
 var myEvents = jQuery('.event').length;
 //console.log("events: " + myEvents);
 
+
 (function($) {
-	// events
-	if (genre && start) {
-		$('.event').addClass('no-match');
-		$('.event[data-start="'+start+'"][data-type="'+genre+'"]').each(function(index, el) {
-			$(this).removeClass('no-match');
-			$(this).prependTo(".event-list");
-		});
-		var MatchingEvents = $('.event[data-start="'+start+'"][data-type="'+genre+'"]').length;
-		//console.log('events with date and genre: ' + MatchingEvents);
-		if(MatchingEvents == 0) {
-			$('.search-error').addClass('show');
-		}
-		picker.setMoment(moment(start, 'DD-MM-YYYY'));
-	}
-	if (start && !genre) {
-		$('.event[data-start="'+start+'"]').each(function(index, el) {
-			$(this).removeClass('no-match');
-			$(this).prependTo(".event-list");
-		});
-		var MatchingEvents = $('.event[data-start="'+start+'"]').length;
-		//console.log('events with date: ' + MatchingEvents);
-		if(MatchingEvents == 0) {
-			$('.search-error').addClass('show');
-		}
-		picker.setMoment(moment(start, 'DD-MM-YYYY'));
-	}
-	if (genre && !start) {
-		$('.event').addClass('no-match');
-		$('.event[data-type="'+genre+'"]').each(function(index, el) {
-			$(this).removeClass('no-match');
-			$(this).prependTo(".event-list");
-		});
-		var MatchingEvents = $('.event[data-type="'+genre+'"]').length;
-		//console.log('events with genre: ' + MatchingEvents);
-		if(MatchingEvents == 0) {
-			$('.search-error').addClass('show');
-		}
-	}
-
-	// busisness
-	if (cat && town) {
-		$('.event').addClass('no-match');
-		$('.event[data-town="'+town+'"][data-cat="'+cat+'"]').each(function(index, el) {
-			$(this).removeClass('no-match');
-			$(this).prependTo(".event-list");
-		});
-		var MatchingEvents = $('.event[data-town="'+town+'"][data-cat="'+cat+'"]').length;
-		//console.log('events with town and cat: ' + MatchingEvents);
-		if(MatchingEvents == 0) {
-			$('.search-error').addClass('show');
-		}
-	}
-	if (town && !cat) {
-		$('.event[data-town="'+town+'"]').each(function(index, el) {
-			$(this).removeClass('no-match');
-			$(this).prependTo(".event-list");
-		});
-		var MatchingEvents = $('.event[data-town="'+town+'"]').length;
-		//console.log('events with town: ' + MatchingEvents);
-		if(MatchingEvents == 0) {
-			$('.search-error').addClass('show');
-		}
-	}
-	if (cat && !town) {
-		$('.event').addClass('no-match');
-		$('.event[data-cat="'+cat+'"]').each(function(index, el) {
-			$(this).removeClass('no-match');
-			$(this).prependTo(".event-list");
-		});
-		var MatchingEvents = $('.event[data-cat="'+cat+'"]').length;
-		//console.log('events with cat: ' + MatchingEvents);
-		if(MatchingEvents == 0) {
-			$('.search-error').addClass('show');
-		}
-	}
-
 	// paginate
 	$('.event-list').easyPaginate({
     	paginateElement: '.event',
@@ -341,3 +266,4 @@ var myEvents = jQuery('.event').length;
 	});
 
 }(jQuery));
+
