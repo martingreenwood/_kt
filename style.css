@@ -637,6 +637,8 @@ a:hover, a:active { outline: 0; }
 
 #discover .grid .row .column aside.text h1, #discover .grid .row .column aside.text h2, #discover .grid .row .column aside.text h3 { margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; font-size: 18px; }
 
+#discover .grid .row .column aside.text p a { display: inline-block; position: relative; width: auto; height: auto; top: auto; left: auto; }
+
 #discover .grid .row .column aside.image { background-size: cover; background-repeat: no-repeat; background-position: center; }
 
 #discover .grid .row .column aside.image:first-of-type { margin-bottom: 30px; }
