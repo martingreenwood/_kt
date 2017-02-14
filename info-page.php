@@ -118,7 +118,12 @@ get_header(); ?>
 				<div class="open">
 					<h3>Essential Info</h3>
 					<?php the_field('opening_times'); ?>
-					<p><?php the_field('website'); ?></p>
+					<p>
+					<?php if (get_field('website')): ?>
+						<a href="<?php the_field('website'); ?>" targe="_blank"><?php the_field('website'); ?> <sup><i class="fa fa-external-link" aria-hidden="true"></i>
+</sup></a>
+					<?php endif; ?>
+					</p>
 				</div>
 
 				<div class="location">
