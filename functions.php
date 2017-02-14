@@ -261,6 +261,32 @@ function hide_menu() {
 add_action('admin_head', 'hide_menu');
 
 
+function coooooookies() { 
+	?>
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+	<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+	<script>
+	window.addEventListener("load", function(){
+	window.cookieconsent.initialise({
+	  "palette": {
+	    "popup": {
+	      "background": "#3c404d",
+	      "text": "#d6d6d6"
+	    },
+	    "button": {
+	      "background": "#8bed4f"
+	    }
+	  },
+	  "position": "bottom-right"
+	})});
+	</script>
+	<?php
+
+}
+add_action('wp_head', 'coooooookies');
+
+
+
 /**
  * Custom template tags for this theme.
  */
