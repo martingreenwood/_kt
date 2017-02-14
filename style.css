@@ -1051,8 +1051,6 @@ a:hover, a:active { outline: 0; }
 
 .home #discover .grid .row .column aside img { display: block; opacity: 0.1; }
 
-.home #discover .grid .row .column aside span { position: absolute; bottom: 0; width: 100%; line-height: 2; font-size: 13px; color: white; background: rgba(0, 0, 0, 0.5); text-indent: 5px; }
-
 .home #discover .grid .row .column .half { float: left; display: block; margin-right: 33.3333333333%; width: 100%; position: relative; }
 
 .home #discover .grid .row .column .half:last-child { margin-right: 0; }

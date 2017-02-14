@@ -14,8 +14,10 @@
 	</article>
 
 	<?php
+	$exclude_ids = array( $post->ID );
 	$args = array(
 		'post_type'      => 'page',
+		'post__not_in' 	 => $exclude_ids,
 		'posts_per_page' => -1,
 		'post_parent'    => wp_get_post_parent_id( $post->ID ),
 		'order'          => 'ASC',
