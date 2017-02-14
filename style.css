@@ -569,7 +569,7 @@ a:hover, a:active { outline: 0; }
 
 .page-links { clear: both; margin: 0; }
 
-.breadcrumbs { padding: 10px 0; font-size: 14px; color: #333333; }
+.breadcrumbs { padding: 10px 0; font-size: 14px; color: #333333; text-transform: capitalize; }
 
 .breadcrumbs a { color: #333333; }
 
@@ -1291,7 +1291,7 @@ a:hover, a:active { outline: 0; }
 
 .page-template-discover-landing-page #primary #main .column a, .page-template-top-landing-page #primary #main .column a, .page-template-landing-page #primary #main .column a { display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 
-.page-template-discover-landing-page #primary #main .column a span, .page-template-top-landing-page #primary #main .column a span, .page-template-landing-page #primary #main .column a span { background: rgba(0, 0, 0, 0.7); color: white; width: 100%; display: block; padding: 5px; font-size: 14px; font-weight: 800; }
+.page-template-discover-landing-page #primary #main .column a span, .page-template-top-landing-page #primary #main .column a span, .page-template-landing-page #primary #main .column a span { background: rgba(0, 0, 0, 0.7); color: white; width: 100%; display: block; padding: 5px; font-size: 14px; font-weight: 800; text-transform: capitalize; }
 
 .page-template-discover-landing-page #primary #main .column a .excerpt, .page-template-top-landing-page #primary #main .column a .excerpt, .page-template-landing-page #primary #main .column a .excerpt { max-height: 0; overflow: hidden; transition: max-height 250ms ease-in-out; background: rgba(0, 0, 0, 0.7); color: white; width: 100%; display: block; padding: 0 5px; font-size: 14px; }
 
@@ -1356,7 +1356,7 @@ a:hover, a:active { outline: 0; }
 
 .page-template-discover-poi #primary #main .column .row img, .page-template-info-page #primary #main .column .row img, .page-template-default #primary #main .column .row img { display: block; width: 100%; margin-bottom: 20px; }
 
-.page-template-discover-poi #primary #main .column .row .caption, .page-template-info-page #primary #main .column .row .caption, .page-template-default #primary #main .column .row .caption { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+.page-template-discover-poi #primary #main .column .row .caption, .page-template-info-page #primary #main .column .row .caption, .page-template-default #primary #main .column .row .caption { float: left; display: block; margin-right: 33.3333333333%; width: 100%; text-transform: uppercase; }
 
 .page-template-discover-poi #primary #main .column .row .caption:last-child, .page-template-info-page #primary #main .column .row .caption:last-child, .page-template-default #primary #main .column .row .caption:last-child { margin-right: 0; }
 

@@ -64,6 +64,13 @@
 		// this needs a date and passwoed set to the i= 
 		// useing SHA1(PASSWORD-YYYYMMDD) defined in config.php DATENOW & PASSWORD & KTKEY
 
+		function cmp($a, $b)
+		{
+			return strcmp($a->start_date, $b->start_date);
+		}
+
+		usort($event_data_obj, "cmp");
+
 		foreach ($event_data_obj as $event_data):
 			$id = $event_data->id;
 			$name = $event_data->name;
@@ -71,21 +78,21 @@
 			$type_id_2 = $event_data->type_id_2;
 			$type = $event_data->type;
 			$town = $event_data->town;
-			$area = $event_data->area;
-			$location = $event_data->location;
-			$postcode = $event_data->postcode;
+			//$area = $event_data->area;
+			//$location = $event_data->location;
+			//$postcode = $event_data->postcode;
 			$start_date = $event_data->start_date;
 			$end_date = $event_data->end_date;
 			$time = $event_data->time;
 			$description = $event_data->description;
 			$min_price = $event_data->min_price;
 			$max_price = $event_data->max_price;
-			$contact_name = $event_data->contact_name;
-			$contact_address = $event_data->contact_address;
-			$contact_tel = $event_data->contact_tel;
-			$email = $event_data->email;
-			$url = $event_data->url;
-			$featured = $event_data->featured;
+			//$contact_name = $event_data->contact_name;
+			//$contact_address = $event_data->contact_address;
+			//$contact_tel = $event_data->contact_tel;
+			//$email = $event_data->email;
+			//$url = $event_data->url;
+			//$featured = $event_data->featured;
 
 			if ( $min_price && $max_price ) {
 				

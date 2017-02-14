@@ -109,27 +109,34 @@
 		// this needs a date and passwoed set to the i= 
 		// useing SHA1(PASSWORD-YYYYMMDD) defined in config.php DATENOW & PASSWORD & KTKEY
 
+		function cmp($a, $b)
+		{
+			return strcmp($a->directory_name, $b->directory_name);
+		}
+
+		usort($business_data_obj, "cmp");
+
 		foreach ($business_data_obj as $business_data):
 			$directory_listing_cats = null;
 			
 			$directory_id = $business_data->directory_id;
 			$directory_name = $business_data->directory_name;
 			$directory_description = $business_data->directory_description;
-			$directory_address = $business_data->directory_address;
-			$directory_address2 = $business_data->directory_address2;
+			//$directory_address = $business_data->directory_address;
+			//$directory_address2 = $business_data->directory_address2;
 			$directory_town_id = $business_data->directory_town_id;
-			$directory_postcode = $business_data->directory_postcode;
-			$directory_phone = $business_data->directory_phone;
-			$directory_website = $business_data->directory_website;
-			$directory_email = $business_data->directory_email;
-			$directory_facebook = $business_data->directory_facebook;
-			$directory_twitter = $business_data->directory_twitter;
-			$directory_linkedin = $business_data->directory_linkedin;
+			//$directory_postcode = $business_data->directory_postcode;
+			//$directory_phone = $business_data->directory_phone;
+			//$directory_website = $business_data->directory_website;
+			//$directory_email = $business_data->directory_email;
+			//$directory_facebook = $business_data->directory_facebook;
+			//$directory_twitter = $business_data->directory_twitter;
+			//$directory_linkedin = $business_data->directory_linkedin;
 			$directory_category_id = $business_data->directory_category_id;
 			$directory_category_2_id = $business_data->directory_category_2_id;
 			$directory_category_3_id = $business_data->directory_category_3_id;
-			$directory_lat = $business_data->directory_lat;
-			$directory_long = $business_data->directory_long;
+			//$directory_lat = $business_data->directory_lat;
+			//$directory_long = $business_data->directory_long;
 
 			foreach ($business_cat_obj as $business_cat) {
 				if (
@@ -156,7 +163,7 @@
 						<small><?php echo substr($directory_listing_cats, 0, -2); ?></small>
 					</div>
 					<p><?php echo $directory_description; ?></p>
-					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/enjoy/business-search/view.php?id=<?php echo $id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
+					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/enjoy/business-search/view.php?id=<?php echo $directory_id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
 				</div>
 
 			</div>
@@ -173,7 +180,7 @@
 						<small><?php echo substr($directory_listing_cats, 0, -2); ?></small>
 					</div>
 					<p><?php echo $directory_description; ?></p>
-					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/enjoy/business-search/view.php?id=<?php echo $id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
+					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/enjoy/business-search/view.php?id=<?php echo $directory_id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
 				</div>
 
 			</div>

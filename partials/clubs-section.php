@@ -92,6 +92,13 @@
 	<div class="events event-list">
 		<?php
 
+		function cmp($a, $b)
+		{
+			return strcmp($a->club_name, $b->club_name);
+		}
+
+		usort($clubs_data_obj, "cmp");
+
 		foreach ($clubs_data_obj as $clubs_data):
 			
 			$clubs_listing_cats = null;
@@ -99,42 +106,41 @@
 			$club_id = $clubs_data->club_id;
 			$club_name = $clubs_data->club_name;
 			$club_description = $clubs_data->club_description;
-			$club_address = $clubs_data->clubs_address;
-			$club_address2 = $clubs_data->club_address2;
+			//$club_address = $clubs_data->clubs_address;
+			//$club_address2 = $clubs_data->club_address2;
 			$club_town_id = $clubs_data->club_town_id;
-			$club_postcode = $clubs_data->club_postcode;
-			$club_phone = $clubs_data->club_phone;
-			$club_website = $clubs_data->club_website;
-			$club_email = $clubs_data->club_email;
-			$club_facebook = $clubs_data->club_facebook;
-			$club_twitter = $clubs_data->club_twitter;
-			$club_linkedin = $clubs_data->club_linkedin;
+			//$club_postcode = $clubs_data->club_postcode;
+			//$club_phone = $clubs_data->club_phone;
+			//$club_website = $clubs_data->club_website;
+			//$club_email = $clubs_data->club_email;
+			//$club_facebook = $clubs_data->club_facebook;
+			//$club_twitter = $clubs_data->club_twitter;
+			//$club_linkedin = $clubs_data->club_linkedin;
 			$club_category_id = $clubs_data->club_category_id;
 			$club_category_2_id = $clubs_data->club_category_2_id;
 			$club_category_3_id = $clubs_data->club_category_3_id;
-			$club_lat = $clubs_data->club_lat;
-			$club_long = $clubs_data->club_long;
-			$club_when = $clubs_data->club_when;
-			$club_anyone = $clubs_data->club_anyone;
-			$club_membership = $clubs_data->club_membership;
-			$club_cost = $clubs_data->club_cost;
-			$club_logo = $clubs_data->club_logo;
+			//$club_lat = $clubs_data->club_lat;
+			//$club_long = $clubs_data->club_long;
+			//$club_when = $clubs_data->club_when;
+			//$club_anyone = $clubs_data->club_anyone;
+			//$club_membership = $clubs_data->club_membership;
+			//$club_cost = $clubs_data->club_cost;
+			//$club_logo = $clubs_data->club_logo;
 
-			foreach ($clubs_cat_obj as $clubs_cat) {
-				if (
-					$clubs_cat->category_id == $club_category_id 
-					|| $clubs_cat->category_id == $club_category_2_id 
-					|| $clubs_cat->category_id == $club_category_3_id 
-					) {
-					$club_listing_cats .= $clubs_cat->category_name . ", ";
-				}
-			}
+			//foreach ($clubs_cat_obj as $clubs_cat) {
+			//	if (
+			//		$clubs_cat->category_id == $club_category_id || 
+			//		$clubs_cat->category_id == $club_category_2_id || 
+			//		$clubs_cat->category_id == $club_category_3_id ) {
+			//		$club_listing_cats .= $clubs_cat->category_name . ", ";
+			//	}
+			//}
 
 			if ($club_town_id == 1):
 				if (isset($_GET['cat'])):
 					if ($_GET['cat'] == $club_category_id ||
 						$_GET['cat'] == $club_category_2_id ||
-						$_GET['cat'] == $directory_category_3_id ):
+						$_GET['cat'] == $club_category_3_id ):
 					?>
 
 			<div class="event" data-id="<?php echo $club_id; ?>" data-town="<?php echo $club_town_id; ?>" data-cat="<?php echo $club_category_id; ?>" data-sec-cat="<?php echo $club_category_2_id; ?>" data-thi-cat="<?php echo $club_category_3_id; ?>">
@@ -142,7 +148,7 @@
 				<div class="info">
 					<h3><?php echo $club_name; ?></h3>
 					<p><?php echo $club_description; ?></p>
-					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/events/clubsandsocieties/view.php?id=<?php echo $id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
+					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/events/clubsandsocieties/view.php?id=<?php echo $club_id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
 				</div>
 
 			</div>
@@ -159,7 +165,7 @@
 				<div class="info">
 					<h3><?php echo $club_name; ?></h3>
 					<p><?php echo $club_description; ?></p>
-					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/events/clubsandsocieties/view.php?id=<?php echo $id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
+					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/events/clubsandsocieties/view.php?id=<?php echo $club_id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
 				</div>
 
 			</div>

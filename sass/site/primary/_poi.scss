@@ -58,6 +58,7 @@
 
 					.caption {
 						@include span-columns(1);
+						text-transform: uppercase;
 
 						@include media($medium-screen-up) {
 							@include span-columns(2 of 6);
