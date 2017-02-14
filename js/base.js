@@ -26,6 +26,20 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
  */
 !function(a){a.fn.equalHeights=function(){var b=0,c=a(this);return c.each(function(){var c=a(this).innerHeight();c>b&&(b=c)}),c.css("height",b)},a("[data-equal]").each(function(){var b=a(this),c=b.data("equal");b.find(c).equalHeights()})}(jQuery);
 
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
 
 var $ = jQuery;
 
@@ -196,6 +210,8 @@ var $ = jQuery;
 /*==================================
 =            DatePicker            =
 ==================================*/
+var start = getUrlParameter('start');
+
 (function($) {
 	$('#datepicker').pickadate({
 		// Formats
@@ -231,27 +247,6 @@ var $ = jQuery;
 /*==============================
 =            SEARCH            =
 ==============================*/
-
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
-};
-
-var genre = getUrlParameter('genre');
-var start = getUrlParameter('start');
-
-var cat = getUrlParameter('cat');
-var town = getUrlParameter('town');
 
 var myEvents = jQuery('.event').length;
 //console.log("events: " + myEvents);

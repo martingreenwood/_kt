@@ -31,24 +31,24 @@ $cpts = array(
 	//),
 
 	// Shows
-	array(
-		'shows',
-		'Shows',
-		'Show',
-		'dashicons-tickets-alt', 
-		array('title','editor','thumbnail'),
-		true,
-	),
+	//array(
+	//	'shows',
+	//	'Shows',
+	//	'Show',
+	//	'dashicons-tickets-alt', 
+	//	array('title','editor','thumbnail'),
+	//	true,
+	//),
 
 	// Businesses
-	array(
-		'businesses',
-		'Businesses',
-		'Business',
-		'dashicons-store', 
-		array('title','editor','thumbnail'),
-		true,
-	),
+	//array(
+	//	'businesses',
+	//	'Businesses',
+	//	'Business',
+	//	'dashicons-store', 
+	//	array('title','editor','thumbnail'),
+	//	true,
+	//),
 );
 
 function cpts_register() {
@@ -98,7 +98,7 @@ function cpts_register() {
 }
 
 //create Products custom post type
-add_action('init', 'cpts_register');
+//add_action('init', 'cpts_register');
 
 function _kt_taxonomies() {
     register_taxonomy(
@@ -117,4 +117,4 @@ function _kt_taxonomies() {
     );
 }
 
-add_action( 'init', '_kt_taxonomies', 0 );
+//add_action( 'init', '_kt_taxonomies', 0 );

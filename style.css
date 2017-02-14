@@ -842,7 +842,7 @@ a:hover, a:active { outline: 0; }
 
 #whatson .content .events .event h3 { color: #1ca75e; border-bottom: 1px solid black; margin: 10px 0 7px 0; padding: 0 0 7px 0; font-size: 17px; }
 
-#whatson .content .events .event a { display: block; margin-top: 10px; color: black; font-size: 14px; }
+#whatson .content .events .event a { display: block; margin-top: 10px; color: white; background: #1ca75e; font-size: 14px; line-height: 2.5; text-align: center; font-weight: 600; }
 
 /*============================================
 =            SOCIAL WALL TEMPLATE            =
