@@ -1001,3 +1001,167 @@
 		}
 	}
 }
+
+/*===========================
+=            404            =
+===========================*/
+
+.error404 {
+
+	#signup {
+		padding: 50px 0;
+
+		.form {
+
+			.mc-field-group {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(2.66);
+				}
+				@include media($large-screen-up) {
+					@include span-columns(4);
+				}
+
+				input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
+					border-radius: 0;
+					box-shadow: none;
+					margin-bottom: 0;
+					padding: 5px;
+
+					&#mce-FNAME, &#mce-LNAME {
+						@include span-columns(1 of 1);
+
+						@include media($medium-screen-up) {
+							@include span-columns(1.33 of 2.66);
+						}
+						@include media($large-screen-up) {
+							@include span-columns(2 od 4);
+						}
+					}
+				}
+
+				#mc-embedded-subscribe {
+					border-radius: 0;
+					margin-bottom: 0;
+					box-shadow: none;
+					background: $brand-primary;
+					display: block;
+					width: 100%;
+					color: white;
+					border: 1px solid transparent;
+				}
+			}
+		}
+
+		.content {
+			margin-bottom: 25px;
+			@include row();
+
+			header {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(3);
+				}
+				@include media($large-screen-up) {
+					@include span-columns(4);
+				}
+
+				h1, h2, {
+					color: $brand-primary;
+					font-size: 40px;
+					text-transform: uppercase;
+					line-height: 1;
+					margin: 0;
+				}
+			}
+
+			.intro {
+				@include span-columns(1);
+
+				@include media($medium-screen-up) {
+					@include span-columns(6);
+				}
+				@include media($large-screen-up) {
+					@include span-columns(8);
+				}
+
+				p {
+					line-height: 1.2;
+					font-size: 17px;
+				}
+			}
+		}
+	}
+
+	#blog {
+		padding: 50px 0;
+
+		header {
+
+			h1, h2, {
+				color: $brand-primary;
+				font-size: 40px;
+				text-transform: uppercase;
+				line-height: 1;
+				margin: 0;
+
+				a {
+					font-size: inherit;
+					color: inherit;
+					font-weight: inherit;
+				}
+			}
+		}
+
+		.posts {
+
+			.item {
+				@include span-columns(1);
+				margin-bottom: 25px;
+
+				@include media($medium-screen-up) {
+					@include span-columns(2.66);
+					@include omega(3n);
+				}
+				@include media($large-screen-up) {
+					@include span-columns(4);
+				}
+
+				&:first-of-type {
+					border-top: 2px solid black;
+					padding-top: 5px;
+				}
+
+				img {
+					display: block;
+				}
+
+				h2, h3 {
+					margin: 10px 0;
+					text-transform: uppercase;
+					color: $brand-primary;
+					font-size: 23px;
+					border-bottom: 2px solid black;
+					padding-bottom: 5px;
+
+					a {
+						font-size: inherit;
+						color: inherit;
+						font-weight: inherit;
+					}
+
+				}
+
+				a {
+					display: block;
+					font-size: 13px;
+					margin-top: 10px;
+					font-weight: bold;
+					color: black;
+				}
+			}
+		}
+	}
+}

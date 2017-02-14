@@ -90,9 +90,7 @@ get_header();
 
 				<article class="post">
 
-					<p>Lorem ipsum dolor sitet eriasa amet, consectetur adipiscing elit aliqua pretium justo id leo ornare, ac varius eros consectetur ut hendre ritamol metus id aliquet. </p>
-
-					<p>Vestibulum lorem es lorem, vehicula id fermentum maximus, ornare at lectus suspendise aies pellentesque, libero nec euismod auctor, lorem ligula aliquet nibh.</p>
+					<?php the_field( 'search_blurb', 'options' ); ?>
 
 				</article>
 

@@ -9,56 +9,77 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<section id="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+			<?php 
+			if(function_exists('bcn_display'))
+			{
+				bcn_display();
+			}
+			?>
+			</div>
+		</div>
+	</section>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', '_kt' ); ?></h1>
-				</header><!-- .page-header -->
+	<section class="break">
+		<div class="container">
+			<hr>
+		</div>
+	</section>
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', '_kt' ); ?></p>
+	<section class="title">
+		<div class="container">
+			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', '_kt' ); ?></h1>
+		</div>
+	</section>
 
-					<?php
-						get_search_form();
+	<div id="primary" class="content-area container">
 
-						the_widget( 'WP_Widget_Recent_Posts' );
+		<main id="main" class="site-main row" role="main">
+				
+			<div class="column">
 
-						// Only show the widget if site has multiple categories.
-						if ( _kt_categorized_blog() ) :
-					?>
+				<section class="error-404 not-found">
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', '_kt' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
+					<div class="page-content">
 
-					<?php
-						endif;
+					</div><!-- .page-content -->
 
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', '_kt' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+				</section><!-- .error-404 -->
 
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+			</div>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+		</main>
+	</div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<section class="break">
+		<div class="container">
+			<hr>
+		</div>
+	</section>
+
+	<section id="signup">
+		<div class="container">
+
+		<?php get_template_part( 'partials/signup', 'section' ); ?>
+
+		</div>
+	</section>
+
+	<section class="break">
+		<div class="container">
+			<hr>
+		</div>
+	</section>
+
+	<section id="blog">
+		<div class="container">
+
+		<?php get_template_part( 'partials/blog', 'section' ); ?>
+
+		</div>
+	</section>
 
 <?php
 get_footer();
