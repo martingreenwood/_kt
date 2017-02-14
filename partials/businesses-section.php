@@ -99,6 +99,10 @@
 	</form>
 	</aside>
 
+	<div class="search-error">
+		<span>Sorry, we couldn't find anything to match your search.</span>
+	</div>
+
 	<div class="events event-list">
 		<?php
 		// url to get events from http://www.exploresouthlakeland.co.uk/exports/business/
@@ -146,34 +150,13 @@
 
 			<div class="event" data-id="<?php echo $directory_id; ?>" data-town="<?php echo $directory_town_id; ?>" data-cat="<?php echo $directory_category_id; ?>" data-sec-cat="<?php echo $directory_category_2_id; ?>" data-thi-cat="<?php echo $directory_category_3_id; ?>">
 
-				<?php
-				$args = array(
-				    'post_type' => 'businesses',
-				    'meta_query'  => array(
-				        array(
-				            'key' => '_kendal_id',
-				            'value' => $directory_id
-				        )
-				    )
-				);
-				$loop = new WP_Query( $args );
-				?>
-
 				<div class="info">
 					<h3><?php echo $directory_name; ?></h3>
 					<div class="meta" style="color: #999">
 						<small><?php echo substr($directory_listing_cats, 0, -2); ?></small>
 					</div>
 					<p><?php echo $directory_description; ?></p>
-					<?php
-					if ($loop->have_posts()) {
-						while ( $loop->have_posts() ) : $loop->the_post(); 
-							echo '<a href="'.get_permalink().'">read more...</a>';
-						endwhile; 
-					} else {
-						
-					}
-					?>
+					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/enjoy/business-search/view.php?id=<?php echo $id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
 				</div>
 
 			</div>
@@ -184,34 +167,13 @@
 				?>
 			<div class="event" data-id="<?php echo $directory_id; ?>" data-town="<?php echo $directory_town_id; ?>" data-cat="<?php echo $directory_category_id; ?>" data-sec-cat="<?php echo $directory_category_2_id; ?>" data-thi-cat="<?php echo $directory_category_3_id; ?>">
 
-				<?php
-				$args = array(
-				    'post_type' => 'businesses',
-				    'meta_query'  => array(
-				        array(
-				            'key' => '_kendal_id',
-				            'value' => $directory_id
-				        )
-				    )
-				);
-				$loop = new WP_Query( $args );
-				?>
-
 				<div class="info">
 					<h3><?php echo $directory_name; ?></h3>
 					<div class="meta" style="color: #999">
 						<small><?php echo substr($directory_listing_cats, 0, -2); ?></small>
 					</div>
 					<p><?php echo $directory_description; ?></p>
-					<?php
-					if ($loop->have_posts()) {
-						while ( $loop->have_posts() ) : $loop->the_post(); 
-							echo '<a href="'.get_permalink().'">read more...</a>';
-						endwhile; 
-					} else {
-						
-					}
-					?>
+					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/enjoy/business-search/view.php?id=<?php echo $id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
 				</div>
 
 			</div>

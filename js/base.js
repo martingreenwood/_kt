@@ -256,6 +256,11 @@ var town = getUrlParameter('town');
 var myEvents = jQuery('.event').length;
 //console.log("events: " + myEvents);
 
+(function($) {
+	if (myEvents < 1) {
+		$('.search-error').addClass('show');
+	}
+}(jQuery));
 
 (function($) {
 	// paginate

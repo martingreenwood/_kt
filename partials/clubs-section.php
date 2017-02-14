@@ -85,6 +85,10 @@
 	</form>
 	</aside>
 
+	<div class="search-error">
+		<span>Sorry, we couldn't find anything to match your search.</span>
+	</div>
+
 	<div class="events event-list">
 		<?php
 
@@ -132,35 +136,13 @@
 						$_GET['cat'] == $club_category_2_id ||
 						$_GET['cat'] == $directory_category_3_id ):
 					?>
-					
+
 			<div class="event" data-id="<?php echo $club_id; ?>" data-town="<?php echo $club_town_id; ?>" data-cat="<?php echo $club_category_id; ?>" data-sec-cat="<?php echo $club_category_2_id; ?>" data-thi-cat="<?php echo $club_category_3_id; ?>">
-
-				<?php
-				$args = array(
-					'post_type' => 'clubs',
-					'meta_query'  => array(
-						array(
-							'key' => '_kendal_id',
-							'value' => $club_id
-						)
-					)
-				);
-
-				$loop = new WP_Query( $args );
-				?>
 
 				<div class="info">
 					<h3><?php echo $club_name; ?></h3>
 					<p><?php echo $club_description; ?></p>
-					<?php
-					if ($loop->have_posts()) {
-						while ( $loop->have_posts() ) : $loop->the_post(); 
-							echo '<a href="'.get_permalink().'">read more...</a>';
-						endwhile; 
-					} else {
-						
-					}
-					?>
+					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/events/clubsandsocieties/view.php?id=<?php echo $id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
 				</div>
 
 			</div>
@@ -174,32 +156,10 @@
 
 			<div class="event" data-id="<?php echo $club_id; ?>" data-town="<?php echo $club_town_id; ?>" data-cat="<?php echo $club_category_id; ?>" data-sec-cat="<?php echo $club_category_2_id; ?>" data-thi-cat="<?php echo $club_category_3_id; ?>">
 
-				<?php
-				$args = array(
-					'post_type' => 'clubs',
-					'meta_query'  => array(
-						array(
-							'key' => '_kendal_id',
-							'value' => $club_id
-						)
-					)
-				);
-
-				$loop = new WP_Query( $args );
-				?>
-
 				<div class="info">
 					<h3><?php echo $club_name; ?></h3>
 					<p><?php echo $club_description; ?></p>
-					<?php
-					if ($loop->have_posts()) {
-						while ( $loop->have_posts() ) : $loop->the_post(); 
-							echo '<a href="'.get_permalink().'">read more...</a>';
-						endwhile; 
-					} else {
-						
-					}
-					?>
+					<a target="_blank" href="http://www.exploresouthlakeland.co.uk/events/clubsandsocieties/view.php?id=<?php echo $id; ?>">Read More <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
 				</div>
 
 			</div>
