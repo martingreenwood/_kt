@@ -20,6 +20,16 @@
 					<div class="table">
 						<div class="cell bottom">
 							<span><?php echo get_the_title( $feature_one->ID ); ?></span>
+							<div class="excerpt">
+							<?php 
+								if (get_field( 'feature_one_intro' )):
+									$excerpt = get_field( 'feature_one_intro' );
+								else:
+									$excerpt = "<p>".get_the_excerpt( $feature_one->ID )."</p>"; 
+								endif;
+								echo $excerpt; 
+							?>
+							</div>
 						</div>
 					</div>
 				</a>
@@ -35,6 +45,16 @@
 					<div class="table">
 						<div class="cell bottom">
 							<span><?php echo get_the_title( $feature_two->ID ); ?></span>
+							<div class="excerpt">
+							<?php 
+								if (get_field( 'feature_two_intro' )):
+									$excerpt = get_field( 'feature_two_intro' );
+								else:
+									$excerpt = "<p>".get_the_excerpt( $feature_two->ID )."</p>"; 
+								endif;
+								echo $excerpt; 
+							?>
+							</div>
 						</div>
 					</div>
 				</a>
@@ -50,6 +70,16 @@
 					<div class="table">
 						<div class="cell bottom">
 							<span><?php echo get_the_title( $feature_three->ID ); ?></span>
+							<div class="excerpt">
+							<?php 
+								if (get_field( 'feature_three_intro' )):
+									$excerpt = get_field( 'feature_three_intro' );
+								else:
+									$excerpt = "<p>".get_the_excerpt( $feature_three->ID )."</p>"; 
+								endif;
+								echo $excerpt; 
+							?>
+							</div>
 						</div>
 					</div>
 				</a>
@@ -106,6 +136,16 @@
 					<div class="table">
 						<div class="cell bottom">
 							<span><?php echo get_the_title( $feature_four->ID ); ?></span>
+							<div class="excerpt">
+							<?php 
+								if (get_field( 'feature_four_intro' )):
+									$excerpt = get_field( 'feature_four_intro' );
+								else:
+									$excerpt = "<p>".get_the_excerpt( $feature_four->ID )."</p>"; 
+								endif;
+								echo $excerpt; 
+							?>
+							</div>
 						</div>
 					</div>
 				</a>
@@ -166,6 +206,16 @@
 					<div class="table">
 						<div class="cell bottom">
 							<span><?php echo get_the_title( $feature_five->ID ); ?></span>
+							<div class="excerpt">
+							<?php 
+								if (get_field( 'feature_five_intro' )):
+									$excerpt = get_field( 'feature_five_intro' );
+								else:
+									$excerpt = "<p>".get_the_excerpt( $feature_five->ID )."</p>"; 
+								endif;
+								echo $excerpt; 
+							?>
+							</div>
 						</div>
 					</div>
 				</a>
@@ -184,6 +234,16 @@
 						<div class="table">
 							<div class="cell bottom">
 								<span><?php echo get_the_title( $feature_six->ID ); ?></span>
+								<div class="excerpt">
+								<?php 
+									if (get_field( 'feature_six_intro' )):
+										$excerpt = get_field( 'feature_six_intro' );
+									else:
+										$excerpt = "<p>".get_the_excerpt( $feature_six->ID )."</p>"; 
+									endif;
+									echo $excerpt; 
+								?>
+								</div>
 							</div>
 						</div>
 					</a>
@@ -199,6 +259,16 @@
 						<div class="table">
 							<div class="cell bottom">
 								<span><?php echo get_the_title( $feature_seven->ID ); ?></span>
+								<div class="excerpt">
+								<?php 
+									if (get_field( 'feature_seven_intro' )):
+										$excerpt = get_field( 'feature_seven_intro' );
+									else:
+										$excerpt = "<p>".get_the_excerpt( $feature_seven->ID )."</p>"; 
+									endif;
+									echo $excerpt; 
+								?>
+								</div>
 							</div>
 						</div>
 					</a>
@@ -216,6 +286,16 @@
 						<div class="table">
 							<div class="cell bottom">
 								<span><?php echo get_the_title( $feature_eight->ID ); ?></span>
+								<div class="excerpt">
+								<?php 
+									if (get_field( 'feature_eight_intro' )):
+										$excerpt = get_field( 'feature_eight_intro' );
+									else:
+										$excerpt = "<p>".get_the_excerpt( $feature_eight->ID )."</p>"; 
+									endif;
+									echo $excerpt; 
+								?>
+								</div>
 							</div>
 						</div>
 					</a>

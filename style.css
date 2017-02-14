@@ -1153,6 +1153,8 @@ a:hover, a:active { outline: 0; }
 
 .home #blog header h1, .home #blog header h2 { color: #1ca75e; font-size: 40px; text-transform: uppercase; line-height: 1; margin: 0; }
 
+.home #blog header h1 a, .home #blog header h2 a { font-size: inherit; color: inherit; font-weight: inherit; }
+
 .home #blog .posts .item { float: left; display: block; margin-right: 33.3333333333%; width: 100%; margin-bottom: 25px; }
 
 .home #blog .posts .item:last-child { margin-right: 0; }
@@ -1170,6 +1172,8 @@ a:hover, a:active { outline: 0; }
 .home #blog .posts .item img { display: block; }
 
 .home #blog .posts .item h2, .home #blog .posts .item h3 { margin: 10px 0; text-transform: uppercase; color: #1ca75e; font-size: 23px; border-bottom: 2px solid black; padding-bottom: 5px; }
+
+.home #blog .posts .item h2 a, .home #blog .posts .item h3 a { font-size: inherit; color: inherit; font-weight: inherit; }
 
 .home #blog .posts .item a { display: block; font-size: 13px; margin-top: 10px; font-weight: bold; color: black; }
 
