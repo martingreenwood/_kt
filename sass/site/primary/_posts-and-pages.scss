@@ -165,8 +165,8 @@
 					}
 
 					&.text {
-						border-top: 2px solid black;
-						padding-top: 5px;
+						//border-top: 2px solid black;
+						//padding-top: 5px;
 
 						h1, h2, h3 {
 							margin: 0 0 5px 0;
@@ -799,6 +799,204 @@
 		}
 		@include media($large-screen-up) {
 			@include span-columns(10);
+		}
+	}
+}
+
+
+/*=================================
+=            SING POST            =
+=================================*/
+
+.blog, .archive, .single-post {
+
+	#primary {
+
+		.column {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(6);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(8.5);
+			}
+
+			article {
+				h1, h2, h3, h4, h5 {
+					margin-top: 0
+				}
+			}
+		}
+
+		aside {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(2);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(3.5);
+			}
+
+			.widget {
+				margin-bottom: 20px;
+
+				h2 {
+					border-bottom: 2px solid black;
+					font-size: 16px;
+					margin: 0 0 5px 0;
+					text-transform: uppercase;
+					color: $brand-primary;
+				}
+
+				ul {
+					list-style-type: none;
+					margin: 20px 0 0 0;
+
+					li a {
+						color: black;
+					}
+				}
+			}
+		}
+	}
+
+	#comments {
+		border-top: 2px solid black;
+		margin-top: 40px;
+		margin-bottom: 40px;
+
+		.comments-title {
+			margin: 20px 0;
+		}
+
+		ol {
+			margin: 0;
+			margin-bottom: 20px;
+			list-style-type: none;
+
+			li {
+				background: #f9f9f9;
+				padding: 20px;
+				margin-bottom: 20px;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				.comment-meta {
+					margin-bottom: 10px;
+					padding-bottom: 10px;
+					border-bottom: 1px solid #ccc;
+
+					img {
+						display: none;
+					}
+
+					.comment-author, .comment-metadata {
+						display: inline-block;
+						width: 49.7%;
+						margin: 0;
+					}
+
+					.comment-metadata {
+						text-align: right;
+					}
+				}
+
+				.reply {
+					margin-top: 20px;
+					text-align: right;
+
+					a {
+						display: inline-block;
+						font-size: 13px;
+						background:$brand-primary;
+						padding: 4px 10px;
+						text-transform: uppercase;
+						color: white;
+						font-weight: 600;
+					}
+				}
+
+				.children {
+					margin-bottom: 0;
+					margin-top: 20px;
+
+					li {
+						background: white;
+
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+
+						.children {
+							margin-bottom: 0;
+							margin-top: 20px;
+
+							li {
+								background: #f9f9f9;
+
+								&:last-of-type {
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*============================
+=            Blog            =
+============================*/
+
+.blog {
+
+	#primary {
+
+		.post {
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 2px solid black;
+
+			&:first-of-type {
+				border-top: 0;
+				padding-top: 0;
+				margin-top: 0;
+			}
+
+			&:last-of-type {
+				margin-bottom: 20px;
+			}
+
+			header {
+				margin-bottom: 20px;
+
+				h2 {
+					font-size: 32px;
+					margin: 0;
+					color: black;
+				}
+			}
+
+			.link {
+				text-align: right;
+				margin-top: 20px;
+
+				a {
+					display: inline-block;
+					font-size: 13px;
+					background:$brand-primary;
+					padding: 4px 10px;
+					text-transform: uppercase;
+					color: white;
+					font-weight: 600;
+				}
+			}
 		}
 	}
 }

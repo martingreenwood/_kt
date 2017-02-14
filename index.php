@@ -14,42 +14,70 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<section id="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+			<?php 
+			if(function_exists('bcn_display'))
+			{
+				bcn_display();
+			}
+			?>
+			</div>
+		</div>
+	</section>
 
-		<?php
-		if ( have_posts() ) :
+	<section class="break">
+		<div class="container">
+			<hr>
+		</div>
+	</section>
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+	<section class="title">
+		<div class="container">
+			<h1>News</h1>
+		</div>
+	</section>
+
+	<div id="primary" class="content-area container">
+
+		<main id="main" class="site-main row" role="main">
+				
+			<div class="column">
 
 			<?php
-			endif;
+			if ( have_posts() ) :
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+				/* Start the Loop */
+				while ( have_posts() ) : the_post();
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+					/*
+					 * Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', 'blog' );
 
-			endwhile;
+				endwhile;
 
-			the_posts_navigation();
+				the_posts_navigation();
 
-		else :
+			else :
 
-			get_template_part( 'template-parts/content', 'none' );
+				get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+			endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			</div>
+
+			<?php
+				// gens aside 
+				get_sidebar();
+			?>
+
+		</main>
+	</div>
+
 
 <?php
 get_sidebar();

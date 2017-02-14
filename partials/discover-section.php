@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="column">
 			<aside class="text">
-				<p><?php the_field( 'discover_intro' ); ?></p>
+				<?php the_field( 'discover_intro' ); ?>
 			</aside>
 
 			<?php

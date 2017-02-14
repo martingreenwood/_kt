@@ -633,8 +633,6 @@ a:hover, a:active { outline: 0; }
 @media screen and (min-width: 1099px) { #discover .grid .row .column aside { float: left; display: block; margin-right: 4.347826087%; width: 47.8260869565%; }
   #discover .grid .row .column aside:last-child { margin-right: 0; } }
 
-#discover .grid .row .column aside.text { border-top: 2px solid black; padding-top: 5px; }
-
 #discover .grid .row .column aside.text h1, #discover .grid .row .column aside.text h2, #discover .grid .row .column aside.text h3 { margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; font-size: 18px; }
 
 #discover .grid .row .column aside.image { background-size: cover; background-repeat: no-repeat; background-position: center; }
@@ -903,6 +901,90 @@ a:hover, a:active { outline: 0; }
 
 @media screen and (min-width: 1099px) { #share .sharedaddy { float: left; display: block; margin-right: 2.1276595745%; width: 82.9787234043%; }
   #share .sharedaddy:last-child { margin-right: 0; } }
+
+/*=================================
+=            SING POST            =
+=================================*/
+.blog #primary .column, .archive #primary .column, .single-post #primary .column { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+
+.blog #primary .column:last-child, .archive #primary .column:last-child, .single-post #primary .column:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { .blog #primary .column, .archive #primary .column, .single-post #primary .column { float: left; display: block; margin-right: 3.2258064516%; width: 74.1935483871%; }
+  .blog #primary .column:last-child, .archive #primary .column:last-child, .single-post #primary .column:last-child { margin-right: 0; } }
+
+@media screen and (min-width: 1099px) { .blog #primary .column, .archive #primary .column, .single-post #primary .column { float: left; display: block; margin-right: 2.1276595745%; width: 70.2127659574%; }
+  .blog #primary .column:last-child, .archive #primary .column:last-child, .single-post #primary .column:last-child { margin-right: 0; } }
+
+.blog #primary .column article h1, .blog #primary .column article h2, .blog #primary .column article h3, .blog #primary .column article h4, .blog #primary .column article h5, .archive #primary .column article h1, .archive #primary .column article h2, .archive #primary .column article h3, .archive #primary .column article h4, .archive #primary .column article h5, .single-post #primary .column article h1, .single-post #primary .column article h2, .single-post #primary .column article h3, .single-post #primary .column article h4, .single-post #primary .column article h5 { margin-top: 0; }
+
+.blog #primary aside, .archive #primary aside, .single-post #primary aside { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
+
+.blog #primary aside:last-child, .archive #primary aside:last-child, .single-post #primary aside:last-child { margin-right: 0; }
+
+@media screen and (min-width: 480px) { .blog #primary aside, .archive #primary aside, .single-post #primary aside { float: left; display: block; margin-right: 3.2258064516%; width: 22.5806451613%; }
+  .blog #primary aside:last-child, .archive #primary aside:last-child, .single-post #primary aside:last-child { margin-right: 0; } }
+
+@media screen and (min-width: 1099px) { .blog #primary aside, .archive #primary aside, .single-post #primary aside { float: left; display: block; margin-right: 2.1276595745%; width: 27.6595744681%; }
+  .blog #primary aside:last-child, .archive #primary aside:last-child, .single-post #primary aside:last-child { margin-right: 0; } }
+
+.blog #primary aside .widget, .archive #primary aside .widget, .single-post #primary aside .widget { margin-bottom: 20px; }
+
+.blog #primary aside .widget h2, .archive #primary aside .widget h2, .single-post #primary aside .widget h2 { border-bottom: 2px solid black; font-size: 16px; margin: 0 0 5px 0; text-transform: uppercase; color: #1ca75e; }
+
+.blog #primary aside .widget ul, .archive #primary aside .widget ul, .single-post #primary aside .widget ul { list-style-type: none; margin: 20px 0 0 0; }
+
+.blog #primary aside .widget ul li a, .archive #primary aside .widget ul li a, .single-post #primary aside .widget ul li a { color: black; }
+
+.blog #comments, .archive #comments, .single-post #comments { border-top: 2px solid black; margin-top: 40px; margin-bottom: 40px; }
+
+.blog #comments .comments-title, .archive #comments .comments-title, .single-post #comments .comments-title { margin: 20px 0; }
+
+.blog #comments ol, .archive #comments ol, .single-post #comments ol { margin: 0; margin-bottom: 20px; list-style-type: none; }
+
+.blog #comments ol li, .archive #comments ol li, .single-post #comments ol li { background: #f9f9f9; padding: 20px; margin-bottom: 20px; }
+
+.blog #comments ol li:last-of-type, .archive #comments ol li:last-of-type, .single-post #comments ol li:last-of-type { margin-bottom: 0; }
+
+.blog #comments ol li .comment-meta, .archive #comments ol li .comment-meta, .single-post #comments ol li .comment-meta { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #ccc; }
+
+.blog #comments ol li .comment-meta img, .archive #comments ol li .comment-meta img, .single-post #comments ol li .comment-meta img { display: none; }
+
+.blog #comments ol li .comment-meta .comment-author, .blog #comments ol li .comment-meta .comment-metadata, .archive #comments ol li .comment-meta .comment-author, .archive #comments ol li .comment-meta .comment-metadata, .single-post #comments ol li .comment-meta .comment-author, .single-post #comments ol li .comment-meta .comment-metadata { display: inline-block; width: 49.7%; margin: 0; }
+
+.blog #comments ol li .comment-meta .comment-metadata, .archive #comments ol li .comment-meta .comment-metadata, .single-post #comments ol li .comment-meta .comment-metadata { text-align: right; }
+
+.blog #comments ol li .reply, .archive #comments ol li .reply, .single-post #comments ol li .reply { margin-top: 20px; text-align: right; }
+
+.blog #comments ol li .reply a, .archive #comments ol li .reply a, .single-post #comments ol li .reply a { display: inline-block; font-size: 13px; background: #1ca75e; padding: 4px 10px; text-transform: uppercase; color: white; font-weight: 600; }
+
+.blog #comments ol li .children, .archive #comments ol li .children, .single-post #comments ol li .children { margin-bottom: 0; margin-top: 20px; }
+
+.blog #comments ol li .children li, .archive #comments ol li .children li, .single-post #comments ol li .children li { background: white; }
+
+.blog #comments ol li .children li:last-of-type, .archive #comments ol li .children li:last-of-type, .single-post #comments ol li .children li:last-of-type { margin-bottom: 0; }
+
+.blog #comments ol li .children li .children, .archive #comments ol li .children li .children, .single-post #comments ol li .children li .children { margin-bottom: 0; margin-top: 20px; }
+
+.blog #comments ol li .children li .children li, .archive #comments ol li .children li .children li, .single-post #comments ol li .children li .children li { background: #f9f9f9; }
+
+.blog #comments ol li .children li .children li:last-of-type, .archive #comments ol li .children li .children li:last-of-type, .single-post #comments ol li .children li .children li:last-of-type { margin-bottom: 0; }
+
+/*============================
+=            Blog            =
+============================*/
+.blog #primary .post { margin-top: 20px; padding-top: 20px; border-top: 2px solid black; }
+
+.blog #primary .post:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+
+.blog #primary .post:last-of-type { margin-bottom: 20px; }
+
+.blog #primary .post header { margin-bottom: 20px; }
+
+.blog #primary .post header h2 { font-size: 32px; margin: 0; color: black; }
+
+.blog #primary .post .link { text-align: right; margin-top: 20px; }
+
+.blog #primary .post .link a { display: inline-block; font-size: 13px; background: #1ca75e; padding: 4px 10px; text-transform: uppercase; color: white; font-weight: 600; }
 
 /*================================
 =            HomePage            =
