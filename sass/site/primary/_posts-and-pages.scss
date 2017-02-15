@@ -105,17 +105,26 @@
 			text-align: center;
 
 			h2 {
-				font-size: 80px;
+				font-size: 20px;
 				text-transform: uppercase;
-				margin: 0 0 20px 0;
+				margin: 0 0 10px 0;
 				line-height: 1;
+
+				@include media($medium-screen-up) {
+					font-size: 80px;
+					margin: 0 0 20px 0;
+				}
 			}
 
 			h3 {
-				font-size: 22px;
+				font-size: 15px;
 				text-transform: uppercase;
 				line-height: 1;
 				margin: 0;
+
+				@include media($medium-screen-up) {
+					font-size: 22px;
+				}
 			}
 		}
 
@@ -143,9 +152,11 @@
 
 			.column {
 				@include span-columns(1);
+				margin-bottom: 20px;
 
 				@include media($medium-screen-up) {
 					@include span-columns(4);
+					margin-bottom: 0;
 				}
 				@include media($large-screen-up) {
 					@include span-columns(6);
@@ -166,8 +177,12 @@
 					}
 
 					&.text {
-						//border-top: 2px solid black;
-						//padding-top: 5px;
+						overflow: scroll;
+						margin-bottom: 20px;
+
+						@include media($medium-screen-up) {
+							margin-bottom: 0;
+						}
 
 						h1, h2, h3 {
 							margin: 0 0 5px 0;
@@ -181,9 +196,17 @@
 						background-size: cover;
 						background-repeat: no-repeat;
 						background-position: center;
+						margin-bottom: 20px;
+
+						@include media($medium-screen-up) {
+							margin-bottom: 0;
+						}
 
 						&:first-of-type {
-							margin-bottom: 30px;
+
+							@include media($medium-screen-up) {
+								margin-bottom: 30px;
+							}
 						}
 
 						&:nth-child(2) {
@@ -305,7 +328,11 @@
 ===============================*/
 
 #explore {
-	padding: 50px 0;
+	padding: 20px 0;
+
+	@include media($medium-screen-up) {
+		padding: 50px 0;
+	}
 
 	.slider {
 
@@ -1160,6 +1187,46 @@
 					margin-top: 10px;
 					font-weight: bold;
 					color: black;
+				}
+			}
+		}
+	}
+}
+
+/*=============================
+=            LOGIN            =
+=============================*/
+
+#login {
+
+	#primary {
+
+		.column {
+			@include span-columns(1);
+
+			@include media($medium-screen-up) {
+				@include span-columns(9);
+			}
+			@include media($large-screen-up) {
+				@include span-columns(12);
+			}
+
+			.entry-content {
+
+				#theme-my-login {
+					margin: 0 auto;
+
+					.message {
+						font-size: 13px;
+						line-height: 1.625;
+						margin-bottom: 20px;
+					}
+
+					.tml-submit-wrap {
+						input {
+							width: 100%;
+						}
+					}
 				}
 			}
 		}

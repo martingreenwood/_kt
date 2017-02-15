@@ -10,10 +10,18 @@
 	height: 100vh;
 
 	#discover {
-		padding: 50px 0;
+		padding: 20px 0;
+
+		@include media($medium-screen-up) {
+			padding: 50px 0;
+		}
 
 		header {
-			margin-bottom: 50px;
+			margin-bottom: 20px;
+
+			@include media($medium-screen-up) {
+				margin-bottom: 50px;
+			}
 
 			h2 {
 				color: $brand-primary;
@@ -73,7 +81,11 @@
 							background-position: center;
 
 							&:first-of-type {
-								margin-bottom: 30px;
+								margin-bottom: 20px;
+
+								@include media($medium-screen-up) {
+									margin-bottom: 30px;
+								}
 							}
 
 							&:nth-child(2) {
@@ -141,8 +153,12 @@
 							aside {
 
 								&:first-of-type {
-									margin-bottom: 30px;
+									margin-bottom: 20px;
 									margin-right: 0;
+
+									@include media($medium-screen-up) {
+										margin-bottom: 30px;
+									}
 								}
 							}
 						}
@@ -240,7 +256,11 @@
 	}
 
 	#experience {
-		padding: 50px 0;
+		padding: 20px 0;
+
+		@include media($medium-screen-up) {
+			padding: 50px 0;
+		}
 
 		header {
 

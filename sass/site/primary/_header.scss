@@ -61,11 +61,12 @@
 	}
 
 	.site-branding, {
-		width: 100%;
-		padding: 20px 0;
+		width: 60%;
+		padding: 30px 0;
 
 		@include media($medium-screen-up) {
 			width: 40%;
+			padding: 20px 0;
 		}
 	}
 

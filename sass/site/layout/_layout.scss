@@ -16,7 +16,11 @@
 
 .row {
 	@include row();
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+
+	@include media($medium-screen-up) {
+		margin-bottom: 30px;
+	}
 
 	&:last-of-type {
 		margin-bottom: 0;

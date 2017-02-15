@@ -10,10 +10,18 @@
 		@include span-columns(1);
 
 		@include media($medium-screen-up) {
-			@include span-columns(2.33);
+			@include span-columns(2);
 		}
 		@include media($large-screen-up) {
 			@include span-columns(3);
+		}
+	}
+
+	.logo {
+		margin-bottom: 20px;
+		
+		@include media($medium-screen-up) {
+			margin-bottom: 0;
 		}
 	}
 
