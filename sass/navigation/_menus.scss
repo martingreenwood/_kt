@@ -146,6 +146,10 @@
 			li {
 				text-align: center;
 
+				&.search-link {
+					display: none;
+				}
+
 				a {
 					color: white;
 				}

@@ -379,6 +379,7 @@ a:hover, a:active { outline: 0; }
   .ubermenu-responsive.ubermenu .ubermenu-nav { display: inline-block; width: 100%; margin-top: 86px; }
   .ubermenu-responsive.ubermenu .ubermenu-nav .ubermenu-submenu-drop:before { display: none; }
   .ubermenu-responsive.ubermenu .ubermenu-nav li { text-align: center; }
+  .ubermenu-responsive.ubermenu .ubermenu-nav li.search-link { display: none; }
   .ubermenu-responsive.ubermenu .ubermenu-nav li a { color: white; }
   .ubermenu-responsive.ubermenu .ubermenu-nav li li a { color: black; } }
 
