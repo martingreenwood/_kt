@@ -7,7 +7,7 @@
 		"uuidString": "BF6D5048-A4DB-4D72-B8DD-3DF3CC6177F6"
 		}
 	],
-"creatorBuild": "25704",
+"creatorBuild": "25813",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -180,11 +180,12 @@
 	"\/assets\/kendal-logo.png": {
 		"ft": 32768,
 		"iS": 20660,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/kendal-logo.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/assets\/kendal-logo.svg": {
@@ -200,11 +201,12 @@
 	"\/assets\/logo-white.png": {
 		"ft": 32768,
 		"iS": 20841,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/logo-white.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/assets\/logo-white.svg": {
@@ -220,41 +222,45 @@
 	"\/assets\/map-art_gallery.png": {
 		"ft": 32768,
 		"iS": 1162,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/map-art_gallery.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/assets\/map-department_store.png": {
 		"ft": 32768,
 		"iS": 980,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/map-department_store.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/assets\/map-lodging.png": {
 		"ft": 32768,
 		"iS": 601,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/map-lodging.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/assets\/map-pin.png": {
 		"ft": 32768,
 		"iS": 500,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/assets\/map-pin.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/assets\/play.svg": {
@@ -630,71 +636,78 @@
 	"\/inc\/social-stream\/public\/img\/arrow-icons.png": {
 		"ft": 32768,
 		"iS": 380,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/arrow-icons.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/blockquote.png": {
 		"ft": 32768,
 		"iS": 480,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/blockquote.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/blockquote_b.png": {
 		"ft": 32768,
 		"iS": 1579,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/blockquote_b.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/board-icons-w.png": {
 		"ft": 32768,
 		"iS": 3058,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/board-icons-w.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/board-icons.png": {
 		"ft": 32768,
 		"iS": 3044,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/board-icons.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/colorbox\/controls.png": {
 		"ft": 32768,
 		"iS": 1633,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/colorbox\/controls.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/colorbox\/controlsw.png": {
 		"ft": 32768,
 		"iS": 2592,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/colorbox\/controlsw.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/colorbox\/index.html": {
@@ -714,21 +727,23 @@
 	"\/inc\/social-stream\/public\/img\/controls.png": {
 		"ft": 32768,
 		"iS": 309,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/controls.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/controls_dark.png": {
 		"ft": 32768,
 		"iS": 516,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/controls_dark.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/grid.svg": {
@@ -766,11 +781,12 @@
 	"\/inc\/social-stream\/public\/img\/menu-icon.png": {
 		"ft": 32768,
 		"iS": 397,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/menu-icon.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/more-loading.gif": {
@@ -784,21 +800,23 @@
 	"\/inc\/social-stream\/public\/img\/noisy-texture.png": {
 		"ft": 32768,
 		"iS": 6534,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/noisy-texture.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/opener.png": {
 		"ft": 32768,
 		"iS": 1438,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/opener.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/oval-bg.svg": {
@@ -824,81 +842,89 @@
 	"\/inc\/social-stream\/public\/img\/playstate.png": {
 		"ft": 32768,
 		"iS": 7714,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/playstate.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/screen-icon.png": {
 		"ft": 32768,
 		"iS": 1145,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/screen-icon.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/share-icons.png": {
 		"ft": 32768,
 		"iS": 1002,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/share-icons.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/social-icons-colored.png": {
 		"ft": 32768,
 		"iS": 4926,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/social-icons-colored.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/social-icons-flat.png": {
 		"ft": 32768,
 		"iS": 1838,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/social-icons-flat.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/social-icons-mini.png": {
 		"ft": 32768,
 		"iS": 1156,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/social-icons-mini.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/social-icons-mt.png": {
 		"ft": 32768,
 		"iS": 3408,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/social-icons-mt.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/img\/social-icons.png": {
 		"ft": 32768,
 		"iS": 4246,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/inc\/social-stream\/public\/img\/social-icons.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/inc\/social-stream\/public\/index.html": {
@@ -4094,11 +4120,12 @@
 	"\/screenshot.png": {
 		"ft": 32768,
 		"iS": 264,
-		"l": 1,
 		"oA": 0,
 		"oAP": "\/screenshot.png",
 		"oF": 0,
+		"oIPL": 0,
 		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/search.php": {
@@ -5310,6 +5337,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-prototype-builtins": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-redeclare": {
 			"active": 1,
 			"optionString": "{'builtinGlobals': false}"
@@ -6134,14 +6165,6 @@
 		"orderOutput": 0,
 		"outputStyle": 1
 		},
-	"languageDefaultsJSX": {
-		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "jsx",
-		"autoOutputPathReplace2": "js",
-		"autoOutputPathStyle": 0
-		},
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.html",
@@ -6204,7 +6227,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"enableLossy": 1,
+		"optimizerType": 1,
 		"quality": 100
 		},
 	"languageDefaultsPUG": {
